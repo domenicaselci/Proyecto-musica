@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#portada{
+    background-image: url(../img/portada.jpg);
+    background-size: cover;
+    min-height: 60vh;
+    padding: 50px;
+    display: flex;
+    margin: 0;
+}
+#portada .titulo{
+    text-align: start;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#portada blockquote {
+    font-size: 80px;
+}
+
+.subtitulo {
+    font-size: 30px;
+    text-align: center;
+    padding: 30px 10px;
+    background-color: dimgrey;
+    margin: 0;
+}
+
+h2 {
+    margin-left: 40px;
+}
+
+article {
+    display: flex;
+}
+
+figure {
+    flex-shrink: 0;
+}
+
+figure img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
