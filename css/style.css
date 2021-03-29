@@ -13,18 +13,18 @@ ul {
 }
 
 #portada{
-    background-image: url(../img/portada.jpg);
-    background-size:contain;
+    background-image: url(../img/portada2.jpg);
+    background-size:cover;
     background-repeat: no-repeat;
+    background-position: center;
     min-height: 60vh;
     padding: 20px;
     display: flex;
-    background-position-x: right;
-    background-position-y: center;
 }
 #portada .titulo{
     padding: 10px;
-    margin-left: 0px;
+    margin-top: 50px;
+    margin-right: 50%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
