@@ -8,17 +8,23 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+ul {
+    list-style: none;
+}
+
 #portada{
     background-image: url(../img/portada.jpg);
-    background-size: cover;
+    background-size:contain;
+    background-repeat: no-repeat;
     min-height: 60vh;
-    padding: 50px;
+    padding: 20px;
     display: flex;
-    margin: 0;
+    background-position-x: right;
+    background-position-y: center;
 }
 #portada .titulo{
-    text-align: start;
-    padding: 100px;
+    padding: 10px;
+    margin-left: 0px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -32,7 +38,7 @@ body{
     font-size: 30px;
     text-align: center;
     padding: 30px 10px;
-    background-color: dimgrey;
+    background-color: rgba(15, 15, 15, 0.74);
     margin: 0;
 }
 
@@ -74,6 +80,16 @@ figure img {
     display: block;
 }
 
+.cancionesalbum {
+  margin: 0;
+}
+
+div.album section article figure img {
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+}
+
 div.canciones section article {
     width: 450px;
 }
@@ -91,12 +107,20 @@ article div.reproductor {
 .canciones article figure img {
      border-radius: 5px;
 }
+
+a {
+    color: white;
+    font-style: italic;
+    text-decoration: none;
+}
+
 footer {
-    background-color: #353745;
+    background-color: rgba(15, 15, 15, 0.74);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 }
 ul{
     list-style: none;
@@ -109,19 +133,19 @@ ul{
 }
 
 .arriba h1{
-    color: #9697a0;
+    color: #ffffff;
     font-size: 20px;
     font-family: calibri;
 }
 
 .arriba ul li a{
     font-size: 16px;
-    color: #575a70;
+    color: white;
 }
 
 .arriba ul li p{
     font-size: 14px;
-    color: #575a70;
+    color:white;
     line-height: 10px;
 }
 
@@ -135,7 +159,7 @@ ul{
 }
 
 .arriba{
-    border-bottom: 1px solid #575a70;
+    border-bottom: 1px solid rgba(15, 15, 15, 0.74);
     
 }
 
@@ -169,7 +193,7 @@ ul{
     width: 35px;
     height: 35px;
     margin: 0px 5px;
-    background-color: #424356;
+    background-color: rgba(15, 15, 15, 0.74);
     box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
@@ -208,12 +232,12 @@ ul{
 }
 
 .social-icons a:hover{
-    background-color: #353745;
+    background-color: white;
     transition: all ease 0.5s;
 }
 
 .social-icons a:hover i{
-    color: #424356;
+    color: white;
 }
 
 .imagenes{
