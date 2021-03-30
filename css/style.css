@@ -1,6 +1,29 @@
 * {
     box-sizing: border-box;
 }
+.header{
+    background-color:#353745;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    text-decoration-color: white;
+    font-family: calibri;
+    justify-content: space-between;
+}
+.nav {
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   font-size: 5mm;
+   /* padding-top: 2%; */
+   font-family: calibri;
+   text-decoration: none;
+   justify-content: flex-end;
+   align-items: center;
+   grid-column-gap: 10px;
+   padding-right: 10px;
+}
+.nav a{
+   text-align: center;
+}
 
 body {
     margin: 0;
