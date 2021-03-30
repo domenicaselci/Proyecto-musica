@@ -1,8 +1,9 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
-    margin:0;
+
+body {
+    margin: 0;
     background-color: rgb(27, 27, 27);
     color: white;
     font-family: 'Open Sans', sans-serif;
@@ -12,16 +13,17 @@ ul {
     list-style: none;
 }
 
-#portada{
+#portada {
     background-image: url(../img/portada2.jpg);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 60vh;
     padding: 20px;
     display: flex;
 }
-#portada .titulo{
+
+#portada .titulo {
     padding: 10px;
     margin-top: 50px;
     margin-right: 50%;
@@ -49,7 +51,7 @@ div section {
     margin-top: 30px;
     margin-left: 100px;
     margin-right: 100px;
-   /* background-color: rgba(128, 128, 128, 0.226);*/
+    /* background-color: rgba(128, 128, 128, 0.226);*/
     border-radius: 20px;
 }
 
@@ -81,7 +83,7 @@ figure img {
 }
 
 .cancionesalbum {
-  margin: 0;
+    margin: 0;
 }
 
 div.album section article figure img {
@@ -105,7 +107,7 @@ article div.reproductor {
 }
 
 .canciones article figure img {
-     border-radius: 5px;
+    border-radius: 5px;
 }
 
 a {
@@ -122,34 +124,35 @@ footer {
     align-items: center;
     margin-top: 30px;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-.arriba ul{
+.arriba ul {
     font-family: calibri;
     margin: 0px;
     padding: 0px 20px;
 }
 
-.arriba h1{
+.arriba h1 {
     color: #ffffff;
     font-size: 20px;
     font-family: calibri;
 }
 
-.arriba ul li a{
+.arriba ul li a {
     font-size: 16px;
     color: white;
 }
 
-.arriba ul li p{
+.arriba ul li p {
     font-size: 14px;
-    color:white;
+    color: white;
     line-height: 10px;
 }
 
-.arriba{
+.arriba {
     display: flex;
     justify-content: space-between;
     padding: 3% 0px;
@@ -158,23 +161,23 @@ ul{
     flex-wrap: wrap;
 }
 
-.arriba{
+.arriba {
     border-bottom: 1px solid rgba(15, 15, 15, 0.74);
-    
+
 }
 
-.arriba a:hover{
+.arriba a:hover {
     color: grey;
 }
-   
-.abajo h1{
+
+.abajo h1 {
     color: #9697a0;
     font-size: 20px;
     font-family: calibri;
 }
 
 
-.abajo{
+.abajo {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
@@ -189,58 +192,60 @@ ul{
     width: 170px;
 } */
 
-.social-icons a{
+.social-icons a {
     width: 35px;
     height: 35px;
     margin: 0px 5px;
     background-color: rgba(15, 15, 15, 0.74);
-    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.social-icons{
+.social-icons {
     display: flex;
 }
 
-.social-icons i{
+.social-icons i {
     color: #ffffff;
     font-size: 14px;
 }
 
-.search input{
+.search input {
     height: 35px;
     width: 200px;
     border-radius: 4px;
     outline: none;
 }
 
-.copyright{
+.copyright {
     font-family: calibri;
     font-size: 12px;
     color: #b3b3b3;
 }
 
-.Integrantes{
+.Integrantes {
     font-family: calibri;
     font-size: 25px;
     color: #b3b3b3;
 }
-.up-section ul li a:hover, .dwn-section ul li a:hover{
+
+.up-section ul li a:hover,
+.dwn-section ul li a:hover {
     color: #9697a0;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     background-color: white;
     transition: all ease 0.5s;
 }
 
-.social-icons a:hover i{
+.social-icons a:hover i {
     color: white;
 }
 
-.imagenes{
+.imagenes {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
@@ -250,4 +255,23 @@ ul{
     flex-wrap: wrap;
 }
 
+/*Agrego css de las paginas detail*/
 
+#detail {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Open Sans', sans-serif
+}
+.albumavicci{
+    display: flex;
+    padding: 50px;
+    margin-bottom: 10px;
+    width: calc(50% - 16px);
+    background-color: rgba(15, 15, 15, 0.74);
+    border-radius: 50px;
+    flex-direction: column;
+    justify-content: center;
+}
+div img {
+    width: 200px;
+    height: 200px;
+}
