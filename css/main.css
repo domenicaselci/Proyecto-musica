@@ -1,0 +1,58 @@
+/*Agrego css de las paginas detail*/
+
+* {
+    box-sizing: border-box;
+}
+
+#detailtrack {
+    background-color: black;
+    background: size 100%;
+    ;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: flex;
+}
+
+div section article {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 10px;
+    width: calc(100%);
+    background-color: rgba(0, 0, 0, 0.363);
+    border-radius: 50px;
+    justify-content:space-evenly;
+}
+
+div img {
+    width: 400px;
+    height: 400px;
+    display: block;
+    border-radius: 10px;
+   
+}
+
+div section h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    color: rgb(214, 197, 197);
+    text-align: right;
+}
+
+div section h3 {
+    font-family: 'Monoton', cursive, sans-serif;
+    color: rgb(247, 241, 241);
+    font-size: 40px;
+    text-align: start;
+    margin-left: 40px;
+}
+
+div.infoalbum{
+    text-align:end;
+}
+div section article ul{
+    font-family:serif;
+    color:lightgrey;
+    text-decoration: none;
+    list-style: none;
+    text-align:right;
+}
