@@ -255,23 +255,3 @@ ul {
     flex-wrap: wrap;
 }
 
-/*Agrego css de las paginas detail*/
-
-#detail {
-    background-color: rgb(0, 0, 0);
-    font-family: 'Open Sans', sans-serif
-}
-.albumavicci{
-    display: flex;
-    padding: 50px;
-    margin-bottom: 10px;
-    width: calc(50% - 16px);
-    background-color: rgba(15, 15, 15, 0.74);
-    border-radius: 50px;
-    flex-direction: column;
-    justify-content: center;
-}
-div img {
-    width: 200px;
-    height: 200px;
-}
