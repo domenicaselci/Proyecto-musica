@@ -238,3 +238,9 @@ arriba ul{
     width: 80%;
     flex-wrap: wrap;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
