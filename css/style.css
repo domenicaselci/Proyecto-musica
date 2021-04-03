@@ -244,3 +244,66 @@ a {
     color: white;
     font-style: italic;
 }
+
+.generos section h1 {
+    font-size: 100px;
+    margin-left: 10%;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.dance {
+  background-image: url("/img/portada.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.rocknacional {
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+.rock {
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+.electropop {
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+.cinematografica {
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+.generos section article h2 a {
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.genero section h1 {
+    font-size: 100px;
+}
+
+.genero section {
+   flex-direction: column;
+   margin-left: 20px;
+}
+
+div.portada-genero {
+    margin:-50px;
+    margin-right: -100px;
+    min-height: 60vh;
+    padding: 50px;
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+}
