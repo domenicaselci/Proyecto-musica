@@ -7,6 +7,28 @@ body{
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
+.header{
+    background-color:#353745;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    text-decoration-color: white;
+    font-family: calibri;
+    justify-content: space-between;
+}
+.nav {
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   font-size: 5mm;
+   /* padding-top: 2%; */
+   font-family: calibri;
+   text-decoration: none;
+   justify-content: flex-end;
+   align-items: center;
+   grid-column-gap: 10px;
+   padding-right: 10px;
+}
+
+
 
 #portada{
     background-image: url(../img/portada.jpg);
@@ -215,4 +237,73 @@ arriba ul{
     margin: 5px;
     width: 80%;
     flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+
+.generos section h1 {
+    font-size: 100px;
+    margin-left: 10%;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.dance {
+  background-image: url("/img/portada.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.rocknacional {
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+.rock {
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+.electropop {
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+.cinematografica {
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+.generos section article h2 a {
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.genero section h1 {
+    font-size: 100px;
+}
+
+.genero section {
+   flex-direction: column;
+   margin-left: 20px;
+}
+
+div.portada-genero {
+    margin:-50px;
+    margin-right: -100px;
+    min-height: 60vh;
+    padding: 50px;
+    background-image: url("/img/portada.jpg");
+    background-position: center;
+    background-size: cover;
 }
