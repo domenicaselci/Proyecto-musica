@@ -56,3 +56,56 @@ div section article ul{
     list-style: none;
     text-align:right;
 }
+
+#detail-album1{
+    background-color: grey;
+    margin:0;
+    padding: 0;
+    background-image: url(../img/portada2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.titulo h2{
+      margin:0px;
+    padding:0px;
+    background-color: black;
+    
+}
+
+.detailalbum{
+    display: flex;
+    margin: 10px;
+    padding:10px;
+    
+}
+.discoheaven{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Francois One', sans-serif;
+    font-size: 50px;
+    
+}
+figure img{
+    width:400px;
+    
+}
+
+.contenido1{
+    display: flex;
+    margin: 20px;
+    padding: 0;
+   
+    
+    
+}
+.listaheaven{
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Francois One', sans-serif;
+    
+    
+}
+ul{
+    color: rgb(255, 255, 255);
+}
