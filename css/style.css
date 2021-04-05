@@ -27,9 +27,14 @@ body{
    grid-column-gap: 10px;
    padding-right: 10px;
 }
+.nav a{
+    text-align: center;
+}
 
-
-
+.logo{
+    height: 50px;
+    width: 170px;
+}
 #portada{
     background-image: url(../img/portada.jpg);
     background-size: cover;
