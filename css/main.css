@@ -5,54 +5,175 @@
 }
 
 #detailtrack {
-    background-color: black;
-    background: size 100%;
-    ;
+    background-image: url(../img/rockfondo5.jpg);
     background-repeat: no-repeat;
-    padding: 20px;
-    display: flex;
+    background-size: cover;
 }
 
-div section article {
+
+.caracteristicastrack {
     display: flex;
-    padding: 20px;
-    margin-bottom: 10px;
-    width: calc(100%);
-    background-color: rgba(0, 0, 0, 0.363);
-    border-radius: 50px;
-    justify-content:space-evenly;
+    
+    margin:0;
+    padding:0;
+      background-color: rgba(0, 0, 0, 0.774);
+    
+
+}
+
+.titulotrack {
+    margin: 0;
+    padding: 0;
+}
+
+.track {
+    margin: 0;
+    padding: 0;
 }
 
 div img {
     width: 400px;
     height: 400px;
-    display: block;
+
     border-radius: 10px;
-   
+
 }
 
-div section h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
-    color: rgb(214, 197, 197);
+.infotrack {
+    display: block;
+
+}
+.infotrack h3{
     text-align: right;
-}
-
-div section h3 {
     font-family: 'Monoton', cursive, sans-serif;
     color: rgb(247, 241, 241);
     font-size: 40px;
-    text-align: start;
-    margin-left: 40px;
+    text-align: right;
+    margin-top: 20px;
+
 }
 
-div.infoalbum{
-    text-align:end;
+div section h2 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.411);
+    text-align: center;
+
+
 }
-div section article ul{
-    font-family:serif;
-    color:lightgrey;
+
+
+
+div.infoalbum {
+    text-align: end;
+}
+
+div section article ul {
+    font-family: serif;
+    color: lightgrey;
     text-decoration: none;
     list-style: none;
-    text-align:right;
+    text-align: right;
+}
+
+#detail-album1 {
+
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/fondo2.png.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.titulo h2 {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.747);
+    font-size: 50px;
+
+}
+
+
+.detailalbum {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.discoheaven {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Racing Sans One', cursive;
+    font-size: 50px;
+
+}
+
+figure img {
+    width: 400px;
+    margin-top: 0px;
+    margin: 0 0 0 75px;
+
+}
+
+.lista1 {
+    justify-content: start;
+}
+
+.contenido1 {
+    display: flex;
+    margin: 30px 0px;
+    padding: 15px 10px 0 0;
+    background-color: rgba(0, 0, 0, 0.747);
+
+}
+
+.listaheaven {
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Francois One', sans-serif;
+    font-size: 20px;
+
+
+
+}
+
+ul {
+    color: rgb(255, 255, 255);
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+h2.Avicci {
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 50px;
+
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.logoavicci img {
+    width: 200px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    border-radius: 0;
+    text-align: center;
+
+
+
+}
+
+ol {
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px 0 20px;
 }
