@@ -303,12 +303,35 @@ footer {
    margin-left: 20px;
 }
 
-div.portada-genero {
-    margin:-50px;
-    margin-right: -100px;
+.artistas section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+   /* background-color: rgba(128, 128, 128, 0.226);*/
+    border-radius: 20px;
+}
+
+#portada-gen {
+    background-image: url(../img/electro.jpg);
+    background-size: cover;
+    background-position: center;
     min-height: 60vh;
     padding: 50px;
-    background-image: url("/img/portada.jpg");
-    background-position: center;
-    background-size: cover;
+    display: flex;
+    margin: 0;
 }
+#portada-gen .titulo{
+    text-align: start;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#portada-gen blockquote {
+    font-size: 80px;
+}
+
