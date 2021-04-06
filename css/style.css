@@ -260,13 +260,13 @@ footer {
 }
 
 .dance {
-  background-image: url("/img/portada.jpg");
+  background-image: url("/img/electro.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .rocknacional {
-    background-image: url("/img/portada.jpg");
+    background-image: url("/img/rocknacional.jpg");
     background-position: center;
     background-size: cover;
   }
@@ -278,13 +278,13 @@ footer {
   }
 
 .electropop {
-    background-image: url("/img/portada.jpg");
+    background-image: url("/img/dance.jpg");
     background-position: center;
     background-size: cover;
   }
 
 .cinematografica {
-    background-image: url("/img/portada.jpg");
+    background-image: url("/img/cinemat.jpg");
     background-position: center;
     background-size: cover;
   }
