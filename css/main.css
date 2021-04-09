@@ -21,7 +21,7 @@ figure {
 
 figure img {
     margin-top: 20px;
-    width: clamp(150px, 50%, 400px);
+    width: clamp(150px, 60%, 400px);
     
 
 }
@@ -154,3 +154,37 @@ ol {
     list-style: none;
 }
 
+@media (min-width:600px){
+    
+    .primero{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    figure img{
+        width: 300px;
+        margin:0;
+        padding: 0;
+    }
+    figure{
+        width: fit-content;
+        margin-left: 40px;
+        margin-top: 50px ;
+        padding: 0;
+    }
+    .albumtim{
+        text-align: left;
+        margin-left:5px;
+        margin-top: 280px;
+        padding-left: 10px;
+        
+    }
+    .album{
+        margin:0;
+        padding:0;
+    }
+    .tim{
+        margin:0;
+        padding:0;
+    }
+}
