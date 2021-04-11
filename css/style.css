@@ -367,6 +367,20 @@ footer {
     .artistas section article .informacion {
         margin-left: 20px;
     }
+
+    .generos section {
+        flex-direction: column;
+    }
+
+    .generos section article {
+        width: 100%;
+        margin-top: 10px;
+        height: 500px;
+    }
+
+    .generos section article h2 {
+        font-size: 50px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -405,7 +419,7 @@ footer {
 
     .album section article {
          width: 100%;
-         margin-left: 20px;
+         margin-left: 45px;
     }
 
     .artistas section {
@@ -413,7 +427,25 @@ footer {
     }
 
     .artistas section article {
-        width: 100%;
-        margin-left:20px;
+       width: 100%;
+       margin-left: 45px;
+    }
+
+    .generos section {
+          margin-left: 20px;
+    }
+
+    .generos section h1 {
+        font-size: 60px;
+        margin-left: 70px;
+    }
+
+    .generos section article {
+        margin-left: 40px;
+    }
+
+    .generos section article h2 a {
+        font-size: 50px;
+        margin-left: 5%;
     }
 }
