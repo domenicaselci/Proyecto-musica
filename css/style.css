@@ -17,23 +17,22 @@ body{
 }
 .nav {
     display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
    font-size: 5mm;
    /* padding-top: 2%; */
    font-family: calibri;
    text-decoration: none;
    justify-content: flex-end;
-   align-items: center;
-   grid-column-gap: 10px;
-   padding-right: 10px;
+   align-items: left;
+
 }
 .nav a{
-    text-align: center;
+    text-align: left;
 }
 
 .logo{
     height: 50px;
-    width: 170px;
+    width: 110px;
 }
 #portada{
     background-image: url(../img/portada.jpg);
@@ -334,4 +333,5 @@ footer {
 #portada-gen blockquote {
     font-size: 80px;
 }
+
 
