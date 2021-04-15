@@ -39,7 +39,8 @@ img {
     display: block;
     text-align: center;
 }
-.artista{
+
+.artista {
     font-style: italic;
 }
 
@@ -92,6 +93,7 @@ li.tim {
 
 
 .listatim {
+    display: flex;
     text-decoration: none;
     list-style: none;
     margin: 0;
@@ -161,20 +163,34 @@ ul {
 }
 
 ol {
-
+    
     color: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
-
-    list-style: none;
+    font-style: italic;
     text-decoration: none;
     font-size: 1.2em;
 
 }
 
 .articletim {
+    display: flex;
     text-align: left;
     text-decoration: none;
     list-style: none;
+    
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(177, 177, 177);
+}
+
+
+.mas{
+    align-items: right;
 }
 
 @media (min-width:600px) {
@@ -304,10 +320,12 @@ ol {
         align-items: right;
 
     }
-    .fav{
+
+    .fav {
         margin-left: 12%;
     }
-    .listatim{
+
+    .listatim {
         margin-left: 12%;
     }
 }
