@@ -17,27 +17,27 @@ body{
 }
 .nav {
     display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
    font-size: 5mm;
    /* padding-top: 2%; */
    font-family: calibri;
    text-decoration: none;
    justify-content: flex-end;
-   align-items: center;
-   grid-column-gap: 10px;
-   padding-right: 10px;
+   align-items: left;
+
 }
 .nav a{
-    text-align: center;
+    text-align: left;
 }
 
 .logo{
     height: 50px;
-    width: 170px;
+    width: 110px;
 }
 #portada{
     background-image: url(../img/portada.jpg);
     background-size: cover;
+    background-position: center;
     min-height: 60vh;
     padding: 50px;
     display: flex;
@@ -51,7 +51,7 @@ body{
     flex-direction: column;
 }
 
-#portada blockquote {
+#portada .titulo h1 {
     font-size: 80px;
 }
 
@@ -63,7 +63,7 @@ body{
     margin: 0;
 }
 
-div section {
+ div section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -331,7 +331,88 @@ footer {
     flex-direction: column;
 }
 
-#portada-gen blockquote {
+#portada-gen h1 {
     font-size: 80px;
 }
 
+@media (max-width: 768px) {
+
+    #portada{
+        background-position: center;
+    }
+
+    .canciones section article {
+        margin-left: 7%;
+    }
+
+    .album section article {
+        flex-direction: column;
+    }
+    .album section article figure img{
+        margin-left: 25%;
+    }
+    .album section article .informacion h3 {
+        margin-left: 20px;
+    }
+
+    .artistas section article {
+        flex-direction: column;
+    }
+
+    .artistas section article figure img {
+        margin-left: 25%;
+    }
+
+    .artistas section article .informacion {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    #portada .titulo h1 {
+        margin-left: -30%
+    }
+
+    #portada .titulo h1 strong {
+        font-size: 50px;
+    }
+
+    .canciones, .album, .artistas{
+       margin-left: -20%;
+    }
+
+    .canciones section article figure img {
+        width: 70px ;
+        height: 70px;
+    }
+
+    .canciones section article figure {
+        width: 15%;
+    }
+
+    .canciones section article .informacion h3, p {
+          font-size: 15px;
+    }
+
+    .reproductor i {
+        margin-right: 10px;
+    }
+
+    .album section {
+        flex-direction: column;
+    }
+
+    .album section article {
+         width: 100%;
+         margin-left: 20px;
+    }
+
+    .artistas section {
+        flex-direction: column;
+    }
+
+    .artistas section article {
+        width: 100%;
+        margin-left:20px;
+    }
+} 
