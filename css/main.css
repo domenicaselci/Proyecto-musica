@@ -157,13 +157,17 @@ a {
 }
 
 ul {
+    list-style: none;
+    text-decoration: none;
     color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
 }
 
 ol {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
     color: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
@@ -177,6 +181,8 @@ ol {
     text-align: left;
     text-decoration: none;
     list-style: none;
+    justify-content: space-between;
+    width: 75%;
     
 }
 
@@ -192,7 +198,15 @@ a:hover {
 .mas{
     align-items: right;
 }
-
+li{
+    margin-bottom: 3%;
+}
+.añadirplaylist {
+    margin-top: 20px;
+}
+.añadirplaylist li{
+    margin-bottom: 11px;
+}
 @media (min-width:600px) {
 
     body {
