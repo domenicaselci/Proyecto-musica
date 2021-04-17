@@ -253,7 +253,14 @@ a {
     font-style: italic;
 }
 
-.generos section h1 {
+.generos article{
+    margin-right:5%;
+    width: calc(50%-5px);
+    height: 300px;
+    border-radius: 40px;
+}
+
+.generos h1 {
     font-size: 100px;
     margin-left: 10%;
 }
@@ -292,18 +299,20 @@ footer {
     background-size: cover;
   }
 
-.generos section article h2 a {
+.generos article h2 a {
     font-style: normal;
     font-weight: bolder;
-}
-
-.genero section h1 {
+    margin-left: 10%;
     font-size: 100px;
 }
 
-.genero section {
+.generos h1 {
+    font-size: 100px;
+}
+
+.generos {
    flex-direction: column;
-   margin-left: 20px;
+   margin-left: 5%;
 }
 
 .artistas section {
@@ -436,5 +445,22 @@ footer {
     }
     figure {
         margin-left:15%;
+    }
+    
+    .generos h1 {
+        font-size: 50px;
+    }
+
+    .generos article {
+        width: calc(50%-5px);
+        margin-left: 20%;
+    }
+     
+    .generos article h2 a {
+          font-size: 40px;
+    }
+    .generos article h2 {
+        width: 50%;
+        margin-left: 25%;
     }
 } 
