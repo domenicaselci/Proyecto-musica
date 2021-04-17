@@ -330,7 +330,7 @@ footer {
     background-image: url(../img/electro.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 60vh;
+    min-height: 40vh;
     padding: 50px;
     display: flex;
     margin: 0;
@@ -346,6 +346,8 @@ footer {
 #portada-gen h1 {
     font-size: 80px;
 }
+
+
 
 @media (max-width: 768px) {
 
