@@ -41,18 +41,13 @@ body{
     min-height: 60vh;
     padding: 50px;
     display: flex;
-    margin: 0;
-}
-#portada .titulo{
+    margin:0;
+    font-size: 80px;
     text-align: start;
     padding: 100px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-}
-
-#portada .titulo h1 {
-    font-size: 80px;
 }
 
 .subtitulo {
@@ -63,7 +58,7 @@ body{
     margin: 0;
 }
 
- div section {
+ #contenedores {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -74,19 +69,27 @@ body{
     border-radius: 20px;
 }
 
-div section h2 {
+#contenedores h2 {
     margin-left: 50px;
     width: 100%;
     font-size: 50px;
 }
 
-div section article {
+#contenedores article {
     display: flex;
     padding: 10px;
     margin-bottom: 5px;
-    width: calc(50% - 4px);
+   /* width: calc(50% - 4px);*/
     background-color: rgba(15, 15, 15, 0.74);
     border-radius: 40px;
+}
+
+.album article {
+    width: calc(50% - 4px);
+}
+
+.artistas article {
+    width: calc(50% - 4px);
 }
 
 article figure {
@@ -101,11 +104,11 @@ figure img {
     display: block;
 }
 
-div.canciones section article {
+.canciones article {
     width: 450px;
 }
 
-div.canciones article div.informacion {
+.canciones article div.informacion {
     width: 120px;
 }
 
@@ -341,56 +344,72 @@ footer {
         background-position: center;
     }
 
-    .canciones section article {
-        margin-left: 7%;
+    .canciones  article {
+        margin-left: 10%;
+        width: calc(90% - 4px);
     }
 
-    .album section article {
+    .album article {
+        width: 100%
+    }
+    .album {
         flex-direction: column;
     }
-    .album section article figure img{
+    .album article figure img{
         margin-left: 25%;
     }
-    .album section article .informacion h3 {
+    .album article .informacion h3 {
         margin-left: 20px;
     }
 
-    .artistas section article {
+    .artistas article {
         flex-direction: column;
     }
 
-    .artistas section article figure img {
+    .artistas article figure img {
         margin-left: 25%;
     }
 
-    .artistas section article .informacion {
-        margin-left: 20px;
+    .artistas article .informacion {
+        margin-left: 10%;
     }
 }
 
 @media (max-width: 420px) {
-    #portada .titulo h1 {
+    #portada{
         margin-left: -30%
     }
 
-    #portada .titulo h1 strong {
+    #portada strong {
         font-size: 50px;
+        margin-left: 10%;
     }
 
-    .canciones, .album, .artistas{
+    #contenedores {
+        margin:0;
+    }
+
+    /*.canciones, .album, .artistas{
        margin-left: -20%;
+    }*/
+    
+    .canciones article {
+       margin-left: 5%;
     }
 
-    .canciones section article figure img {
+    .album article {
+     width: calc(90% - 4px);
+    }
+    .canciones article figure img {
         width: 70px ;
         height: 70px;
     }
 
-    .canciones section article figure {
+    .canciones article figure {
         width: 15%;
     }
 
-    .canciones section article .informacion h3, p {
+    .canciones article .informacion h3, p {
           font-size: 15px;
     }
 
@@ -398,21 +417,24 @@ footer {
         margin-right: 10px;
     }
 
-    .album section {
+    .album {
         flex-direction: column;
     }
 
-    .album section article {
-         width: 100%;
-         margin-left: 20px;
+    .album article {
+         flex-direction: column;
+         margin-left: 5%;
     }
 
-    .artistas section {
+    .artistas {
         flex-direction: column;
     }
 
-    .artistas section article {
-        width: 100%;
-        margin-left:20px;
+    .artistas article {
+        width: calc(90% - 4px);
+        margin-left:5%;
+    }
+    figure {
+        margin-left:15%;
     }
 } 
