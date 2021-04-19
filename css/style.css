@@ -7,32 +7,64 @@ body{
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
-.header{
-    background-color:#353745;
-    display: grid;
-    grid-template-columns: 40% 50%;
-    text-decoration-color: white;
-    font-family: calibri;
-    justify-content: space-between;
-}
-.nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-   font-size: 5mm;
-   /* padding-top: 2%; */
-   font-family: calibri;
-   text-decoration: none;
-   justify-content: flex-end;
-   align-items: left;
+nav{
+    padding: 10px 40px 10px 70px;
+    border: 1px #000;
+    border-left: none;
+    border-right: none;
 
 }
-.nav a{
-    text-align: left;
-}
+nav ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
-.logo{
-    height: 50px;
-    width: 110px;
+}
+nav ul li.logo{
+    flex: 1;
+    font-size: 30px;
+    font-weight: 700;
+}
+nav ul div.items{
+    padding: 0 25px;
+    display: inline-flex;
+}
+nav ul div.items a{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 12px;
+
+}
+nav ul .search-icon{
+    height: 40px;
+    width: 240px;
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+nav ul .search-icon input{
+    height: 100%;
+    width: 200px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+
+}
+nav ul .search-icon .icon{
+    height: 100%;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #000;
+}
+nav ul .search-icon .icon span{
+    color:white;
+    font-size: 18px;
 }
 #portada{
     background-image: url(../img/portada.jpg);
@@ -179,11 +211,7 @@ ul{
 .social-icons a:hover i{
     color: #424356;
 }
-arriba ul{
-    font-family: calibri;
-    margin: 0px;
-    padding: 0px 20px;
-}
+
 
 .arriba h1{
     color: #9697a0;
