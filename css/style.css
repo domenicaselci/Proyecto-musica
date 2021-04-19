@@ -77,15 +77,13 @@ nav ul .search-icon .icon span{
     background-size: cover;
     background-position: center;
     min-height: 60vh;
-    padding: 50px;
-    display: flex;
+    padding: 100px;
     margin:0;
     font-size: 80px;
-    text-align: start;
-    padding: 100px;
+  /* text-align: start;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: column;*/
 }
 
 .subtitulo {
@@ -422,12 +420,12 @@ footer {
 
 @media (max-width: 420px) {
     #portada{
-        margin-left: -30%
+        margin-left: -10% ;
     }
 
     #portada strong {
         font-size: 50px;
-        margin-left: 10%;
+        margin-left: 15%;
     }
 
     #contenedores {
