@@ -15,6 +15,7 @@ div {
     padding: 0;
 
 }
+
 nav {
     padding: 10px 40px 10px 70px;
     border: 1px #000;
@@ -88,6 +89,7 @@ nav ul .search-icon .icon span {
     color: white;
     font-size: 18px;
 }
+
 .contenido1 figure {
     margin-bottom: 0;
 }
@@ -116,7 +118,7 @@ img {
     text-decoration: none;
     list-style: none;
     font-family: 'Open Sans', sans-serif;
-    font-weight:bold;
+    font-weight: bold;
     color: white;
     text-align: center;
 
@@ -256,7 +258,71 @@ a {
     align-items: right;
 }
 
+.artist {
+    display: flex;
+}
 
+.martininf {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.infomartin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.infomartin figure img {
+
+    margin-top: 10px;
+    width: clamp(150px, 80%, 400px);
+    margin-bottom: 0;
+    padding: 0;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.articlemartin figure {
+    max-width: 400px;
+    max-height: 500px;
+    align-items: center;
+
+}
+
+.martingarrixtitulo {
+    color: rgb(255, 255, 255);
+    font-size: 2.5em;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+section h2.titulotop5 {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(109, 109, 109);
+    font-size: 2.0em;
+    
+
+}
+
+.sectiontop5 {
+    margin:0;
+    padding: 0;
+    background: -webkit-linear-gradient(rgb(18, 13, 63), black);
+    background: -o-linear-gradient(rgb(18, 13, 63), black);
+    background: -moz-linear-gradient(rgb(18, 13, 63), black);
+    background: linear-gradient(rgb(18, 13, 63), black);
+}
+
+ol.topcinco li {
+    font-size: 1.2em;
+}
 
 @media (min-width:600px) {
 
@@ -330,9 +396,26 @@ a {
     .listatim {
         margin-left: 2%;
     }
-    .infomartin{
+
+    .infomartin figure img {
+
+        margin-top: 10px;
+        width: clamp(150px, 80%, 400px);
+        margin-bottom: 0;
+        padding: 0;
         align-items: center;
+
     }
+    .infomartin figure img {
+
+        margin-top: 10px;
+        width: clamp(150px, 80%, 400px);
+        margin-bottom: 0;
+        padding: 0;
+        align-items: center;
+        margin-left:20%;
+    }
+    
 }
 
 @media (min-width:900px) {
@@ -432,4 +515,29 @@ a {
         color: rgb(156, 149, 149);
     }
 
+    .infomartin figure img {
+
+        margin-top: 10px;
+        width: clamp(150px, 80%, 400px);
+        margin-bottom: 0;
+        padding: 0;
+        align-items: center;
+        margin-left: 20%;
+
+    }
+
+    .martingarrixtitulo {
+        text-align: center;
+    }
+
+    .sectiontop5 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    .topcinco {
+        margin-left: 5%;
+    }
 }
