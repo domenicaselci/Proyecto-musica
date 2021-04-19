@@ -307,12 +307,12 @@ section h2.titulotop5 {
     padding: 20px;
     background-color: rgb(109, 109, 109);
     font-size: 2.0em;
-    
+
 
 }
 
 .sectiontop5 {
-    margin:0;
+    margin: 0;
     padding: 0;
     background: -webkit-linear-gradient(rgb(18, 13, 63), black);
     background: -o-linear-gradient(rgb(18, 13, 63), black);
@@ -322,6 +322,38 @@ section h2.titulotop5 {
 
 ol.topcinco li {
     font-size: 1.2em;
+}
+
+.primerarespuesta {
+    display: flex;
+    flex-direction: column;
+}
+
+.electronic {
+    align-items: left;
+    max-width: 600px;
+}
+
+.electronic img {
+    align-items: center;
+    width: clamp(150px, 50%, 400px);
+}
+.electronica{
+    color: rgb(255, 255, 255);
+   
+    padding: 0;
+    text-align: left;
+    margin: 0;
+}
+h4{
+    color: darkgray;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    
+}
+.titulossearch{
+    margin-left: 8%;
 }
 
 @media (min-width:600px) {
@@ -406,6 +438,7 @@ ol.topcinco li {
         align-items: center;
 
     }
+
     .infomartin figure img {
 
         margin-top: 10px;
@@ -413,9 +446,15 @@ ol.topcinco li {
         margin-bottom: 0;
         padding: 0;
         align-items: center;
-        margin-left:20%;
+        margin-left: 18%;
     }
-    
+    .electronic img {
+        align-items: center;
+        width: clamp(150px, 50%, 400px);
+    }
+    .titulossearch{
+        margin-left: 5%;
+    }
 }
 
 @media (min-width:900px) {
@@ -498,7 +537,7 @@ ol.topcinco li {
 
     ol {
 
-        width: 83%;
+        width: 100%;
     }
 
     ol li:hover {
@@ -539,5 +578,16 @@ ol.topcinco li {
 
     .topcinco {
         margin-left: 5%;
+        width: 85%;
+    }
+    .electronic figure img {
+        align-items: center;
+        width: 40%;
+    }
+    .electronica:hover{
+        text-decoration: underline;
+    }
+    .titulossearch{
+        margin-left: 3%;
     }
 }
