@@ -12,6 +12,7 @@ nav{
     border: 1px #000;
     border-left: none;
     border-right: none;
+background-color: #000;
 
 }
 nav ul{
@@ -91,7 +92,7 @@ nav ul .search-icon .icon span{
     font-size: 30px;
     text-align: center;
     padding: 30px 10px;
-    background-color: dimgrey;
+    background-color: #353745;
     margin: 0;
 }
 
