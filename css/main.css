@@ -168,6 +168,8 @@ li.tim {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
 
 }
 
@@ -227,11 +229,10 @@ ul {
 
 ol {
 
-    justify-content: space-between;
+
     color: rgb(255, 255, 255);
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
     font-size: 1.2em;
     width: 100%;
 
@@ -247,6 +248,11 @@ ol {
     margin-top: 1%;
     margin-bottom: 1%;
 
+}
+
+article .trespuntitos {
+    align-items: end;
+    text-align: end;
 }
 
 a {
@@ -338,23 +344,45 @@ ol.topcinco li {
     align-items: center;
     width: clamp(150px, 50%, 400px);
 }
-.electronica{
+
+.electronica {
     color: rgb(255, 255, 255);
-   
+
     padding: 0;
     text-align: left;
     margin: 0;
 }
-h4{
+
+h4 {
     color: darkgray;
     font-style: italic;
     margin: 0;
     padding: 0;
-    
+
 }
-.titulossearch{
-    margin-left: 8%;
+
+.titulossearch {
+    margin-left: 3%;
 }
+
+.resultadosbusqueda {
+
+    font-style: italic;
+    color: rgb(145, 145, 145);
+    margin-top: 2%;
+    margin-left: 3%;
+
+}
+
+.busquedaicono {
+    margin-right: 2%;
+}
+
+.canciones {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 @media (min-width:600px) {
 
@@ -426,7 +454,9 @@ h4{
     }
 
     .listatim {
+
         margin-left: 2%;
+
     }
 
     .infomartin figure img {
@@ -448,11 +478,13 @@ h4{
         align-items: center;
         margin-left: 18%;
     }
+
     .electronic img {
         align-items: center;
         width: clamp(150px, 50%, 400px);
     }
-    .titulossearch{
+
+    .titulossearch {
         margin-left: 5%;
     }
 }
@@ -580,14 +612,16 @@ h4{
         margin-left: 5%;
         width: 85%;
     }
+
     .electronic figure img {
         align-items: center;
         width: 40%;
     }
-    .electronica:hover{
+
+    .electronica:hover {
         text-decoration: underline;
     }
-    .titulossearch{
-        margin-left: 3%;
-    }
+
+
+
 }
