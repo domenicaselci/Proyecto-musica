@@ -156,7 +156,7 @@ li.tim {
     background: -webkit-linear-gradient(rgb(216, 87, 28), black);
     background: -o-linear-gradient(rgb(216, 87, 28), black);
     background: -moz-linear-gradient(rgb(216, 87, 28), black);
-    background: linear-gradient(rgb(216, 87, 28), black);
+    
 
 }
 
@@ -170,6 +170,7 @@ li.tim {
     padding: 0;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 10%;
 
 }
 
@@ -324,6 +325,7 @@ section h2.titulotop5 {
     background: -o-linear-gradient(rgb(18, 13, 63), black);
     background: -moz-linear-gradient(rgb(18, 13, 63), black);
     background: linear-gradient(rgb(18, 13, 63), black);
+    margin-bottom: 10%;
 }
 
 ol.topcinco li {
@@ -361,9 +363,10 @@ h4 {
 
 }
 
-.titulossearch{
+.titulossearch {
     margin-left: 9%;
 }
+
 .resultadosbusqueda {
 
     font-style: italic;
@@ -382,6 +385,117 @@ h4 {
     justify-content: space-between;
 }
 
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    margin: 0px 5px;
+    background-color: #424356;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons i {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.copyright {
+    font-family: calibri;
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.Integrantes {
+    font-family: calibri;
+    font-size: 25px;
+    color: #b3b3b3;
+}
+
+.social-icons a:hover {
+    background-color: #353745;
+    transition: all ease 0.5s;
+}
+
+.social-icons a:hover i {
+    color: #424356;
+}
+
+
+.arriba h1 {
+    color: #9697a0;
+    font-size: 20px;
+    font-family: calibri;
+}
+
+.arriba ul li a {
+    font-size: 16px;
+    color: #575a70;
+}
+
+.arriba ul li p {
+    font-size: 14px;
+    color: #575a70;
+    line-height: 10px;
+}
+
+.arriba {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 0px;
+    margin: 5px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.arriba {
+    border-bottom: 1px solid #575a70;
+
+}
+
+.arriba a:hover {
+    color: grey;
+}
+
+.abajo h1 {
+    color: #9697a0;
+    font-size: 20px;
+    font-family: calibri;
+}
+
+
+.abajo {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 3% 0px;
+    margin: 5px;
+    width: 80%;
+    flex-wrap: wrap;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #353745;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
 
 @media (min-width:600px) {
 
@@ -621,8 +735,8 @@ h4 {
         text-decoration: underline;
     }
 
-.titulossearch{
-    margin-left: 3%;
-}
+    .titulossearch {
+        margin-left: 3%;
+    }
 
 }
