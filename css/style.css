@@ -138,14 +138,13 @@ nav ul .search-icon .icon span{
 
 article figure {
     flex-shrink: 0;
-    width: 50%;
 }
 
 figure img {
     height: 100px;
-    width: 50%;
+    width: 100px;
     border-radius: 50%;
-    object-fit: fill;
+    object-fit: cover;
    /* display: block;*/
 }
 
@@ -427,8 +426,11 @@ footer {
 
 @media (max-width: 420px) {
     #portada{
-        margin-left: -10% ;
-        font-size: 50px;
+        font-size: 35px;
+    }
+
+    #portada h2 {
+        width: 100%;
     }
 
     /*.canciones, .album, .artistas{
@@ -449,6 +451,10 @@ footer {
 
     .canciones article {
         width: 100%;
+    }
+    
+    .canciones article div.informacion{
+        margin-left: -5%;
     }
     /*.canciones article figure img {
         width: 70px ;
