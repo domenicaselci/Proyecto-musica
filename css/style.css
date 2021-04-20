@@ -99,14 +99,17 @@ nav ul .search-icon .icon span{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+   /* margin-left: 100px;
+    margin-right: 100px;*/
    /* background-color: rgba(128, 128, 128, 0.226);*/
     border-radius: 20px;
 }
 
 #contenedores h2 {
-    margin-left: 50px;
+   
     width: 100%;
     font-size: 50px;
 }
@@ -119,6 +122,11 @@ nav ul .search-icon .icon span{
     background-color: rgba(15, 15, 15, 0.74);
     border-radius: 40px;
 }
+
+.canciones article {
+    width: calc(50% - 4px);
+}
+
 
 .album article {
     width: calc(50% - 4px);
@@ -137,21 +145,19 @@ figure img {
     width: 100px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
+   /* display: block;*/
 }
 
-.canciones article {
-    width: 450px;
-}
 
 .canciones article div.informacion {
-    width: 120px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 article div.reproductor {
-    margin-left: 20%;
     display: flex;
     margin-top: 50px;
+    margin-right: 5%;
 }
 
 .canciones article figure img {
@@ -286,7 +292,7 @@ a {
 }
 
 .generos article{
-    margin-right:5%;
+   /* margin-right:5%;*/
     width: calc(50%-5px);
     height: 300px;
     border-radius: 40px;
@@ -294,7 +300,7 @@ a {
 
 .generos h1 {
     font-size: 100px;
-    margin-left: 10%;
+  /*  margin-left: 10%;*/
 }
 
 footer {
@@ -338,13 +344,11 @@ footer {
     font-size: 100px;
 }
 
-.generos h1 {
-    font-size: 100px;
-}
-
 .generos {
    flex-direction: column;
-   margin-left: 5%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 30px;
 }
 
 .artistas section {
@@ -387,10 +391,10 @@ footer {
         background-position: center;
     }
 
-    .canciones  article {
+   /* .canciones  article {
         margin-left: 10%;
         width: calc(90% - 4px);
-    }
+    }*/
 
     .album article {
         width: 100%
@@ -420,30 +424,37 @@ footer {
 
 @media (max-width: 420px) {
     #portada{
-        margin-left: -10% ;
+        font-size: 35px;
     }
 
-    #portada strong {
-        font-size: 50px;
-        margin-left: 15%;
-    }
-
-    #contenedores {
-        margin:0;
+    #portada h2 {
+        width: 100%;
     }
 
     /*.canciones, .album, .artistas{
        margin-left: -20%;
     }*/
     
-    .canciones article {
+    /*.canciones article {
        margin-left: 5%;
-    }
+    }*/
 
     .album article {
      width: calc(90% - 4px);
     }
-    .canciones article figure img {
+
+    .canciones {
+        flex-direction: column;
+    }
+
+    .canciones article {
+        width: 100%;
+    }
+    
+    .canciones article div.informacion{
+        margin-left: -5%;
+    }
+    /*.canciones article figure img {
         width: 70px ;
         height: 70px;
     }
@@ -458,7 +469,7 @@ footer {
 
     .reproductor i {
         margin-right: 10px;
-    }
+    }*/
 
     .album {
         flex-direction: column;
@@ -487,7 +498,7 @@ footer {
 
     .generos article {
         width: calc(50%-5px);
-        margin-left: 20%;
+        /*margin-left: 20%;*/
     }
      
     .generos article h2 a {
