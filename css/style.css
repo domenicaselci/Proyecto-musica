@@ -401,6 +401,19 @@ footer {
     font-size: 80px;
 }
 
+.playlist {
+    display: flex;
+}
+
+.playlist article {
+    display: flex;
+    flex-direction: column;
+    width: calc(33% - 5px);
+}
+.playlist article img{
+    border-radius: 20px;
+    width: 100%;
+}
 
 
 @media (max-width: 768px) {
@@ -534,5 +547,9 @@ footer {
     .generos article h2 {
         width: 50%;
         margin-left: 25%;
+    }
+
+    .playlist{
+        flex-direction: column;
     }
 } 
