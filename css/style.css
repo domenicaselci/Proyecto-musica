@@ -326,7 +326,7 @@ footer {
 }
 
 .dance {
-  background-image: url("/img/electro.jpg");
+  background-image: url("/img/dance.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -344,7 +344,7 @@ footer {
   }
 
 .electropop {
-    background-image: url("/img/dance.jpg");
+    background-image: url("/img/electro.jpg");
     background-position: center;
     background-size: cover;
   }
