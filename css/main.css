@@ -90,8 +90,8 @@ nav ul .search-icon .icon span {
     font-size: 18px;
 }
 
-.contenido1 figure {
-    margin-bottom: 0;
+.contenedor{
+    margin-bottom: 10%;
 }
 
 figure img {
@@ -156,7 +156,7 @@ li.tim {
     background: -webkit-linear-gradient(rgb(216, 87, 28), black);
     background: -o-linear-gradient(rgb(216, 87, 28), black);
     background: -moz-linear-gradient(rgb(216, 87, 28), black);
-    
+
 
 }
 
@@ -170,7 +170,7 @@ li.tim {
     padding: 0;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 
 }
 
@@ -273,24 +273,26 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom:10%;
 }
 
 .infomartin {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
 }
 
 
-.infomartin figure img {
+.infomartin img {
 
     margin-top: 10px;
-    width: clamp(150px, 80%, 400px);
+    width: clamp(150px, 60%, 400px);
     margin-bottom: 0;
     padding: 0;
     align-items: center;
-    margin-left: 10%;
+   
 }
 
 .articlemartin figure {
@@ -325,7 +327,7 @@ section h2.titulotop5 {
     background: -o-linear-gradient(rgb(18, 13, 63), black);
     background: -moz-linear-gradient(rgb(18, 13, 63), black);
     background: linear-gradient(rgb(18, 13, 63), black);
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 ol.topcinco li {
@@ -497,6 +499,48 @@ footer {
 
 }
 
+.discografia {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 10%;
+
+}
+
+.titulodiscografia {
+    color: white;
+    text-align: left;
+    width: 100%;
+    font-size: 2.0em;
+
+}
+
+.discos {
+    display: flex;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(15, 15, 15, 0.74);
+    border-radius: 40px;
+    flex-direction: column;
+    width: calc(33% - 5px);
+}
+
+.discos img {
+    border-radius: 20px;
+    width: 100%;
+
+}
+
+.albumesmartin {
+    color: white;
+    font-size: 0.9em;
+    margin-bottom: 0%;
+}
+
+.subtitulosalbum {
+    width: 0.9em;
+}
+
 @media (min-width:600px) {
 
     body {
@@ -572,6 +616,7 @@ footer {
 
     }
 
+
     .infomartin figure img {
 
         margin-top: 10px;
@@ -599,6 +644,23 @@ footer {
 
     .titulossearch {
         margin-left: 5%;
+    }
+
+    .albumesmartin {
+        font-size: 1.1em;
+    }
+
+    .subtitulosalbum {
+        width: 1.1em;
+    }
+
+    .discografia {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .discos {
+        padding: 10px;
     }
 }
 
@@ -738,5 +800,25 @@ footer {
     .titulossearch {
         margin-left: 3%;
     }
+    .albumesmartin {
+        
+        font-size: 1.4em;
+    }
+    .albumesmartin:hover {
+        text-decoration: underline ;
+       
+    }
 
+    .subtitulosalbum {
+        width: 1.4em;
+    }
+
+    .discografia {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .discos {
+        padding: 20px;
+    }
 }
