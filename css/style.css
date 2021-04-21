@@ -181,6 +181,15 @@ article div.reproductor {
     list-style: square;
 }
 
+.faq-planes div h3 {
+    font-size: 25px;
+}
+
+.faq-planes div h4 {
+    font-size: 20px;
+    color: green;
+}
+
 footer {
     background-color: #353745;
     box-sizing: border-box;
