@@ -163,6 +163,17 @@ article div.reproductor {
 .canciones article figure img {
      border-radius: 5px;
 }
+
+.faq {
+    display: flex;
+    background-color: rgba(15, 15, 15, 0.74);
+}
+
+.faq div {
+    width: calc(33% - 5px);
+}
+
+
 footer {
     background-color: #353745;
     box-sizing: border-box;
@@ -491,7 +502,15 @@ footer {
     figure {
         margin-left:15%;
     }
+
+    .faq {
+        flex-direction: column;
+    }
     
+    .faq div {
+        width: 100%;
+    }
+
     .generos h1 {
         font-size: 50px;
     }
