@@ -164,15 +164,22 @@ article div.reproductor {
      border-radius: 5px;
 }
 
-.faq {
+.faq-planes {
     display: flex;
-    background-color: rgba(15, 15, 15, 0.74);
+    /*background-color: rgba(15, 15, 15, 0.74);*/
+    border-radius: 0;
 }
 
-.faq div {
+.faq-planes div {
     width: calc(33% - 5px);
+    padding: 10px;
+    background-color: rgba(15, 15, 15, 0.74);
+    border-radius: 20px;
 }
 
+.faq-planes div ul {
+    list-style: square;
+}
 
 footer {
     background-color: #353745;
@@ -503,11 +510,12 @@ footer {
         margin-left:15%;
     }
 
-    .faq {
+    .faq-planes {
         flex-direction: column;
     }
     
-    .faq div {
+    .faq-planes div {
+        margin-top: 10px;
         width: 100%;
     }
 
