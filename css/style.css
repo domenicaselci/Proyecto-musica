@@ -415,7 +415,34 @@ footer {
     width: 100%;
 }
 
+.favoritos {
+    margin-top: 10px;
+    text-align: left;
 
+}
+
+.fav {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    margin:0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.icons {
+    justify-content: space-between;
+    width: 35px;
+    margin: 0px 5px 0;
+}
+
+.iconitos:hover{
+color:grey;
+}
 @media (max-width: 768px) {
 
     #portada{

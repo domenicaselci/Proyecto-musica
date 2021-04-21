@@ -331,11 +331,17 @@ div.arribamartin {
     margin: 0;
     padding: 10px;
     margin-bottom: 5%;
-    width: 80%;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.listacinco{
+   align-items: center;
 }
 
 ol.topcinco li {
     font-size: 1.2em;
+    
 }
 
 .primerarespuesta {
@@ -545,7 +551,48 @@ footer {
 .subtitulosalbum {
     width: 0.9em;
 }
+.informacionmartin{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+}
+.descripcionmartin{
+    display: flex;
+    flex-direction: column;
+    width: 70% ;
+    max-height: 100%;
+    background-image: url(../img/mgx2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    flex-wrap: wrap;
+    margin: auto;
+    border-radius: 20px;
+    padding: 5px;
+    
+    
+}
+.martingarrixinfo{
+    color: white;
 
+}
+.tituloinformacion{
+    color: white;
+    font-size: 2.0em;
+}
+.descripcionmartin p{
+    flex-wrap: wrap;
+    color: white;
+    width: calc(100% - 10px);
+    text-align: left;
+    
+    
+}
+
+.imagenesartistas{
+    border-radius: 100%;
+}
 @media (min-width:600px) {
 
     body {
@@ -811,7 +858,8 @@ footer {
 
     .topcinco {
         margin-left: 5%;
-        width: 85%;
+        width: 90%;
+        align-items: center;
     }
 
     .electronic figure img {
@@ -854,5 +902,14 @@ footer {
     .discos {
         margin: 3px;
         padding: 15px;
+    }
+    .descripcionmartin{
+        background-position-y: 15%;
+    }
+    .informacionmartin{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 20px;
     }
 }
