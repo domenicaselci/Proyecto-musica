@@ -346,7 +346,19 @@ ol.topcinco li {
 
 .primerarespuesta {
     display: flex;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(15, 15, 15, 0.74);
+    border-radius: 20px;
     flex-direction: column;
+    width: calc(50% - 2px);
+    
+}
+
+.primerarespuesta img{
+    width:100%;
+    border-radius: 20px;
+    margin-bottom: 2%;
 }
 
 .electronic {
@@ -361,7 +373,6 @@ ol.topcinco li {
 
 .electronica {
     color: rgb(255, 255, 255);
-
     padding: 0;
     text-align: left;
     margin: 0;
@@ -375,9 +386,7 @@ h4 {
 
 }
 
-.titulossearch {
-    margin-left: 9%;
-}
+
 
 .resultadosbusqueda {
 
@@ -387,7 +396,10 @@ h4 {
     margin-left: 3%;
 
 }
-
+.resultadoselectronica{
+    width: fit-content;
+    margin-bottom:10% ;
+}
 .busquedaicono {
     margin-right: 2%;
 }
@@ -694,9 +706,7 @@ footer {
         width: clamp(150px, 50%, 400px);
     }
 
-    .titulossearch {
-        margin-left: 5%;
-    }
+    
 
     .albumesmartin {
         font-size: 1.1em;
@@ -871,9 +881,7 @@ footer {
         text-decoration: underline;
     }
 
-    .titulossearch {
-        margin-left: 3%;
-    }
+    
 
     .albumesmartin {
 

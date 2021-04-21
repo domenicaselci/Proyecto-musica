@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -11,42 +12,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <title>Searchresults</title>
-    </head>
+</head>
 
-    <body id="detail">
-        <nav>
+<body id="detail">
+    <nav>
+        <ul>
+            <li class="logo">Music<span>Center</span></li>
+            <div class="items">
+                <li><a href="../proyecto-musica/index.html">Home</a></li>
+                <li><a href="../proyecto-musica/genres.html">Genres</a></li>
+                <li><a href="../proyecto-musica/playlist.html">Playlist</a></li>
+            </div>
+            <li class="search-icon">
+                <form action="../proyecto-musica/search-results.html" method="GET">
+                    <input type="search" placeholder="Descubrí MusicCenter">
+                    <label class="icon">
+                        <span class="fas fa-search"></span>
+                    </label>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="searchresults">
+        <h4 class="resultadosbusqueda"><i class="fas fa-search"></i> Resultados para "Electrónica"</h4>
+        <section class="resultadoselectronica">
+            
+            <article class="primerarespuesta">
+                <img src="img/electro2.jpg" alt="electronica">
+                    <div class="titulossearch">
+                        <h3 class="electronica"><a href="genres.html">Electrónica</a></h3>
+                        <h4>Playlist</h4>
+                    </div>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+
+        <div class="arriba">
+
             <ul>
-                <li class="logo">Music<span>Center</span></li>
-                <div class="items">
-                    <li><a href="../proyecto-musica/index.html">Home</a></li>
-                    <li><a href="../proyecto-musica/genres.html">Genres</a></li>
-                    <li><a href="../proyecto-musica/playlist.html">Playlist</a></li>
-                </div>
-                <li class="search-icon">
-                    <form action="../proyecto-musica/search-results.html" method="GET">
-                        <input type="search" placeholder="Descubrí MusicCenter">
-                        <label class="icon">
-                            <span class="fas fa-search"></span>
-                        </label>
-                    </form>
+                <h1>Company</h1>
+                <li><a href="#">Teams</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+
+            <ul>
+                <h1>About</h1>
+                <li><a href="#">Team & Company</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Our Services</a></li>
+            </ul>
+
+            <ul>
+                <h1>Contact Us</h1>
+                <li>
+                    <p>+54 9 11 2234-5359</p>
+                </li>
+                <li>
+                    <p>Digital House St 14</p>
+                </li>
+                <li>
+                    <p>blablabla@contact.com</p>
                 </li>
             </ul>
-        </nav>
 
-        <main class="searchresults">
-            <section class="resultadoselectronica">
-                <h4 class="resultadosbusqueda"><i class="fas fa-search"></i> Resultados para "Electrónica"</h4>
-                <article class="primerarespuesta">
-                    <figure class="electronic">
-                        <a href="genres.html" ><img src="img/electro2.jpg" alt="electronica">
-                    </figure>
-                    <div class="titulossearch">
-                    <h3 class="electronica"><a href="genres.html">Electrónica</a></h3>
-                    <h4>Playlist</h4>
-                    </div>
-                </article>
-            </section>
 
-        </main>
+        </div>
+
+        <div class="abajo">
+
+            <div class="social">
+                <h1>Social</h1>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="search">
+                <h1>Subscribe to our Newsletter</h1>
+                <input type="email" placeholder="Enter your Email" />
+
+            </div>
+        </div>
+
+        <p class="copyright"> copyright 2020</p>
+        <p class="Integrantes">Franco Leone, Domenica Selci, Tomas Morales</p>
+    </footer>
 </body>
+
 </html>
