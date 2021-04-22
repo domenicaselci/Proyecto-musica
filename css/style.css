@@ -7,6 +7,7 @@ body{
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
+/*Header*/
 nav{
     padding: 10px 40px 10px 70px;
     border: 1px #000;
@@ -72,6 +73,7 @@ nav ul .search-icon .icon span{
     color:white;
     font-size: 18px;
 }
+/*Index*/
 #portada{
     background-image: url(../img/portada.jpg);
     background-size: cover;
@@ -189,7 +191,7 @@ article div.reproductor {
     font-size: 20px;
     color: green;
 }
-
+/*Footer*/
 footer {
     background-color: #353745;
     box-sizing: border-box;
@@ -317,7 +319,10 @@ a {
     color: white;
     font-style: italic;
 }
-
+footer {
+    margin-top: 20px;
+}
+/*Página de generos*/
 .generos article{
    /* margin-right:5%;*/
     width: calc(50%-5px);
@@ -328,10 +333,6 @@ a {
 .generos h1 {
     font-size: 100px;
   /*  margin-left: 10%;*/
-}
-
-footer {
-    margin-top: 20px;
 }
 
 .dance {
@@ -377,7 +378,7 @@ footer {
    margin: 0 auto;
    padding: 30px;
 }
-
+/*Página detalles de género*/
 .artistas section {
     display: flex;
     flex-wrap: wrap;
@@ -423,7 +424,7 @@ footer {
     border-radius: 20px;
     width: 100%;
 }
-
+/*Otros*/
 .favoritos {
     margin-top: 10px;
     text-align: left;
@@ -452,6 +453,7 @@ a {
 .iconitos:hover{
 color:grey;
 }
+/*Responsive Ipad*/
 @media (max-width: 768px) {
 
     #portada{
@@ -488,7 +490,7 @@ color:grey;
         margin-left: 10%;
     }
 }
-
+/*Responsive Celular*/
 @media (max-width: 420px) {
     #portada{
         font-size: 35px;
