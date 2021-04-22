@@ -1,7 +1,10 @@
+/* mobile first estructura detail-album*/
+
 * {
     box-sizing: border-box;
 }
 
+/*body detail para search, album y artist*/
 #detail {
     background-color: rgb(0, 0, 0);
     margin: 0;
@@ -10,6 +13,7 @@
 
 }
 
+/*header*/
 div {
     margin: 0;
     padding: 0;
@@ -90,6 +94,8 @@ nav ul .search-icon .icon span {
     font-size: 18px;
 }
 
+/*detail-album*/
+
 .contenedor {
     margin-bottom: 10%;
 }
@@ -103,11 +109,6 @@ figure img {
 
 img {
     margin-top: 0;
-}
-
-.primero {
-    display: block;
-    text-align: center;
 }
 
 .artista {
@@ -162,18 +163,6 @@ li.tim {
 
 
 
-.listatim {
-    display: flex;
-    text-decoration: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5%;
-
-}
-
 .listagris {
     text-align: center;
     margin-left: 5px;
@@ -191,6 +180,7 @@ li.tim {
 
 }
 
+/*seccion iconos*/
 
 .favoritos {
     margin-top: 10px;
@@ -228,6 +218,8 @@ ul {
     padding: 0;
 }
 
+/*seccion canciones tim*/
+
 ol {
 
 
@@ -237,6 +229,18 @@ ol {
     font-size: 1.2em;
     width: 100%;
 
+
+}
+
+.listatim {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5%;
 
 }
 
@@ -264,6 +268,56 @@ a {
 .mas {
     align-items: right;
 }
+
+.discografia {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 10%;
+
+}
+
+.titulodiscografia {
+    color: white;
+    text-align: left;
+    width: 100%;
+    font-size: 2.0em;
+
+}
+
+.discos {
+    display: flex;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 5px;
+    background-color: rgba(15, 15, 15, 0.74);
+    border-radius: 40px;
+    flex-direction: column;
+    width: calc(33% - 5px);
+}
+
+.discos img {
+    border-radius: 20px;
+    width: 100%;
+
+}
+
+.albumesmartin {
+    color: white;
+    font-size: 0.9em;
+    margin-bottom: 0%;
+}
+
+.subtitulosalbum {
+    width: 0.9em;
+}
+
+.canciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*css detail-artist*/
 
 .artist {
     display: flex;
@@ -335,28 +389,72 @@ div.arribamartin {
     flex-wrap: wrap;
 }
 
-.listacinco{
-   align-items: center;
+.listacinco {
+    align-items: center;
 }
 
 ol.topcinco li {
     font-size: 1.2em;
-    
+
 }
+
+.informacionmartin {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+}
+
+.descripcionmartin {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-height: 100%;
+    background-image: url(../img/mgx2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    flex-wrap: wrap;
+    margin: auto;
+    border-radius: 20px;
+    padding: 5px;
+
+
+}
+
+.martingarrixinfo {
+    color: white;
+
+}
+
+.tituloinformacion {
+    color: white;
+    font-size: 2.0em;
+}
+
+.descripcionmartin p {
+    flex-wrap: wrap;
+    color: white;
+    width: calc(100% - 10px);
+    text-align: left;
+
+}
+
+/*css search-results*/
 
 .primerarespuesta {
     display: flex;
     padding: 10px;
     margin: 10px;
-    background-color: rgba(15, 15, 15, 0.74);
+    background-color: rgba(49, 49, 49, 0.74);
     border-radius: 20px;
     flex-direction: column;
     width: calc(50% - 2px);
-    
+
 }
 
-.primerarespuesta img{
-    width:100%;
+.primerarespuesta img {
+    width: 100%;
     border-radius: 20px;
     margin-bottom: 2%;
 }
@@ -386,8 +484,6 @@ h4 {
 
 }
 
-
-
 .resultadosbusqueda {
 
     font-style: italic;
@@ -396,18 +492,17 @@ h4 {
     margin-left: 3%;
 
 }
-.resultadoselectronica{
+
+.resultadoselectronica {
     width: fit-content;
-    margin-bottom:10% ;
+    margin-bottom: 10%;
 }
+
 .busquedaicono {
     margin-right: 2%;
 }
 
-.canciones {
-    display: flex;
-    justify-content: space-between;
-}
+/*css footer*/
 
 .social-icons a {
     width: 35px;
@@ -518,93 +613,8 @@ footer {
     flex-direction: column;
     align-items: center;
 
-
 }
 
-.discografia {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    margin-bottom: 10%;
-
-}
-
-.titulodiscografia {
-    color: white;
-    text-align: left;
-    width: 100%;
-    font-size: 2.0em;
-
-}
-
-.discos {
-    display: flex;
-    padding: 5px;
-    margin: 3px;
-    margin-bottom: 5px;
-    background-color: rgba(15, 15, 15, 0.74);
-    border-radius: 40px;
-    flex-direction: column;
-    width: calc(33% - 5px);
-}
-
-.discos img {
-    border-radius: 20px;
-    width: 100%;
-
-}
-
-.albumesmartin {
-    color: white;
-    font-size: 0.9em;
-    margin-bottom: 0%;
-}
-
-.subtitulosalbum {
-    width: 0.9em;
-}
-.informacionmartin{
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    padding: 10px;
-}
-.descripcionmartin{
-    display: flex;
-    flex-direction: column;
-    width: 70% ;
-    max-height: 100%;
-    background-image: url(../img/mgx2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    flex-wrap: wrap;
-    margin: auto;
-    border-radius: 20px;
-    padding: 5px;
-    
-    
-}
-.martingarrixinfo{
-    color: white;
-
-}
-.tituloinformacion{
-    color: white;
-    font-size: 2.0em;
-}
-.descripcionmartin p{
-    flex-wrap: wrap;
-    color: white;
-    width: calc(100% - 10px);
-    text-align: left;
-    
-    
-}
-
-.imagenesartistas{
-    border-radius: 100%;
-}
 @media (min-width:600px) {
 
     body {
@@ -706,7 +716,7 @@ footer {
         width: clamp(150px, 50%, 400px);
     }
 
-    
+
 
     .albumesmartin {
         font-size: 1.1em;
@@ -719,13 +729,15 @@ footer {
     .discografia {
         margin: 10px;
         padding: 10px;
-    }    
+    }
+
     .infow4l {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 5%;
     }
+
     .infow4l img {
         margin-top: 10px;
         width: clamp(150px, 60%, 400px);
@@ -733,6 +745,7 @@ footer {
         padding: 0;
         align-items: center;
     }
+
     .w4ltitulo {
         color: rgb(255, 255, 255);
         font-size: 2.5em;
@@ -740,12 +753,15 @@ footer {
         padding: 0;
         text-align: center;
     }
+
     .discos {
         padding: 10px;
     }
-}
-.listado{
+
+
+.listado {
     text-align: center;
+}
 }
 @media (min-width:900px) {
 
@@ -789,8 +805,6 @@ footer {
 
         text-align: left;
         margin-top: 90%;
-
-
     }
 
     ul.albumtim {
@@ -807,16 +821,11 @@ footer {
         margin-right: 0;
         padding-right: 0;
         width: 85%;
-
-
-
     }
 
     .fav {
         margin-left: 12%;
     }
-
-
 
     .articletim {
         display: flex;
@@ -881,8 +890,6 @@ footer {
         text-decoration: underline;
     }
 
-    
-
     .albumesmartin {
 
         font-size: 1.4em;
@@ -901,7 +908,8 @@ footer {
         margin: 10px;
         padding: 20px;
     }
-    .ladeltrack{
+
+    .ladeltrack {
         width: 300px;
         margin: 30px;
 
@@ -911,10 +919,12 @@ footer {
         margin: 3px;
         padding: 15px;
     }
-    .descripcionmartin{
+
+    .descripcionmartin {
         background-position-y: 15%;
     }
-    .informacionmartin{
+
+    .informacionmartin {
         display: flex;
         flex-direction: column;
         margin: 10px;
