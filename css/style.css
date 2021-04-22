@@ -586,6 +586,11 @@ color:grey;
     }
 
     .playlist{
-        flex-direction: column;
+        flex-wrap: wrap;
     }
+
+    #portada-gen h1{
+        font-size: 50px;
+    }
+
 } 
