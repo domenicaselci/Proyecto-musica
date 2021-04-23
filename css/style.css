@@ -107,7 +107,7 @@ nav ul .search-icon .icon span {
     margin: 0;
 }
 
-#contenedores {
+.contenedores {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -121,13 +121,13 @@ nav ul .search-icon .icon span {
     border-radius: 20px;
 }
 
-#contenedores h2 {
+.contenedores h2 {
 
     width: 100%;
     font-size: 50px;
 }
 
-#contenedores article {
+.contenedores article {
     display: flex;
     padding: 10px;
     margin-bottom: 5px;
@@ -136,16 +136,16 @@ nav ul .search-icon .icon span {
     border-radius: 40px;
 }
 
-.canciones article {
+#canciones article {
     width: calc(50% - 4px);
 }
 
 
-.album article {
+#album article {
     width: calc(50% - 4px);
 }
 
-.artistas article {
+#artistas article {
     width: calc(50% - 4px);
 }
 
@@ -162,7 +162,7 @@ figure img {
 }
 
 
-.canciones article div.informacion {
+#canciones article div.informacion {
     width: 50%;
     margin: 0 auto;
 }
@@ -173,32 +173,32 @@ article div.reproductor {
     margin-right: 5%;
 }
 
-.canciones article figure img {
+#canciones article figure img {
     border-radius: 5px;
 }
 
-.faq-planes {
+#faq-planes {
     display: flex;
     /*background-color: rgba(15, 15, 15, 0.74);*/
     border-radius: 0;
 }
 
-.faq-planes div {
+#faq-planes div {
     width: calc(33% - 5px);
     padding: 10px;
     background-color: rgba(15, 15, 15, 0.74);
     border-radius: 20px;
 }
 
-.faq-planes div ul {
+#faq-planes div ul {
     list-style: square;
 }
 
-.faq-planes div h3 {
+#faq-planes div h3 {
     font-size: 25px;
 }
 
-.faq-planes div h4 {
+#faq-planes div h4 {
     font-size: 20px;
     color: green;
 }
@@ -480,31 +480,31 @@ a {
         width: calc(90% - 4px);
     }*/
 
-    .album article {
+    #album article {
         width: 100%
     }
 
-    .album {
+    #album {
         flex-direction: column;
     }
 
-    .album article figure img {
+    #album article figure img {
         margin-left: 25%;
     }
 
-    .album article .informacion h3 {
+    #album article .informacion h3 {
         margin-left: 20px;
     }
 
-    .artistas article {
+    #artistas article {
         flex-direction: column;
     }
 
-    .artistas article figure img {
+    #artistas article figure img {
         margin-left: 25%;
     }
 
-    .artistas article .informacion {
+    #artistas article .informacion {
         margin-left: 10%;
     }
 }
@@ -527,19 +527,19 @@ a {
        margin-left: 5%;
     }*/
 
-    .album article {
+    #album article {
         width: calc(90% - 4px);
     }
 
-    .canciones {
+    #canciones {
         flex-direction: column;
     }
 
-    .canciones article {
+    #canciones article {
         width: 100%;
     }
 
-    .canciones article div.informacion {
+    #canciones article div.informacion {
         margin-left: -5%;
     }
 
@@ -560,20 +560,20 @@ a {
         margin-right: 10px;
     }*/
 
-    .album {
+    #album {
         flex-direction: column;
     }
 
-    .album article {
+    #album article {
         flex-direction: column;
         margin-left: 5%;
     }
 
-    .artistas {
+    #artistas {
         flex-direction: column;
     }
 
-    .artistas article {
+    #artistas article {
         width: calc(90% - 4px);
         margin-left: 5%;
     }
@@ -582,11 +582,11 @@ a {
         margin-left: 15%;
     }
 
-    .faq-planes {
+    #faq-planes {
         flex-direction: column;
     }
 
-    .faq-planes div {
+    #faq-planes div {
         margin-top: 10px;
         width: 100%;
     }
