@@ -390,7 +390,7 @@ footer {
 }
 
 /*Página detalles de género*/
-.artistas section {
+/*#artistas section {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -398,8 +398,8 @@ footer {
     margin-left: 100px;
     margin-right: 100px;
     /* background-color: rgba(128, 128, 128, 0.226);*/
-    border-radius: 20px;
-}
+    /*border-radius: 20px;
+}*/
 
 #portada-gen {
     background-image: url(../img/electro.jpg);
@@ -423,17 +423,17 @@ footer {
     font-size: 80px;
 }
 
-.playlist {
+#playlist {
     display: flex;
 }
 
-.playlist article {
+#playlist article {
     display: flex;
     flex-direction: column;
     width: calc(33% - 5px);
 }
 
-.playlist article img {
+#playlist article img {
     border-radius: 20px;
     width: 100%;
 }
@@ -609,7 +609,7 @@ a {
         margin-left: 25%;
     }
 
-    .playlist {
+    #playlist {
         flex-wrap: wrap;
     }
 
