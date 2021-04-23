@@ -1,21 +1,25 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
-    margin:0;
+
+body {
+    margin: 0;
     background-color: rgb(27, 27, 27);
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
-nav{
+
+/*Header*/
+nav {
     padding: 10px 40px 10px 70px;
     border: 1px #000;
     border-left: none;
     border-right: none;
-background-color: #000;
+    background-color: #000;
 
 }
-nav ul{
+
+nav ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -23,34 +27,39 @@ nav ul{
     justify-content: center;
 
 }
-nav ul li.logo{
+
+nav ul li.logo {
     flex: 1;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 30px;
     font-weight: 200;
 }
-nav ul li.logo span{
-font-weight: 800;
+
+nav ul li.logo span {
+    font-weight: 800;
 }
 
-nav ul div.items{
+nav ul div.items {
     padding: 0 25px;
     display: inline-flex;
 }
-nav ul div.items a{
+
+nav ul div.items a {
     text-decoration: none;
     font-size: 18px;
     padding: 0 12px;
 
 }
-nav ul .search-icon{
+
+nav ul .search-icon {
     height: 40px;
     width: 240px;
     display: flex;
-    background: #f2f2f2;
+    background: black;
     border-radius: 5px;
 }
-nav ul .search-icon input{
+
+nav ul .search-icon input {
     height: 100%;
     width: 200px;
     border: none;
@@ -61,26 +70,30 @@ nav ul .search-icon input{
     border-radius: 5px 0 0 5px;
 
 }
-nav ul .search-icon .icon{
+
+nav ul .search-icon .icon {
     height: 100%;
     width: 40px;
     line-height: 40px;
     text-align: center;
     background: #000;
 }
-nav ul .search-icon .icon span{
-    color:white;
+
+nav ul .search-icon .icon span {
+    color: white;
     font-size: 18px;
 }
-#portada{
+
+/*Index*/
+#portada {
     background-image: url(../img/portada.jpg);
     background-size: cover;
     background-position: center;
     min-height: 60vh;
     padding: 100px;
-    margin:0;
+    margin: 0;
     font-size: 80px;
-  /* text-align: start;
+    /* text-align: start;
     display: flex;
     justify-content: space-between;
     flex-direction: column;*/
@@ -94,7 +107,7 @@ nav ul .search-icon .icon span{
     margin: 0;
 }
 
- #contenedores {
+#contenedores {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -102,14 +115,14 @@ nav ul .search-icon .icon span{
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px;
-   /* margin-left: 100px;
+    /* margin-left: 100px;
     margin-right: 100px;*/
-   /* background-color: rgba(128, 128, 128, 0.226);*/
+    /* background-color: rgba(128, 128, 128, 0.226);*/
     border-radius: 20px;
 }
 
 #contenedores h2 {
-   
+
     width: 100%;
     font-size: 50px;
 }
@@ -118,7 +131,7 @@ nav ul .search-icon .icon span{
     display: flex;
     padding: 10px;
     margin-bottom: 5px;
-   /* width: calc(50% - 4px);*/
+    /* width: calc(50% - 4px);*/
     background-color: rgba(15, 15, 15, 0.74);
     border-radius: 40px;
 }
@@ -145,7 +158,7 @@ figure img {
     width: 100px;
     border-radius: 50%;
     object-fit: cover;
-   /* display: block;*/
+    /* display: block;*/
 }
 
 
@@ -161,7 +174,7 @@ article div.reproductor {
 }
 
 .canciones article figure img {
-     border-radius: 5px;
+    border-radius: 5px;
 }
 
 .faq-planes {
@@ -190,6 +203,7 @@ article div.reproductor {
     color: green;
 }
 
+/*Footer*/
 footer {
     background-color: #353745;
     box-sizing: border-box;
@@ -198,7 +212,7 @@ footer {
     align-items: center;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -208,66 +222,63 @@ ul{
     width: 170px;
 } */
 
-.social-icons a{
+.social-icons a {
     width: 35px;
     height: 35px;
     margin: 0px 5px;
     background-color: #424356;
-    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.social-icons{
+.social-icons {
     display: flex;
 }
 
-.social-icons i{
+.social-icons i {
     color: #ffffff;
     font-size: 14px;
 }
 
-.copyright{
-    font-family: calibri;
+.copyright {
     font-size: 12px;
     color: #b3b3b3;
 }
 
-.Integrantes{
-    font-family: calibri;
+.Integrantes {
     font-size: 25px;
     color: #b3b3b3;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     background-color: #353745;
     transition: all ease 0.5s;
 }
 
-.social-icons a:hover i{
+.social-icons a:hover i {
     color: #424356;
 }
 
 
-.arriba h1{
+.arriba h1 {
     color: #9697a0;
     font-size: 20px;
-    font-family: calibri;
 }
 
-.arriba ul li a{
+.arriba ul li a {
     font-size: 16px;
     color: #575a70;
 }
 
-.arriba ul li p{
+.arriba ul li p {
     font-size: 14px;
     color: #575a70;
     line-height: 10px;
 }
 
-.arriba{
+.arriba {
     display: flex;
     justify-content: space-between;
     padding: 3% 0px;
@@ -276,23 +287,22 @@ ul{
     flex-wrap: wrap;
 }
 
-.arriba{
+.arriba {
     border-bottom: 1px solid #575a70;
-    
+
 }
 
-.arriba a:hover{
+.arriba a:hover {
     color: grey;
 }
-   
-.abajo h1{
+
+.abajo h1 {
     color: #9697a0;
     font-size: 20px;
-    font-family: calibri;
 }
 
 
-.abajo{
+.abajo {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
@@ -302,7 +312,7 @@ ul{
     flex-wrap: wrap;
 }
 
-.imagenes{
+.imagenes {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
@@ -318,8 +328,13 @@ a {
     font-style: italic;
 }
 
-.generos article{
-   /* margin-right:5%;*/
+footer {
+    margin-top: 20px;
+}
+
+/*Página de generos*/
+.generos article {
+    /* margin-right:5%;*/
     width: calc(50%-5px);
     height: 300px;
     border-radius: 40px;
@@ -327,42 +342,38 @@ a {
 
 .generos h1 {
     font-size: 100px;
-  /*  margin-left: 10%;*/
-}
-
-footer {
-    margin-top: 20px;
+    /*  margin-left: 10%;*/
 }
 
 .dance {
-  background-image: url("/proyecto-musica/img/dance.jpg");
-  background-position: center;
-  background-size: cover;
+    background-image: url("/proyecto-musica/img/dance.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .rocknacional {
     background-image: url("/proyecto-musica/img/rocknacional.jpg");
     background-position: center;
     background-size: cover;
-  }
+}
 
 .rock {
     background-image: url("/proyecto-musica/img/portada2.jpg");
     background-position: center;
     background-size: cover;
-  }
+}
 
 .electropop {
     background-image: url("/proyecto-musica/img/electro2.jpg");
     background-position: center;
     background-size: cover;
-  }
+}
 
 .cinematografica {
     background-image: url("/proyecto-musica/img/cinemat.jpg");
     background-position: center;
     background-size: cover;
-  }
+}
 
 .generos article h2 a {
     font-style: normal;
@@ -372,12 +383,13 @@ footer {
 }
 
 .generos {
-   flex-direction: column;
-   max-width: 1200px;
-   margin: 0 auto;
-   padding: 30px;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
+/*Página detalles de género*/
 .artistas section {
     display: flex;
     flex-wrap: wrap;
@@ -385,7 +397,7 @@ footer {
     margin-top: 30px;
     margin-left: 100px;
     margin-right: 100px;
-   /* background-color: rgba(128, 128, 128, 0.226);*/
+    /* background-color: rgba(128, 128, 128, 0.226);*/
     border-radius: 20px;
 }
 
@@ -398,7 +410,8 @@ footer {
     display: flex;
     margin: 0;
 }
-#portada-gen .titulo{
+
+#portada-gen .titulo {
     text-align: start;
     padding: 100px;
     display: flex;
@@ -419,11 +432,13 @@ footer {
     flex-direction: column;
     width: calc(33% - 5px);
 }
-.playlist article img{
+
+.playlist article img {
     border-radius: 20px;
     width: 100%;
 }
 
+/*Otros*/
 .favoritos {
     margin-top: 10px;
     text-align: left;
@@ -434,7 +449,7 @@ footer {
     display: flex;
     list-style: none;
     text-decoration: none;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
@@ -449,16 +464,18 @@ a {
     margin: 0px 5px 0;
 }
 
-.iconitos:hover{
-color:grey;
+.iconitos:hover {
+    color: grey;
 }
+
+/*Responsive Ipad*/
 @media (max-width: 768px) {
 
-    #portada{
+    #portada {
         background-position: center;
     }
 
-   /* .canciones  article {
+    /* .canciones  article {
         margin-left: 10%;
         width: calc(90% - 4px);
     }*/
@@ -466,12 +483,15 @@ color:grey;
     .album article {
         width: 100%
     }
+
     .album {
         flex-direction: column;
     }
-    .album article figure img{
+
+    .album article figure img {
         margin-left: 25%;
     }
+
     .album article .informacion h3 {
         margin-left: 20px;
     }
@@ -489,8 +509,9 @@ color:grey;
     }
 }
 
+/*Responsive Celular*/
 @media (max-width: 420px) {
-    #portada{
+    #portada {
         font-size: 35px;
     }
 
@@ -501,13 +522,13 @@ color:grey;
     /*.canciones, .album, .artistas{
        margin-left: -20%;
     }*/
-    
+
     /*.canciones article {
        margin-left: 5%;
     }*/
 
     .album article {
-     width: calc(90% - 4px);
+        width: calc(90% - 4px);
     }
 
     .canciones {
@@ -517,10 +538,11 @@ color:grey;
     .canciones article {
         width: 100%;
     }
-    
-    .canciones article div.informacion{
+
+    .canciones article div.informacion {
         margin-left: -5%;
     }
+
     /*.canciones article figure img {
         width: 70px ;
         height: 70px;
@@ -543,8 +565,8 @@ color:grey;
     }
 
     .album article {
-         flex-direction: column;
-         margin-left: 5%;
+        flex-direction: column;
+        margin-left: 5%;
     }
 
     .artistas {
@@ -553,16 +575,17 @@ color:grey;
 
     .artistas article {
         width: calc(90% - 4px);
-        margin-left:5%;
+        margin-left: 5%;
     }
+
     figure {
-        margin-left:15%;
+        margin-left: 15%;
     }
 
     .faq-planes {
         flex-direction: column;
     }
-    
+
     .faq-planes div {
         margin-top: 10px;
         width: 100%;
@@ -576,16 +599,22 @@ color:grey;
         width: calc(50%-5px);
         /*margin-left: 20%;*/
     }
-     
+
     .generos article h2 a {
-          font-size: 40px;
+        font-size: 60px;
     }
+
     .generos article h2 {
         width: 50%;
         margin-left: 25%;
     }
 
-    .playlist{
-        flex-direction: column;
+    .playlist {
+        flex-wrap: wrap;
     }
-} 
+
+    #portada-gen h1 {
+        font-size: 50px;
+    }
+
+}
