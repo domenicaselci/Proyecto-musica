@@ -237,7 +237,6 @@ ul{
 }
 
 .Integrantes{
-    font-family: calibri;
     font-size: 25px;
     color: #b3b3b3;
 }
@@ -255,7 +254,6 @@ ul{
 .arriba h1{
     color: #9697a0;
     font-size: 20px;
-    font-family: calibri;
 }
 
 .arriba ul li a{
