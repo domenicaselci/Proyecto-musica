@@ -235,6 +235,7 @@ ol {
 .listatim {
     display: flex;
     text-decoration: none;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -312,11 +313,6 @@ a {
     width: 0.9em;
 }
 
-.canciones {
-    display: flex;
-    justify-content: space-between;
-}
-
 /*css detail-artist*/
 
 .artist {
@@ -391,11 +387,17 @@ div.arribamartin {
 
 .listacinco {
     align-items: center;
+    flex-wrap: wrap;
 }
 
 ol.topcinco li {
     font-size: 1.2em;
+    }
 
+.cancionesconplay{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .informacionmartin {
@@ -729,6 +731,7 @@ footer {
     .discografia {
         margin: 10px;
         padding: 10px;
+        flex-wrap: wrap;
     }
 
     .infow4l {
@@ -759,10 +762,11 @@ footer {
     }
 
 
-.listado {
-    text-align: center;
+    .listado {
+        text-align: center;
+    }
 }
-}
+
 @media (min-width:900px) {
 
     body {
