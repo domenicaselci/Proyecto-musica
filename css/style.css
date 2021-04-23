@@ -167,7 +167,7 @@ figure img {
     margin: 0 auto;
 }
 
-article div.reproductor {
+#canciones article div.reproductor {
     display: flex;
     margin-top: 50px;
     margin-right: 5%;
