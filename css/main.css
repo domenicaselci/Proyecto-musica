@@ -150,10 +150,11 @@ li.tim {
 
 .contenido1 {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
     margin-top: 0;
-    padding: 0;
+    padding: 10px;
     background: -webkit-linear-gradient(rgb(216, 87, 28), black);
     background: -o-linear-gradient(rgb(216, 87, 28), black);
     background: -moz-linear-gradient(rgb(216, 87, 28), black);
@@ -184,7 +185,7 @@ li.tim {
 
 .favoritos {
     margin-top: 10px;
-    margin-left: 10px;
+
 
 }
 
@@ -192,6 +193,7 @@ li.tim {
     display: flex;
     list-style: none;
     text-decoration: none;
+    
 }
 
 a {
@@ -227,7 +229,8 @@ ol {
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
-    width: 100%;
+    width: 90%;
+    margin: 0;
 
 
 }
@@ -250,7 +253,6 @@ ol {
     width: 100%;
     text-decoration: none;
     list-style: none;
-    margin-right: 10%;
     margin-top: 1%;
     margin-bottom: 1%;
 
@@ -259,6 +261,11 @@ ol {
 article .trespuntitos {
     align-items: end;
     text-align: end;
+}
+
+.albumtimcanciones {
+    width: 100%;
+    align-items: center;
 }
 
 a {
@@ -362,16 +369,17 @@ a {
     text-align: center;
 }
 
-section h2.titulotop5 {
+h2.titulotop5 {
     color: rgb(255, 255, 255);
-    margin: 0;
+    margin-bottom: 2%;
     text-align: left;
     font-size: 2.0em;
+    text-align: left;
 
 
 }
 
-div.arribamartin {
+section.arribamartin {
     background: -webkit-linear-gradient(rgb(18, 13, 63), black);
     background: -o-linear-gradient(rgb(18, 13, 63), black);
     background: -moz-linear-gradient(rgb(18, 13, 63), black);
@@ -382,7 +390,7 @@ div.arribamartin {
     margin: 0;
     padding: 10px;
     margin-bottom: 5%;
-    width: 90%;
+    width: 100%;
     flex-wrap: wrap;
 }
 
@@ -393,12 +401,14 @@ div.arribamartin {
 
 ol.topcinco li {
     font-size: 1.0em;
-    }
+}
 
-.cancionesconplay{
+.cancionesconplay {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    margin: auto;
 }
 
 .informacionmartin {
@@ -628,6 +638,7 @@ footer {
     .contenido1 {
         display: flex;
         flex-direction: column;
+
     }
 
 
@@ -719,6 +730,11 @@ footer {
         width: clamp(150px, 50%, 400px);
     }
 
+    .sectiontop5 {
+        margin: 10px;
+        padding: 10px;
+
+    }
 
 
     .albumesmartin {
@@ -782,8 +798,8 @@ footer {
 
     .contenido1 {
         display: flex;
-        flex-direction: row;
-        width: 100%;
+        flex-direction: column;
+        margin: auto;
 
     }
 
@@ -806,7 +822,16 @@ footer {
         padding: 0 0;
         margin-top: 20%;
     }
+    .primeraparte{
+        display: flex;
+        margin-left: 10%;
+        
+    }
 
+    .fav{
+        margin-top: 2%;
+        margin-left: 22%;
+    }
     .albumtim {
 
         text-align: left;
@@ -829,20 +854,19 @@ footer {
         width: 85%;
     }
 
-    .fav {
-        margin-left: 12%;
-    }
+    
+
 
     .articletim {
         display: flex;
-        width: 90%;
-        margin-left: 15%;
+        width: 100%;
 
     }
 
     ol {
 
-        width: 100%;
+        width: 60%;
+        margin: auto;
     }
 
     ol li:hover {
@@ -877,14 +901,16 @@ footer {
     .sectiontop5 {
         display: flex;
         flex-direction: column;
-        margin: 20px;
-        padding: 10px;
+        margin: 10px;
+        padding: 20px;
+
     }
 
     .topcinco {
-        margin-left: 5%;
-        width: 90%;
-        align-items: center;
+
+        width: 60%;
+        margin: auto;
+        flex-wrap: wrap;
     }
 
     .electronic figure img {
