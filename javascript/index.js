@@ -34,7 +34,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
 
 let topAlbums = document.querySelector("#album");
 
-fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums`)
+fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums`) 
 .then(function(response){
     return response.json();
 })

@@ -345,6 +345,11 @@ footer {
     /*  margin-left: 10%;*/
 }
 
+#deezerGen{
+    background-position: center;
+    background-size: cover;
+}
+
 .dance {
     background-image: url("/proyecto-musica/img/dance.jpg");
     background-position: center;
