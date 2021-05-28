@@ -384,7 +384,7 @@ footer {
     font-style: normal;
     font-weight: bolder;
     margin-left: 10%;
-    font-size: 100px;
+    font-size: 300%;
 }
 
 .generos {
@@ -512,6 +512,10 @@ a {
     #artistas article .informacion {
         margin-left: 10%;
     }
+    .generos article h2 a {
+        margin-left: 10%;
+        font-size: 300%;
+    }
 }
 
 /*Responsive Celular*/
@@ -606,7 +610,8 @@ a {
     }
 
     .generos article h2 a {
-        font-size: 60px;
+        margin-left: -40%;
+        font-size: 150%;
     }
 
     .generos article h2 {
