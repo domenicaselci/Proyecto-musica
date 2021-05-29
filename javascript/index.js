@@ -95,4 +95,20 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
     console.log(error);
 })
 
+// let planBasic = document.querySelector(`#planBasico`);
+// let planPremium = document.querySelector(`#planPremium`);
+// let planPremiumFam = document.querySelector(`#planPremiumFam`);
+
+// planBasic.addEventListener("click", function(){
+//     planBasic.style.background = "rgba(109, 88, 19, 0.74)";
+// })
+
+// planPremium.addEventListener("click", function(){
+//     planPremium.style.background = "rgba(109, 88, 19, 0.74)";
+// })
+
+// planPremiumFam.addEventListener("click", function(){
+//     planPremiumFam.style.background = "rgba(109, 88, 19, 0.74)";
+// })
+
 })
