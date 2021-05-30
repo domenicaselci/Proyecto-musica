@@ -95,20 +95,68 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
     console.log(error);
 })
 
-// let planBasic = document.querySelector(`#planBasico`);
-// let planPremium = document.querySelector(`#planPremium`);
-// let planPremiumFam = document.querySelector(`#planPremiumFam`);
+let planBasic = document.querySelector(`#planBasico`);
+let planPremium = document.querySelector(`#planPremium`);
+let planPremiumFam = document.querySelector(`#planPremiumFam`);
+
+planBasic.addEventListener("mouseover", function(){
+    planBasic.classList.toggle(`planSelec`);
+})
+planBasic.addEventListener("mouseout", function(){
+    planBasic.classList.toggle(`planSelec`);
+})
+
+planPremium.addEventListener("mouseover", function(){
+    planPremium.classList.toggle(`planSelec`);
+})
+planPremium.addEventListener("mouseout", function(){
+    planPremium.classList.toggle(`planSelec`);
+})
+
+planPremiumFam.addEventListener("mouseover", function(){
+    planPremiumFam.classList.toggle(`planSelec`);
+})
+planPremiumFam.addEventListener("mouseout", function(){
+    planPremiumFam.classList.toggle(`planSelec`);
+})
 
 // planBasic.addEventListener("click", function(){
-//     planBasic.style.background = "rgba(109, 88, 19, 0.74)";
+//     let planSeleccionado = document.querySelectorAll(`.planSelec`);
+//     if (planSeleccionado.length === 0){
+//         planBasic.classList.toggle(`planSelec`);
+//         console.log(planSeleccionado);
+//     }else if (planSeleccionado.includes(planBasic) === true && planSeleccionado.length === 1){
+//         planBasic.classList.toggle(`planSelec`);
+//     }
+//     else{
+//         alert("Ya tienes seleccionado un plan")
+//     }
 // })
 
 // planPremium.addEventListener("click", function(){
-//     planPremium.style.background = "rgba(109, 88, 19, 0.74)";
+//     let planSeleccionado = document.querySelectorAll(`.planSelec`);
+//     if (planSeleccionado.length === 0){
+//         planPremium.classList.toggle(`planSelec`);
+//         console.log(planSeleccionado.length);
+//     }else if (planSeleccionado.includes(planPremium) === true){
+//         planBasic.classList.toggle(`planSelec`);
+//     }
+//     else {
+//         alert("Ya tienes seleccionado un plan")
+//     }
 // })
 
 // planPremiumFam.addEventListener("click", function(){
-//     planPremiumFam.style.background = "rgba(109, 88, 19, 0.74)";
+//     let planSeleccionado = document.querySelectorAll(`.planSelec`);
+//     if (planSeleccionado.length === 0){
+//         planPremiumFam.classList.toggle(`planSelec`);
+//         console.log(planSeleccionado.length);
+//     }else if (planSeleccionado.includes(planPremiumFam) === true && planSeleccionado.length === 1){
+//         planBasic.classList.toggle(`planSelec`);
+//     }
+//     else {
+//         alert("Ya tienes seleccionado un plan")
+//     }
 // })
 
 })

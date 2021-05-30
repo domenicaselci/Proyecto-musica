@@ -210,6 +210,10 @@ figure img {
     color: green;
 }
 
+#faq-planes div.planSelec {
+    background-color: rgb(0, 0, 0);
+}
+
 /*Footer*/
 footer {
     background-color: #353745;
