@@ -1,21 +1,20 @@
 window.addEventListener("load", function () {
 
-    let cancionesAlbum = document.querySelector(".contenidoprincipal");
+    let cancionesAlbum = document.querySelector("#contenidoprincipal");
 
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127`)
+    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127")
         .then(function (response) {
             return response.json();
         })
         .then(function (datos) {
-            let tracksAvicci = datos.data;
-            for (let i = 0; i < tracksAvicci.length; i++) {
-                let imagenAlbum = tracksAvicci[0].cover_big;
-                let nombreArtista = tracksAvicci[1].contributors.name;
-                let tracksDos = tracksAvicci[0].title;
-                let nombresCanciones = tracksAvicci[2].tracks.data.title;
+            let tracksAlbum = datos;
+            for (let i = 0; i < tracksAlbum.length; i++) {
+                let imagenAlbum = tracksAlbum[0].cover_big;
+                let nombreArtista = tracksAlbum[1].contributors.name;
+                let tracksDos = tracksAlbum[0].title;
+                let nombresCanciones = tracksAlbum[2].tracks.data.title;
                 cancionesAlbum.innerHTML += `
-            <section>
-                           <article class="contenido1">
+          <article class="contenido1">
             <div class="primeraparte">
             <figure>
             <img src="${imagenAlbum}" alt="${tracksDos}">
@@ -48,8 +47,7 @@ window.addEventListener("load", function () {
                     <div><a href="#"><i class="fas fa-play" title="Play"></i> ${nombresCanciones}</a></div>
                     <a href="#" title="Añadir a mi playlist" class="mas"><i class="fas fa-ellipsis-h"></i></a>
                 </li>
-        </section>
-            `
+                 `
             }
 
         })
