@@ -418,7 +418,7 @@ footer {
 }*/
 
 #portada-gen {
-    background-image: url(../img/electro.jpg);
+    /* background-image: url(); */
     background-size: cover;
     background-position: center;
     min-height: 40vh;
