@@ -55,14 +55,29 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums
                 <div class="informacion">
                     <h3><a href="detail-artist.html?id=${artistId}">${artistAlbum}</a> - <a href="detail-album.html?id=${albumId}">${tituloAlbum}</a></h3>
                     <ol class="cancionesalbum">
-                        <li>▷ <a href="detail-track.html">Heaven</a> </li>
-                        <li>▷ <a href="detail-track.html">SOS</a></li>
-                        <li>▷ <a href="detail-track.html">Tough Love</a></li>
-                        <li>▷ <a href="detail-track.html">Bad Reputation</a></li>
                     </ol>
                 </div>
             </article>
-        `
+            `;
+            fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${albumId}/tracks`)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                let listaCanciones = document.querySelectorAll(`.cancionesalbum`);
+                let listaFinal = listaCanciones[i];
+                console.log(listaFinal);
+                console.log(listaCanciones);
+                let lista = data.data;
+                for(let o = 0; o < 5; o++){
+                    let cancionNombre = lista[o].title;
+                    let cancionId = lista[o].id;
+                    listaFinal.innerHTML += `
+                    <li>▷ <a href="detail-track.html?id=${cancionId}">${cancionNombre}</a> </li>
+                    `
+                }
+
+            })
     }
 })
 .catch(function(error){
@@ -93,6 +108,8 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
             </article>
         `
     }
+
+
 })
 .catch (function(error){
     console.log(error);
