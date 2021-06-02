@@ -418,7 +418,7 @@ footer {
 }*/
 
 #portada-gen {
-    /* background-image: url(); */
+    background-image: url(https://cdns-images.dzcdn.net/images/misc/db7a604d9e7634a67d45cfc86b48370a/1000x1000-000000-80-0-0.jpg);
     background-size: cover;
     background-position: center;
     min-height: 40vh;
@@ -426,6 +426,9 @@ footer {
     display: flex;
     margin: 0;
 }
+
+
+
 
 #portada-gen .titulo {
     text-align: start;

@@ -21,11 +21,12 @@ window.addEventListener("load", function(){
     })
     .then(function(data){
         let genero = data;
+        console.log(genero);
         let nombreGenero = genero.name;
-        let imagenGenero = genero.picture;
-        titulo.innerText = `${nombreGenero}`;
-        portada.style.background_image = `url("${imagenGenero}")`;
+        let imagenGenero = genero.picture_xl;
         console.log(imagenGenero);
+        titulo.innerText = `${nombreGenero}`;
+        portada.style.background_image = `url(${imagenGenero})`;
         artistas.innerText = `Artistas más escuchados en ${nombreGenero}`;
         canciones.innerText = `Lo más escuchado en ${nombreGenero}`;
         playlist.innerText = `Playlist más seguidas de ${nombreGenero}`;

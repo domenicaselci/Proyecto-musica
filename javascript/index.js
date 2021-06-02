@@ -13,6 +13,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
         let tituloTrack = tracks[i].title;
         let artista = tracks[i].artist.name;
         let cover = tracks[i].album.cover;
+        //faltan ids de track y artista 
         topTracks.innerHTML += `
         <article>
                 <figure class="cancion"><img src="${cover}" alt="${tituloTrack} - ${artista}">
