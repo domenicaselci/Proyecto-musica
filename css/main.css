@@ -95,6 +95,14 @@ nav ul .search-icon .icon span {
 }
 
 /*detail-album*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.derecha {
+    align-items: right;
+}
 
 .contenedor {
     margin-bottom: 10%;
@@ -102,7 +110,7 @@ nav ul .search-icon .icon span {
 
 figure img {
     margin-top: 20px;
-    width: clamp(150px, 80%, 400px);
+    width: clamp(150px, 100%, 400px);
     margin-bottom: 0;
     padding: 0;
 }
@@ -121,10 +129,13 @@ img {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     color: white;
-    text-align: center;
+    text-align: left;
+    margin-top: 90%;
 
 
 }
+
+
 
 ul {
     margin: 0;
@@ -150,11 +161,8 @@ li.tim {
 
 .contenido1 {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    text-align: center;
-    margin-top: 0;
-    padding: 10px;
+    margin: auto;
     background: -webkit-linear-gradient(rgb(216, 87, 28), black);
     background: -o-linear-gradient(rgb(216, 87, 28), black);
     background: -moz-linear-gradient(rgb(216, 87, 28), black);
@@ -163,11 +171,32 @@ li.tim {
 }
 
 
+.contenido1 figure {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    align-items: right;
+    max-width: 350px;
+    max-height: 500px;
+    margin-left: 15%;
+
+}
+
+
+.contenido1 figure img {
+    display: flex;
+    width: 100%;
+    padding: 0 0;
+    margin-top: 20%;
+}
+
+
 
 .listagris {
     text-align: center;
     margin-left: 5px;
-    margin-top: 5px;
+    margin-top: 40px;
 
 }
 
@@ -181,6 +210,14 @@ li.tim {
 
 }
 
+.primeraparte {
+    display: flex;
+    margin-left: 10%;
+
+}
+
+
+
 /*seccion iconos*/
 
 .favoritos {
@@ -191,9 +228,9 @@ li.tim {
 
 .fav {
     display: flex;
-    list-style: none;
-    text-decoration: none;
-    
+    margin-top: 1%;
+    margin-left: 23%;
+    margin-bottom: 1%;
 }
 
 a {
@@ -220,6 +257,19 @@ ul {
     padding: 0;
 }
 
+section.favoritos {
+    display: flex;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+section.listatim {
+    margin-right: 0;
+    padding-right: 0;
+    width: 85%;
+}
+
+
 /*seccion canciones tim*/
 
 ol {
@@ -229,13 +279,13 @@ ol {
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
-    width: 90%;
-    margin: 0;
+    width: 60%;
+    margin: auto;
 
 
 }
 
-.listatim {
+/*.listatim {
     display: flex;
     text-decoration: none;
     flex-wrap: wrap;
@@ -246,17 +296,16 @@ ol {
     justify-content: space-between;
     margin-bottom: 5%;
 
-}
+}*/
 
 .articletim {
+
     display: flex;
     width: 100%;
-    text-decoration: none;
-    list-style: none;
-    margin-top: 1%;
-    margin-bottom: 1%;
 
 }
+
+
 
 article .trespuntitos {
     align-items: end;
@@ -280,8 +329,11 @@ a {
 .discografia {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
     margin-bottom: 10%;
+    margin: 10px;
+    padding: 20px;
+
+
 
 }
 
@@ -295,13 +347,14 @@ a {
 
 .discos {
     display: flex;
-    padding: 5px;
-    margin: 3px;
     margin-bottom: 5px;
     background-color: rgba(15, 15, 15, 0.74);
     border-radius: 40px;
     flex-direction: column;
     width: calc(33% - 5px);
+    flex-wrap: wrap;
+    margin: 3px;
+    padding: 15px;
     flex-wrap: wrap;
 }
 
@@ -313,12 +366,14 @@ a {
 
 .albumesmartin {
     color: white;
-    font-size: 0.9em;
+    font-size: 1.4em;
     margin-bottom: 0%;
 }
 
 .subtitulosalbum {
-    width: 0.9em;
+
+    width: 1.4em;
+
 }
 
 /*css detail-artist*/
@@ -343,8 +398,20 @@ a {
 
 }
 
+.infomartin figure img {
 
-.infomartin img {
+    margin-top: 10px;
+    width: clamp(150px, 80%, 400px);
+    margin-bottom: 0;
+    padding: 0;
+    align-items: center;
+    margin-left: 20%;
+
+}
+
+
+
+/*.infomartin img {
 
     margin-top: 10px;
     width: clamp(150px, 60%, 400px);
@@ -352,7 +419,7 @@ a {
     padding: 0;
     align-items: center;
 
-}
+}*/
 
 .articlemartin figure {
     max-width: 400px;
@@ -367,6 +434,26 @@ a {
     margin: 10px;
     padding: 0;
     text-align: center;
+}
+
+.sectiontop5 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+
+}
+
+.topcinco {
+
+    width: 60%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.electronic figure img {
+    align-items: center;
+    width: 40%;
 }
 
 h2.titulotop5 {
@@ -386,13 +473,13 @@ section.arribamartin {
     background: linear-gradient(rgb(18, 13, 63), black);
 }
 
-.sectiontop5 {
+/*.sectiontop5 {
     margin: 0;
     padding: 10px;
     margin-bottom: 5%;
     width: 100%;
     flex-wrap: wrap;
-}
+}*/
 
 .listacinco {
     align-items: center;
@@ -414,8 +501,8 @@ ol.topcinco li {
 .informacionmartin {
     display: flex;
     flex-direction: column;
-    margin: 5px;
-    padding: 10px;
+    margin: 10px;
+    padding: 20px;
 }
 
 .descripcionmartin {
@@ -431,6 +518,8 @@ ol.topcinco li {
     margin: auto;
     border-radius: 20px;
     padding: 5px;
+    background-position-y: 15%;
+
 
 
 }
@@ -450,6 +539,12 @@ ol.topcinco li {
     color: white;
     width: calc(100% - 10px);
     text-align: left;
+
+}
+
+.ladeltrack {
+    width: 300px;
+    margin: 30px;
 
 }
 
@@ -628,69 +723,171 @@ footer {
 
 }
 
-@media (min-width:600px) {
+@media (max-width: 768px) {
 
     body {
         margin: 0;
         padding: 0;
     }
 
-    .contenido1 {
-        display: flex;
-        flex-direction: column;
-
+    .contenedor {
+        margin-bottom: 0;
+    }
+.primeraparte figure{
+    
+        margin-top: 20px;
+        width: clamp(200px, 70%, 400px);
+        margin-bottom: 0;
+        padding: 0;
+       
+    
+ 
+}
+    .primeraparte figure img {
+        width: 90%;
+        padding: 0;
+        align-items: center;
+        margin-left: 30%;
+        
     }
 
+    img {
+        margin-top: 0;
+    }
 
-    .contenido1 figure {
+    .primero {
         display: block;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
+        text-align: center;
+    }
+
+    .artista {
+        font-style: italic;
+    }
+
+    .albumtim {
+        width: 100%;
+        text-align: center;
+        margin-left: 15%;
         margin: 0;
         padding: 0;
-        width: fit-content;
-        align-items: center;
     }
 
-    .contenido1 figure img {
-        margin: 5% 0 0 0;
-        padding: 0;
-        width: clamp(150px, 80%, 400px);
+    .primeraparte {
 
-    }
-
-    .contenido1 div.listagris {
         display: flex;
         flex-direction: column;
-        text-align: left;
-        padding-top: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .primeraparte figure{
+        width: 80%;
+        margin-left: 12%;
         margin-top: 0;
-        list-style: none;
-        text-decoration: none;
-
+        padding: 0;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
     }
 
     li.album {
-        font-size: 1.0em;
-        margin: 0;
-        padding: 0;
+        font-size: 0.8em;
     }
 
     li.tim {
-        font-size: 3.3em;
+        font-size: 2.5em;
+        text-align: center;
+        padding: 0;
+
+    }
+
+    .contenido1 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 0;
+        padding: 0;
+
+    }
+
+
+
+    .listatim {
+        display: flex;
+        text-decoration: none;
+        list-style: none;
         margin: 0;
         padding: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5%;
 
     }
 
     .listagris {
         text-align: center;
-        margin-left: 15px;
-        margin-top: 0;
+        margin-left: 5px;
+        margin-top: 5px;
+        width: 100%;
+        padding: 0;
+
+
     }
 
+    .listaheaven {
+        list-style: none;
+        text-decoration: none;
+        font-size: 1.1em;
+        color: rgb(177, 177, 177);
+        text-align: left;
+
+    }
+
+    /*seccion iconos*/
+
+    .favoritos {
+        margin-top: 10px;
+
+    }
+
+    .fav {
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        margin-left: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .icons {
+        justify-content: space-between;
+        width: 35px;
+        margin: 0px 5px 0;
+    }
+
+    .artista {
+        list-style: none;
+        font-weight: bolder;
+    }
+
+    ul {
+        list-style: none;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .articletim ol{
+      margin: 5%;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
     .listaheaven {
         list-style: none;
         text-decoration: none;
@@ -785,182 +982,356 @@ footer {
     }
 }
 
-@media (min-width:900px) {
+@media (max-width: 420px) {
 
-    body {
+    /*detail-album*/
+
+    .contenedor {
+        margin-bottom: 10%;
+    }
+
+    .primeraparte figure img {
+        width: 80%;
+        padding: 0;
+        align-items: center;
+        margin-left: 10%;
+    }
+
+    img {
+        margin-top: 0;
+    }
+
+    .primero {
+        display: block;
+        text-align: center;
+    }
+
+    .artista {
+        font-style: italic;
+    }
+
+    .albumtim {
+        width: 100%;
+        text-align: center;
+        margin-left: 15%;
         margin: 0;
         padding: 0;
     }
 
-    .derecha {
-        align-items: right;
+    .primeraparte {
+
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li.album {
+        font-size: 0.8em;
+    }
+
+    li.tim {
+        font-size: 2.5em;
+        text-align: center;
+        padding: 0;
+
     }
 
     .contenido1 {
         display: flex;
         flex-direction: column;
-        margin: auto;
+        text-align: center;
+        margin-top: 0;
+        padding: 0;
 
     }
 
-    .contenido1 figure {
+
+
+    .listatim {
         display: flex;
+        text-decoration: none;
+        list-style: none;
         margin: 0;
         padding: 0;
-        width: fit-content;
-        align-items: right;
-        max-width: 315px;
-        max-height: 500px;
-        margin-left: 15%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5%;
 
     }
 
-
-    .contenido1 figure img {
-        display: flex;
+    .listagris {
+        text-align: center;
+        margin-left: 5px;
+        margin-top: 5px;
         width: 100%;
-        padding: 0 0;
-        margin-top: 20%;
-    }
-    .primeraparte{
-        display: flex;
-        margin-left: 10%;
-        
+        padding: 0;
+
+
     }
 
-    .fav{
-        margin-top: 2%;
-        margin-left: 22%;
-    }
-    .albumtim {
-
+    .listaheaven {
+        list-style: none;
+        text-decoration: none;
+        font-size: 1.1em;
+        color: rgb(177, 177, 177);
         text-align: left;
-        margin-top: 90%;
+
     }
 
-    ul.albumtim {
-        margin-top: 65%;
+    /*seccion iconos*/
+
+    .favoritos {
+        margin-top: 10px;
+
     }
 
-    section.favoritos {
+    .fav {
         display: flex;
-        margin-left: 20%;
-        margin-top: 2%;
+        list-style: none;
+        text-decoration: none;
+        margin-left: 0;
     }
 
-    section.listatim {
-        margin-right: 0;
-        padding-right: 0;
-        width: 85%;
+    a {
+        text-decoration: none;
+        color: white;
     }
 
-    
+    .icons {
+        justify-content: space-between;
+        width: 35px;
+        margin: 0px 5px 0;
+    }
 
+    .artista {
+        list-style: none;
+        font-weight: bolder;
+    }
+
+    ul {
+        list-style: none;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        margin: 0;
+        padding: 0;
+    }
+
+    /*seccion canciones tim*/
+
+    ol {
+
+
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2em;
+        width: 100%;
+        margin-right: 5%;
+        padding-left: 5%;
+
+    }
+
+    .listatim {
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5%;
+
+    }
 
     .articletim {
         display: flex;
         width: 100%;
-
+        text-decoration: none;
+        list-style: none;
+        margin-right: 3%;
     }
 
-    ol {
-
-        width: 60%;
-        margin: auto;
+    article .trespuntitos {
+        align-items: end;
+        text-align: end;
     }
 
-    ol li:hover {
-        background-color: rgba(177, 177, 177, 0.226);
-
+    a {
+        color: white;
     }
 
-    .iconitos:hover {
-        color: rgb(177, 177, 177);
-
-    }
-
-    a:hover {
-        color: rgb(156, 149, 149);
-    }
-
-    .infomartin figure img {
-
-        margin-top: 10px;
-        width: clamp(150px, 80%, 400px);
-        margin-bottom: 0;
-        padding: 0;
-        align-items: center;
-        margin-left: 20%;
-
-    }
-
-    .martingarrixtitulo {
-        text-align: center;
-    }
-
-    .sectiontop5 {
-        display: flex;
-        flex-direction: column;
-        margin: 10px;
-        padding: 20px;
-
-    }
-
-    .topcinco {
-
-        width: 60%;
-        margin: auto;
-        flex-wrap: wrap;
-    }
-
-    .electronic figure img {
-        align-items: center;
-        width: 40%;
-    }
-
-    .electronica:hover {
-        text-decoration: underline;
-    }
-
-    .albumesmartin {
-
-        font-size: 1.4em;
-    }
-
-    .albumesmartin:hover {
-        text-decoration: underline;
-
-    }
-
-    .subtitulosalbum {
-        width: 1.4em;
+    .mas {
+        align-items: right;
     }
 
     .discografia {
-        margin: 10px;
-        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin-bottom: 10%;
+
     }
 
-    .ladeltrack {
-        width: 300px;
-        margin: 30px;
+    .titulodiscografia {
+        color: white;
+        text-align: left;
+        width: 100%;
+        font-size: 2.0em;
 
     }
 
     .discos {
+        display: flex;
+        padding: 5px;
         margin: 3px;
-        padding: 15px;
+        margin-bottom: 5px;
+        background-color: rgba(15, 15, 15, 0.74);
+        border-radius: 40px;
+        flex-direction: column;
+        width: calc(33% - 5px);
+    }
+
+    .discos img {
+        border-radius: 20px;
+        width: 100%;
+
+    }
+
+    .albumesmartin {
+        color: white;
+        font-size: 0.9em;
+        margin-bottom: 0%;
+    }
+
+    .subtitulosalbum {
+        width: 0.9em;
+    }
+
+    .canciones {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*css detail-artist*/
+
+    .artist {
+        display: flex;
+    }
+
+    .martininf {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    .infomartin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .infomartin img {
+        margin-top: 10px;
+        width: clamp(150px, 30%, 400px);
+        margin-bottom: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    .articlemartin figure {
+        max-width: 400px;
+        max-height: 500px;
+        align-items: center;
+    }
+
+    .martingarrixtitulo {
+        color: rgb(255, 255, 255);
+        font-size: 2.5em;
+        margin: 10px;
+        padding: 0;
+        text-align: center;
+    }
+
+    section h2.titulotop5 {
+        color: rgb(255, 255, 255);
+        margin: 0;
+        text-align: left;
+        font-size: 2.0em;
+    }
+
+    div.arribamartin {
+        background: -webkit-linear-gradient(rgb(18, 13, 63), black);
+        background: -o-linear-gradient(rgb(18, 13, 63), black);
+        background: -moz-linear-gradient(rgb(18, 13, 63), black);
+        background: linear-gradient(rgb(18, 13, 63), black);
+    }
+
+    .sectiontop5 {
+        margin: 0;
+        padding: 10px;
+        margin-bottom: 5%;
+        width: 90%;
         flex-wrap: wrap;
     }
 
-    .descripcionmartin {
-        background-position-y: 15%;
+
+    .listacinco {
+        align-items: center;
+    }
+
+    ol.topcinco li {
+        font-size: 1.2em;
+
+
     }
 
     .informacionmartin {
         display: flex;
         flex-direction: column;
-        margin: 10px;
-        padding: 20px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .descripcionmartin {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        max-height: 100%;
+        background-image: url(../img/mgx2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        flex-wrap: wrap;
+        margin: auto;
+        border-radius: 20px;
+        padding: 5px;
+
+
+    }
+
+    .martingarrixinfo {
+        color: white;
+
+    }
+
+    .tituloinformacion {
+        color: white;
+        font-size: 2.0em;
+    }
+
+    .descripcionmartin p {
+        flex-wrap: wrap;
+        color: white;
+        width: calc(100% - 10px);
+        text-align: left;
+
     }
 }
