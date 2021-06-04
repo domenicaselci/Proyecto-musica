@@ -411,7 +411,7 @@ a {
 
 
 
-/*.infomartin img {
+.infomartin img {
 
     margin-top: 10px;
     width: clamp(150px, 60%, 400px);
@@ -419,7 +419,7 @@ a {
     padding: 0;
     align-items: center;
 
-}*/
+}
 
 .articlemartin figure {
     max-width: 400px;
@@ -446,7 +446,7 @@ a {
 
 .topcinco {
 
-    width: 60%;
+    width: 80%;
     margin: auto;
     flex-wrap: wrap;
 }
@@ -473,13 +473,7 @@ section.arribamartin {
     background: linear-gradient(rgb(18, 13, 63), black);
 }
 
-/*.sectiontop5 {
-    margin: 0;
-    padding: 10px;
-    margin-bottom: 5%;
-    width: 100%;
-    flex-wrap: wrap;
-}*/
+
 
 .listacinco {
     align-items: center;
@@ -747,7 +741,7 @@ footer {
         width: 90%;
         padding: 0;
         align-items: center;
-        margin-left: 30%;
+        margin-left: 40%;
         
     }
 
@@ -883,10 +877,11 @@ footer {
 
 
     .articletim ol{
-      margin: 5%;
+      margin: 3%;
         width: 100%;
         padding: 0;
         align-items: center;
+        margin-right: 5%;
     }
     .listaheaven {
         list-style: none;
@@ -979,6 +974,12 @@ footer {
 
     .listado {
         text-align: center;
+    }
+    .topcinco {
+
+        width: 80%;
+        margin: 5%;
+        flex-wrap: wrap;
     }
 }
 
@@ -1274,13 +1275,7 @@ footer {
         background: linear-gradient(rgb(18, 13, 63), black);
     }
 
-    .sectiontop5 {
-        margin: 0;
-        padding: 10px;
-        margin-bottom: 5%;
-        width: 90%;
-        flex-wrap: wrap;
-    }
+    
 
 
     .listacinco {
@@ -1333,5 +1328,11 @@ footer {
         width: calc(100% - 10px);
         text-align: left;
 
+    }
+    .topcinco {
+
+        width: 100%;
+        margin: 5%;
+        flex-wrap: wrap;
     }
 }
