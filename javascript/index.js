@@ -96,7 +96,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
     for(let i = 0; i <6; i++){
         let foto = artists[i].picture;
         let nombre = artists[i].name;
-        let artistaId = artists[i].id
+        let artistaId = artists[i].id;
         //falta descripcion y genero musical
         topArtist.innerHTML += `
         <article>
@@ -104,7 +104,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
                 <div class="informacion">
                     <h3><a href="detail-artist.html?id=${artistaId}">${nombre}</a></h3>
                     <p>Género: <a href="detail-genres.html">Electro-Pop</a></p>
-                    <p>Avicii es un Dj y Productor sueco muy reconocido mundialmente.</p>
+                    <p>${nombre} se unió a MusicCenter y es uno de los artistas más destacados de la época.</p>
                 </div>
             </article>
         `

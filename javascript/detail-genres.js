@@ -40,13 +40,13 @@ window.addEventListener("load", function(){
             for (let i = 0; i < 6; i++){
                 let nombreArtista = artistasGenero[i].name;
                 let imagenArtista = artistasGenero[i].picture;
-                let artistaId = artistasGenero[i].id
+                let artistaId = artistasGenero[i].id;
                 artistasGen.innerHTML += `
                 <article>
                 <figure><img src="${imagenArtista}" alt="${nombreArtista}"></figure>
                 <div class="informacion">
                     <h3><a href="detail-artist.html?id=${artistaId}">${nombreArtista}</a></h3>
-                    <p>Avicii es un Dj y Productor sueco muy reconocido mundialmente.</p>
+                    <p>${nombreArtista} es de los artistas más destacados de ${nombreGenero}, aportando gran valor al mismo y colaborando a su desarrollo.</p>
                 </div>
             </article>
                 `
