@@ -30,7 +30,7 @@ window.addEventListener("load", function(){
         portada.style.background_image = `url(${imagenGenero})`;
         artistas.innerText = `Artistas más escuchados en ${nombreGenero}`;
         canciones.innerText = `Lo más escuchado en ${nombreGenero}`;
-        playlist.innerText = `Playlist más seguidas de ${nombreGenero}`;
+        playlist.innerText = `Playlist relacionadas con ${nombreGenero}`;
 
         fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${generoSeleccionado}/artists`)
         .then(function(response){
