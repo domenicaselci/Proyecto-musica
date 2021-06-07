@@ -6,6 +6,7 @@ window.addEventListener("load", function(){
     let artistas = document.querySelector(`#artistas h2`);
     let canciones = document.querySelector(`#canciones h2`);
     let playlist = document.querySelector(`#playlist h2`);
+    let playlistDestacadas = document.querySelector(`#playlist`);
     let artistasGen = document.querySelector(`#artistas`);
 
     let queryString = location.search;
@@ -50,6 +51,34 @@ window.addEventListener("load", function(){
                 </div>
             </article>
                 `
+                fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${artistaId}/playlists`)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    let playlists = data.data;
+                    
+                    for(let i = 0; i< 1; i++){
+                        let titulo = playlists[i].title;
+                        let playlistId = playlists[i].id;
+                        let fotoPlaylist = playlists[i].picture_big;
+                        let nombreUsuario =  playlists[i].user.name;
+        
+                        playlistDestacadas.innerHTML += `
+                        <article>
+                        <img src="${fotoPlaylist}" alt="${titulo}">
+                        <div class="informacion">
+                            <h3><a href="playlist.html?id=${playlistId}">${titulo}</a></h3>
+                            <p>De: ${nombreUsuario} - ${nombreGenero}</p>
+                        </div>
+                    </article>
+                        `
+                    }
+                })
+                .catch(function(error){
+                    console.log(error);
+                })
+
             }
         })
         .catch (function(error){
