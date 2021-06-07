@@ -38,6 +38,7 @@ window.addEventListener("load", function(){
         })
         .then (function(data){
             let artistasGenero = data.data;
+            let artistaUno = artistasGenero[0].id;
             for (let i = 0; i < 6; i++){
                 let nombreArtista = artistasGenero[i].name;
                 let imagenArtista = artistasGenero[i].picture;
@@ -51,14 +52,15 @@ window.addEventListener("load", function(){
                 </div>
             </article>
                 `
-                fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${artistaId}/playlists`)
+            }
+                fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${artistaUno}/playlists`)
                 .then(function(response){
                     return response.json();
                 })
                 .then(function(data){
                     let playlists = data.data;
                     
-                    for(let i = 0; i< 1; i++){
+                    for(let i = 0; i< 6; i++){
                         let titulo = playlists[i].title;
                         let playlistId = playlists[i].id;
                         let fotoPlaylist = playlists[i].picture_big;
@@ -78,8 +80,6 @@ window.addEventListener("load", function(){
                 .catch(function(error){
                     console.log(error);
                 })
-
-            }
         })
         .catch (function(error){
             console.log(error);
