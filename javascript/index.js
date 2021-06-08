@@ -107,7 +107,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
             </article>
         `
     }
-{/* <p>Género: <a href="detail-genres.html">Electro-Pop</a></p> */}
+/* <p>Género: <a href="detail-genres.html">Electro-Pop</a></p> */
 
 })
 .catch (function(error){
