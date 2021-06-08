@@ -36,7 +36,7 @@ window.addEventListener("load", function () {
                 for (let i = 0; i < nuevosTracks.length; i++) {
                     lista.innerHTML += `<li class="cancionesconplay">
                     <div><a href="#"><i class="fas fa-play" title="Play"></i> ${nuevosTracks[i].title} </a></div>
-                    <a href="#" title="Añadir a mi playlist" class="mas"><i class="fas fa-ellipsis-h"></i></a>
+                    <a href="#" title="Añadir a favoritos" class="mas"><i class="far fa-heart"></i></a>
                 </li>
                    `
                 }
@@ -48,18 +48,20 @@ window.addEventListener("load", function () {
 
     let segundaParte = document.querySelector("#masde");
     //console.log(segundaParte)
-    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556")
+    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/27/top?limit=50")
         .then(function (respuesta) {
             return respuesta.json();
         })
         .then(function (datos) {
-            let mas = datos;
-            let nombreDos = mas.artist.name;
-            let nombreMas = document.querySelector("#masde")
-            nombreMas.innerHTML += `<h1 class="titulodiscografia"> Más de ${nombreDos}</h1>`
+            let mas = datos.data;
+            let nombreDos = mas[0].contributors[0].name;
+                console.log(nombreDos)
+                let nombreMas = document.querySelector("#masde")
+                nombreMas.innerHTML += `<h1 class="titulodiscografia"> Más de ${nombreDos}</h1>`
             for (let i = 0; i < 3; i++) {
-                let nombreCancion = mas.title;
-                let img = mas.contributors[0].picture_xl;
+                
+                let nombreCancion = mas[i].title;
+                let img = mas[i].album.cover_xl;
                 segundaParte.innerHTML += `
                 <article class="discos">
                     <img src="${img}" alt="${nombreCancion}">
@@ -68,22 +70,23 @@ window.addEventListener("load", function () {
                 </article>
                 `
             }
+
         })
         .catch(function (error) {
             console.log(error);
         })
 
-        let terceraParte = document.querySelector("#relacionados")
-        fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart")
+    let terceraParte = document.querySelector("#relacionados")
+    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/27/related")
         .then(function (respuesta) {
             return respuesta.json();
         })
         .then(function (datos) {
-            let tres = datos.tracks;
-                       
+            let tres = datos.data;
+
             for (let i = 0; i < 3; i++) {
-                let nombreTres = tres.data[i].artist.name;
-                let imgTres = tres.data[i].artist.picture_xl;
+                let nombreTres = tres[i].name;
+                let imgTres = tres[i].picture_xl;
                 terceraParte.innerHTML += `
                 <article class="discos">
                     <img src="${imgTres}" alt="${nombreTres}" class="imagenesartistas">
