@@ -635,6 +635,12 @@ a {
 
     #playlist {
         flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #playlist article{
+        width: calc(100% - 5px);
     }
 
     #portada-gen h1 {
