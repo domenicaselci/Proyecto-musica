@@ -76,13 +76,11 @@ window.addEventListener("load", function () {
             let infoFans = datos;
             for (let i = 0; i < 1; i++) {
                 let imgMedieum = infoFans.picture_xl
-                console.log(imgMedieum)
                 let fansNum = infoFans.nb_fan;
                 let numAlbum = infoFans.nb_album;
-                info.innerHTML += `<h3 class="martingarrixinfo">${fansNum} oyentes mensuales</h3>
-                <p>${numAlbum} ÁLBUMES</p>`
-               let fondo = document.querySelector("#mass")
-               fondo.style.background_image = `url(${imgMedieum})`;
+                document.querySelector(".martingarrixinfo").innerText = `${fansNum} oyentes`
+                document.querySelector(".parrafo").innerText = `${numAlbum} álbumes`
+                info.style.backgroundImage = `url(${imgMedieum})`;
 
             }
 
