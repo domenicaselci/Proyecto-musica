@@ -25,7 +25,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
                     <i class="fas fa-play"></i>
                 </div>
             </article>
-        `
+        `;
     }
 })
 .catch(function(error){
@@ -102,13 +102,12 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
                 <figure><img src="${foto}" alt="${nombre}"></figure>
                 <div class="informacion">
                     <h3><a href="detail-artist.html?id=${artistaId}">${nombre}</a></h3>
-                    <p>Género: <a href="detail-genres.html">Electro-Pop</a></p>
                     <p>${nombre} se unió a MusicCenter y es uno de los artistas más destacados de la época.</p>
                 </div>
             </article>
         `
     }
-
+{/* <p>Género: <a href="detail-genres.html">Electro-Pop</a></p> */}
 
 })
 .catch (function(error){
