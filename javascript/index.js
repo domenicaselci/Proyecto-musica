@@ -13,7 +13,6 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
         let tituloTrack = tracks[i].title;
         let artista = tracks[i].artist.name;
         let cover = tracks[i].album.cover;
-        //faltan ids de track y artista 
         topTracks.innerHTML += `
         <article>
                 <figure class="cancion"><img src="${cover}" alt="${tituloTrack} - ${artista}">
@@ -26,7 +25,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks
                     <i class="fas fa-play"></i>
                 </div>
             </article>
-        `
+        `;
     }
 })
 .catch(function(error){
@@ -49,7 +48,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums
         let artistAlbum = albumes[i].artist.name;
         let artistId = albumes[i].artist.id;
         let albumId = albumes[i].id;
-        //falta lista de canciones
+        
         topAlbums.innerHTML += `
         <article>
                 <figure><img src="${coverAlbum}" alt="${tituloAlbum}"></figure>
@@ -103,13 +102,12 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artist
                 <figure><img src="${foto}" alt="${nombre}"></figure>
                 <div class="informacion">
                     <h3><a href="detail-artist.html?id=${artistaId}">${nombre}</a></h3>
-                    <p>Género: <a href="detail-genres.html">Electro-Pop</a></p>
                     <p>${nombre} se unió a MusicCenter y es uno de los artistas más destacados de la época.</p>
                 </div>
             </article>
         `
     }
-
+/* <p>Género: <a href="detail-genres.html">Electro-Pop</a></p> */
 
 })
 .catch (function(error){

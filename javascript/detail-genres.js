@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
             let imagenGenero = genero.picture_xl;
             console.log(imagenGenero);
             titulo.innerText = `${nombreGenero}`;
-            portada.style.background_image = `url(${imagenGenero})`;
+            portada.style.backgroundImage = `url(${imagenGenero})`;
             artistas.innerText = `Artistas más escuchados en ${nombreGenero}`;
             canciones.innerText = `Lo más escuchado en ${nombreGenero}`;
             playlist.innerText = `Playlist relacionadas con ${nombreGenero}`;
