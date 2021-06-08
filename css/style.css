@@ -636,7 +636,6 @@ a {
     #playlist {
         flex-wrap: wrap;
         flex-direction: column;
-        margin: 0;
     }
 
     #playlist article{

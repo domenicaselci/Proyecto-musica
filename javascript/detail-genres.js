@@ -63,8 +63,28 @@ window.addEventListener("load", function () {
                                 let cover = canciones[0].album.cover_medium;
                                 let title = canciones[0].title;
                                 let idCancion = canciones[0].id;
+                                let contributors = canciones[0].contributors;
 
-                                cancionesDestacadas.innerHTML += `
+                                if (contributors.length > 1) {
+                                    let coverOtra = canciones[1].album.cover_medium;
+                                    let titleOtra = canciones[1].title;
+                                    let idCancionOtra = canciones[1].id;
+                                    cancionesDestacadas.innerHTML += `
+                    <article>
+                <figure class="cancion"><img src="${coverOtra}" alt="${titleOtra} - ${nombreArtista}">
+                </figure>
+                <div class="informacion">
+                    <h3> <a href="detail-track.html?id=${idCancionOtra}">${titleOtra}</a></h3>
+                    <p><a href="detail-artist.html?id=${artistaId}">${nombreArtista} y otros</a></p>
+                </div>
+                <div class="reproductor">
+                    <i class="fas fa-play"></i>
+                </div>
+            </article>
+                    `;
+                                } else {
+
+                                    cancionesDestacadas.innerHTML += `
                     <article>
                 <figure class="cancion"><img src="${cover}" alt="${title} - ${nombreArtista}">
                 </figure>
@@ -77,6 +97,7 @@ window.addEventListener("load", function () {
                 </div>
             </article>
                     `
+                                }
                             })
                             .catch(function (error) {
                                 console.log(error);
