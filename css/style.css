@@ -573,6 +573,7 @@ a {
 
     #canciones article div.informacion {
         margin-left: -5%;
+        font-size: small;
     }
 
     /*.canciones article figure img {
