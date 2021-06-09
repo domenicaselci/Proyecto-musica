@@ -137,9 +137,14 @@ nav ul .search-icon .icon span {
 }
 
 #canciones article {
+    display: flex;
+    flex-direction: column;
     width: calc(50% - 4px);
 }
 
+#canciones article div {
+    display: flex;
+}
 
 #album article {
     width: calc(50% - 4px);
@@ -162,18 +167,24 @@ figure img {
 }
 
 
-#canciones article div.informacion {
+#canciones article div div.informacion {
+    flex-direction: column;
     width: 50%;
     margin: 0 auto;
 }
 
-#canciones article div.reproductor {
+#canciones article div div.reproductor {
     display: flex;
     margin-top: 50px;
     margin-right: 5%;
 }
 
-#canciones article figure img {
+#audio {
+    display: none;
+    width: 100%;
+}
+
+#canciones article div figure img {
     border-radius: 5px;
 }
 
@@ -356,7 +367,7 @@ footer {
     /*  margin-left: 10%;*/
 }
 
-#deezerGen{
+#deezerGen {
     background-position: center;
     background-size: cover;
 }
@@ -414,7 +425,7 @@ footer {
     margin-left: 100px;
     margin-right: 100px;
     /* background-color: rgba(128, 128, 128, 0.226);*/
-    /*border-radius: 20px;
+/*border-radius: 20px;
 }*/
 
 #portada-gen {
@@ -523,6 +534,7 @@ a {
     #artistas article .informacion {
         margin-left: 10%;
     }
+
     .generos article h2 a {
         margin-left: 10%;
         font-size: 300%;
@@ -635,7 +647,7 @@ a {
         flex-direction: column;
     }
 
-    #playlist article{
+    #playlist article {
         width: calc(100% - 5px);
     }
 

@@ -63,40 +63,54 @@ window.addEventListener("load", function () {
                                 let cover = canciones[0].album.cover_medium;
                                 let title = canciones[0].title;
                                 let idCancion = canciones[0].id;
+                                let preview = canciones[0].preview;
                                 let contributors = canciones[0].contributors;
 
                                 if (contributors.length > 1) {
                                     let coverOtra = canciones[1].album.cover_medium;
                                     let titleOtra = canciones[1].title;
                                     let idCancionOtra = canciones[1].id;
+                                    let previewOtra = canciones[1].preview;
                                     cancionesDestacadas.innerHTML += `
                     <article>
+                    <div>
                 <figure class="cancion"><img src="${coverOtra}" alt="${titleOtra} - ${nombreArtista}">
                 </figure>
                 <div class="informacion">
                     <h3> <a href="detail-track.html?id=${idCancionOtra}">${titleOtra}</a></h3>
                     <p><a href="detail-artist.html?id=${artistaId}">${nombreArtista} y otros</a></p>
                 </div>
-                <div class="reproductor">
-                    <i class="fas fa-play"></i>
                 </div>
+                <audio id="audio" src="${previewOtra}" controls></audio>
             </article>
                     `;
                                 } else {
 
                                     cancionesDestacadas.innerHTML += `
                     <article>
+                    <div>
                 <figure class="cancion"><img src="${cover}" alt="${title} - ${nombreArtista}">
                 </figure>
                 <div class="informacion">
                     <h3> <a href="detail-track.html?id=${idCancion}">${title}</a></h3>
                     <p><a href="detail-artist.html?id=${artistaId}">${nombreArtista}</a></p>
                 </div>
-                <div class="reproductor">
-                    <i class="fas fa-play"></i>
                 </div>
+                <audio id="audio" src="${preview}" controls></audio>
             </article>
                     `
+                                }
+                                let cancionCont = document.querySelectorAll(`#canciones article`)
+                                let audio = document.querySelectorAll(`#audio`);
+                                for (let e = 0; e < cancionCont.length; e++) {
+                                    let cancion = cancionCont[e];
+                                    let tema = audio[e];
+                                    cancion.addEventListener("mouseover", function () {
+                                        tema.style.display = "inline"
+                                    })
+                                    cancion.addEventListener("mouseout", function () {
+                                        tema.style.display = "none";
+                                    })
                                 }
                             })
                             .catch(function (error) {
