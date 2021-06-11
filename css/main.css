@@ -545,14 +545,16 @@ ol.topcinco li {
     background-color: rgba(49, 49, 49, 0.74);
     border-radius: 20px;
     flex-direction: column;
-    width: calc(50% - 2px);
+    width: calc(33% - 2px);
 
 }
 
 .primerarespuesta img {
-    width: 100%;
+    width: 80%;
     border-radius: 20px;
-    margin-bottom: 2%;
+   
+    margin: auto;
+    
 }
 
 .electronic {
@@ -584,14 +586,14 @@ h4 {
 
     font-style: italic;
     color: rgb(145, 145, 145);
-    margin-top: 2%;
-    margin-left: 3%;
+    margin-left: 2%;
 
 }
 
 .resultadoselectronica {
     width: fit-content;
     margin-bottom: 10%;
+    
 }
 
 .busquedaicono {

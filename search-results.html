@@ -25,7 +25,23 @@
             </div>
             <li class="search-icon">
                 <form action="../proyecto-musica/search-results.html" method="GET">
-                    <input type="search" placeholder="Descubrí MusicCenter">
+                    <input type="search" placeholder="Descubrí MusicCenter" name="q">
+                    <label>
+                        Artista
+                        <input type="radio" name="filtro" value="artista">
+                    </label>
+                    <label>
+                        Álbum
+                        <input type="radio" name="filtro" value="album">
+                    </label>
+                    <label>
+                        Track
+                        <input type="radio" name="filtro" value="track">
+                    </label>
+                    <label>
+                        Todo
+                        <input type="radio" name="filtro" value="todo" checked>
+                    </label>
                     <label class="icon">
                         <span class="fas fa-search"></span>
                     </label>
@@ -36,14 +52,36 @@
 
     <main class="searchresults">
         <h4 class="resultadosbusqueda"><i class="fas fa-search"></i> Resultados para "Electrónica"</h4>
+
+        <section class="discografia">
+            <h1 class="titulodiscografia"> Artista </h1>
+            <article class="primerarespuesta"  id="primero">
+                <!--<img src="img/electro2.jpg" alt="electronica">
+                <div class="titulossearch">
+                    <h3 class="electronica"><a href="genres.html">Electrónica</a></h3>
+                    <h4>Playlist</h4>
+                </div>-->
+            </article>
+        </section>
+
         <section class="resultadoselectronica">
-            
-            <article class="primerarespuesta">
-                <img src="img/electro2.jpg" alt="electronica">
-                    <div class="titulossearch">
-                        <h3 class="electronica"><a href="genres.html">Electrónica</a></h3>
-                        <h4>Playlist</h4>
-                    </div>
+            <h1 class="titulodiscografia"> Álbumes </h1>
+           <article class="primerarespuesta" id="segundo">
+            <!--     <img src="img/electro2.jpg" alt="electronica">
+                <div class="titulossearch">
+                    <h3 class="electronica"><a href="genres.html">Electrónica</a></h3>
+                    <h4>Playlist</h4>
+                </div>
+            </article>-->
+        </section>
+
+        <section class="resultadoselectronica">
+            <article class="primerarespuesta" id="tercero">
+                <!--<img src="img/electro2.jpg" alt="electronica">
+                <div class="titulossearch">
+                    <h3 class="electronica"><a href="genres.html">Electrónica</a></h3>
+                    <h4>Playlist</h4>
+                </div>-->
             </article>
         </section>
 
@@ -105,6 +143,7 @@
         <p class="copyright"> copyright 2020</p>
         <p class="Integrantes">Franco Leone, Domenica Selci, Tomas Morales</p>
     </footer>
+    <script src="javascript/searchresults.js"></script>
 </body>
 
 </html>
