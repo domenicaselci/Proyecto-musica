@@ -15,4 +15,3 @@ if(recuperoStorage == null || recuperoStorage == "[]"){
         buscarYMostrarTrack(idTrack);
     });
 }
-
