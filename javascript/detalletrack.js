@@ -5,11 +5,27 @@ const parametros = new URLSearchParams(location.search);
 const idTrack = parametros.get("id");
 console.log(idTrack);
 
+/// Fetch
 fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idTrack}`)
-.then(function (respuesta) {
-    return respuesta.json();
-})
+    .then(function (respuesta) {
+        return respuesta.json();
+    })
+    .then(function (datos) {
+        console.log(datos);
+        let titulo = document.querySelector('.titulo');
+        titulo.innerHTML += datos.title;
+        let interprete = document.querySelector('.interprete');
+        interprete.innerHTML += '<a href="./detail-artist.html?id=' + datos.artist.id + '" >' + datos.artist.name + '</a>'
+        let album = document.querySelector('.album');
+        album.innerHTML += '<a href="./detail-album.html?id=' + datos.album.id + '" >' + datos.album.title + '</a>'
 
+        let player = document.querySelector('iframe');
+        player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
+
+
+    })
+
+/// boton agregar/quitar de playlist
 let playlist = []
 let recuperoStorage = localStorage.getItem('playlist');
 if (recuperoStorage == null) {
