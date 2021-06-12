@@ -86,71 +86,16 @@ window.addEventListener("load", function () {
                 let fansNum = infoFans.nb_fan;
                 let numAlbum = infoFans.nb_album;
                 document.querySelector(".martingarrixinfo").innerText = `${fansNum} oyentes`
-                document.querySelector(".parrafo").innerText = `${numAlbum} álbumes`
+                document.querySelector(".parrafo").innerText = `${numAlbum} tracks`
                 info.style.backgroundImage = `url(${imgMedieum})`;
 
             }
-
-
-        })
-        .catch(function (error) {
-            console.log(error);
-        })
-
-        let segundaParte = document.querySelector("#masde");
-   
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${cual}/top?limit=50`)
-        .then(function (respuesta) {
-            return respuesta.json();
-        })
-        .then(function (datos) {
-            let mas = datos.data;
-            let nombreDos = mas[0].contributors[0].name;
-            console.log(nombreDos)
-            let nombreMas = document.querySelector("#masde")
-            nombreMas.innerHTML += `<h1 class="titulodiscografia"> Más de ${nombreDos}</h1>`
-            for (let i = 0; i < 3; i++) {
-
-                let nombreCancion = mas[i].title;
-                let img = mas[i].album.cover_xl;
-                segundaParte.innerHTML += `
-           <article class="discos">
-               <img src="${img}" alt="${nombreCancion}">
-               <h3 class="albumesmartin"><a href="detail-track.html">${nombreCancion}</a></h3>
-               <h4 class="subtitulosalbum"> Track</h4>
-           </article>
-           `
-            }
-
         })
         .catch(function (error) {
             console.log(error);
         })
 
 
-
-    let terceraParte = document.querySelector("#relacionados")
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${cual}/related`)
-        .then(function (respuesta) {
-            return respuesta.json();
-        })
-        .then(function (datos) {
-            let tres = datos.data;
-
-            for (let i = 0; i < 3; i++) {
-                let nombreTres = tres[i].name;
-                let imgTres = tres[i].picture_xl;
-                terceraParte.innerHTML += `
-                    <article class="discos">
-                        <img src="${imgTres}" alt="${nombreTres}" class="imagenesartistas">
-                        <h3 class="albumesmartin"><a href="detail-artist.html">${nombreTres}</a></h3>
-                        <h4 class="subtitulosalbum">Artista</h4>
-                    </article>
-                    `
-            }
-        })
-        .catch(function (error) {
-            console.log(error);
-        })
+    
 
 })

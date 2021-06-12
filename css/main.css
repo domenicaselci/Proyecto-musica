@@ -108,7 +108,7 @@ body {
     margin-bottom: 10%;
 }
 
- img {
+img {
     margin-top: 20px;
     width: clamp(150px, 60%, 400px);
     margin-bottom: 0;
@@ -178,7 +178,7 @@ li.tim {
 
 .contenido1 img {
     display: flex;
-    width:  clamp(100px, 40%, 400px);
+    width: clamp(100px, 40%, 400px);
     padding: 0;
     margin-top: 5%;
     margin-left: 5%;
@@ -205,7 +205,8 @@ li.tim {
 
 .primeraparte {
     display: flex;
-    margin-left: 10%;
+    margin-left: 15%;
+
 
 }
 
@@ -322,12 +323,8 @@ a {
 .discografia {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10%;
     margin: 10px;
-    padding: 20px;
-
-
-
+    padding: 10px;
 }
 
 .titulodiscografia {
@@ -540,21 +537,25 @@ ol.topcinco li {
 
 .primerarespuesta {
     display: flex;
-    padding: 10px;
-    margin: 10px;
-    background-color: rgba(49, 49, 49, 0.74);
-    border-radius: 20px;
+    margin-bottom: 5px;
+    background-color: rgba(15, 15, 15, 0.74);
+    border-radius: 40px;
     flex-direction: column;
-    width: calc(33% - 2px);
+    width: calc(33% - 5px);
+    flex-wrap: wrap;
+    margin: 3px;
+    padding: 15px;
+    flex-wrap: wrap;
 
 }
 
+
+
 .primerarespuesta img {
-    width: 80%;
+    width: 100%;
     border-radius: 20px;
-   
     margin: auto;
-    
+
 }
 
 .electronic {
@@ -593,7 +594,7 @@ h4 {
 .resultadoselectronica {
     width: fit-content;
     margin-bottom: 10%;
-    
+
 }
 
 .busquedaicono {
@@ -728,8 +729,8 @@ footer {
         width: 50%;
         padding: 0;
         align-items: center;
-               margin-top: 10%;
-        
+        margin-top: 10%;
+
     }
 
     img {
@@ -748,7 +749,7 @@ footer {
     .albumtim {
         width: 80%;
         text-align: center;
-        
+
         margin: auto;
         padding: auto;
     }
@@ -760,14 +761,15 @@ footer {
         margin: 0;
         padding: 0;
     }
-    .primeraparte img{
+
+    .primeraparte img {
         width: 50%;
         margin-top: 5%;
         padding: 0;
         align-items: center;
         margin-left: 25%;
     }
-    
+
     ul {
         margin: 0;
         padding: 0;
@@ -809,7 +811,7 @@ footer {
 
     .listagris {
         text-align: center;
-        margin:auto;
+        margin: auto;
         width: 100%;
         padding: auto;
         margin-top: 2%;
@@ -866,13 +868,14 @@ footer {
     }
 
 
-    .articletim ol{
-      margin: 3%;
+    .articletim ol {
+        margin: 3%;
         width: 100%;
         padding: 0;
         align-items: center;
         margin-right: 5%;
     }
+
     .listaheaven {
         list-style: none;
         text-decoration: none;
@@ -966,12 +969,13 @@ footer {
     .listado {
         text-align: center;
     }
+
     .topcinco {
 
         width: 90%;
         margin: 5%;
         flex-wrap: wrap;
-               padding: 0;
+        padding: 0;
     }
 }
 
@@ -983,12 +987,12 @@ footer {
         margin-bottom: 10%;
     }
 
-    .primeraparte  img {
+    .primeraparte img {
         width: 50%;
         padding: 0;
         align-items: center;
-       margin-top: 5%;
-        
+        margin-top: 5%;
+
     }
 
     img {
@@ -1007,7 +1011,7 @@ footer {
     .albumtim {
         width: 90%;
         text-align: center;
-        
+
         margin: auto;
         padding: auto;
     }
@@ -1061,7 +1065,7 @@ footer {
 
     .listagris {
         text-align: center;
-        margin:auto;
+        margin: auto;
         width: 100%;
         padding: 0;
         margin-top: 2%;
@@ -1268,7 +1272,7 @@ footer {
         background: linear-gradient(rgb(18, 13, 63), black);
     }
 
-    
+
 
 
     .listacinco {
@@ -1322,6 +1326,7 @@ footer {
         text-align: left;
 
     }
+
     .topcinco {
 
         width: 90%;
@@ -1329,5 +1334,5 @@ footer {
         flex-wrap: wrap;
     }
 
-    
+
 }
