@@ -154,7 +154,7 @@ window.addEventListener("load", function () {
                 console.log(error);
             })
 
-    } else if( busqueda == null){
+    } else if(busqueda == null){
         console.log("no se encontró resultados")
     }
 })
