@@ -9,6 +9,10 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idTrac
 .then(function (respuesta) {
     return respuesta.json();
 })
+.then(function(datos){
+    console.log(datos);
+    let titulo = document.querySelector('.titulo');
+    titulo.innerHTML += datos.title;
 
 let playlist = []
 let recuperoStorage = localStorage.getItem('playlist');
