@@ -15,9 +15,9 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idTrac
         let titulo = document.querySelector('.titulo');
         titulo.innerHTML += datos.title;
         let interprete = document.querySelector('.interprete');
-        interprete.innerHTML += '<a href="./detail-artist.html?id=' + datos.artist.id + '" >' + datos.artist.name + '</a>'
+        interprete.innerHTML += '<a href="./detail-artist.html?id=' + datos.data.id + '" >' + datos.data.name + '</a>'
         let album = document.querySelector('.album');
-        album.innerHTML += '<a href="./detail-album.html?id=' + datos.album.id + '" >' + datos.album.title + '</a>'
+        album.innerHTML += '<a href="./detail-album.html?id=' + datos.data.id + '" >' + datos.data.title + '</a>'
 
         let player = document.querySelector('iframe');
         player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
