@@ -79,6 +79,7 @@ window.addEventListener("load", function () {
             })
             .then(function (datos) {
                 let nombreArtist = datos.data;
+                console.log(nombreArtist)
                 document.querySelector(".resultadosbusqueda").innerText = `Resultados para "${busqueda}"`
                 for (let i = 0; i < 1; i++) {
                     let name = nombreArtist[0].name;
@@ -154,7 +155,7 @@ window.addEventListener("load", function () {
                 console.log(error);
             })
 
-    } else if(busqueda == null){
+    } else if(busqueda == ""){
         console.log("no se encontró resultados")
     }
 })
