@@ -41,6 +41,7 @@ window.addEventListener("load", function () {
             `
                 let nuevosTracks = albumPrimero.tracks.data;
                 let lista = document.querySelector("#cancionesyalbum ol");
+
                 for (let i = 0; i < nuevosTracks.length; i++) {
                     lista.innerHTML += `<li class="cancionesconplay">
                     <div><a href="#"><i class="fas fa-play" title="Play"></i> ${nuevosTracks[i].title} </a></div>
@@ -48,32 +49,7 @@ window.addEventListener("load", function () {
                 </li>`
 
                 }
-                let masde = document.querySelector("#masde");
 
-                for (let i = 0; i < 1; i++) {
-
-                    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/related`)
-                        .then(function (respuesta) {
-                            return respuesta.json();
-                        })
-                        .then(function (datos) {
-                            let tres = datos.data;
-                            for (let i = 0; i < 3; i++) {
-                                let nombreTres = tres[i].name;
-                                let imgTres = tres[i].picture_xl;
-                                masde.innerHTML += `
-            <article class="discos">
-                <img src="${imgTres}" alt="${nombreTres}" class="imagenesartistas">
-                <h3 class="albumesmartin"><a href="detail-artist.html">${nombreTres}</a></h3>
-                <h4 class="subtitulosalbum">Artista</h4>
-            </article>
-            `
-                            }
-                        })
-                        .catch(function (error) {
-                            console.log(error);
-                        })
-                }
                 let segundaParte = document.querySelector("#masde");
 
                 for (let i = 0; i < 1; i++) {
@@ -106,8 +82,7 @@ window.addEventListener("load", function () {
                             console.log(error);
                         })
                 }
-
-                let relacionados = document.querySelector("#relacionado");
+                let relacionados = document.querySelector("#relacionados");
 
                 for (let i = 0; i < 1; i++) {
                     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/related`)
@@ -116,6 +91,9 @@ window.addEventListener("load", function () {
                         })
                         .then(function (datos) {
                             let tres = datos.data;
+                            if(tres.length == 0){
+                                relacionados.style.display = "none";
+                            }
                             for (let i = 0; i < 3; i++) {
                                 let nombreTres = tres[i].name;
                                 let imgTres = tres[i].picture_xl;
@@ -132,7 +110,6 @@ window.addEventListener("load", function () {
                             console.log(error);
                         })
                 }
-
             }
         })
         .catch(function (error) {

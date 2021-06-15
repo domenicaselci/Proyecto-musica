@@ -6,10 +6,11 @@ window.addEventListener("load", function(){
         formulario.addEventListener("submit", function(event) {
             event.preventDefault();
             if (campoBuscar.value == "") {
-                resultadoss.innerText = `El campo no puede estar vacío`
+                resultadoss.innerText = `El campo no puede estar vacío`;
+                
             }
-            if (campoBuscar.value.length > 0 && campoBuscar.value.length < 3) {
-                resultadoss.innerText = `Por favor ingrese al menos 3 caracteres`
+            if (campoBuscar.value.length > 0 && campoBuscar.value.length < 2) {
+                resultadoss.innerText = `Por favor ingrese al menos 2 caracteres`
             } else {
                submit();
             }
@@ -19,8 +20,8 @@ window.addEventListener("load", function(){
             if (campoBuscar.value == "") {
                 resultadoss.innerText = `El campo no puede estar vacío`
             }
-            if (campoBuscar.value.length > 0 && campoBuscar.value.length < 3) {
-                resultadoss.innerText = `Por favor ingrese al menos 3 caracteres`
+            if (campoBuscar.value.length > 0 && campoBuscar.value.length < 2) {
+                resultadoss.innerText = `Por favor ingrese al menos 2 caracteres`
             } else {
                 resultadoss.innerText = "";
             }
