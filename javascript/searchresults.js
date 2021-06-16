@@ -33,10 +33,12 @@ window.addEventListener("load", function () {
                     giphy.style.display = "none";
                     for (let i = 0; i < 1; i++){
                         let nombreArt = todo[i].artist.name;
+                        let idArt = todo[i].artist.id
+                        console.log(idArt);
                         let imagenArtista = todo[i].artist.picture_xl;
                         primero.innerHTML += `<img src="${imagenArtista}" alt="${nombreArt}">
                 <div class="titulossearch">
-                    <h3 class="electronica"><a href="detail-artist.html">${nombreArt}</a></h3>
+                    <h3 class="electronica"><a href="detail-artist.html?id=${idArt}">${nombreArt}</a></h3>
                     <h4>Artista</h4>
                 </div>`
                         for (let i = 0; i < 1; i++){
@@ -48,12 +50,13 @@ window.addEventListener("load", function () {
                                     let albom = datos.data;
                                     for (let i = 0; i < 3; i++){
                                         let nomAlb = albom[i].title;
+                                        let idAlb = albom[i].id
                                         let fotoAlb = albom[i].cover_xl;
                                         document.querySelector("#segundo").innerHTML +=
                                             `<article class="discos" id="segundo">
                     <img src="${fotoAlb}" alt="${nomAlb}">
                     <div class="titulossearch">
-                    <h3 class="electronica"><a href="detail-album.html">${nomAlb}</a></h3>
+                    <h3 class="electronica"><a href="detail-album.html?id=${idAlb}">${nomAlb}</a></h3>
                     <h4>Álbum</h4>
                     </div>
                     </article>`
@@ -70,11 +73,12 @@ window.addEventListener("load", function () {
                                         for (let i = 0; i < 3; i++){
                                             let nombreCan = canciones[i].title;
                                             let fotoCan = canciones[i].album.cover_xl;
+                                            let idTrack = canciones[i].id
                                             tercero.innerHTML += `
                                         <article class="discos">
                                         <img src="${fotoCan}" alt="${nombreCan}">
                                         <div class="titulossearch">
-                                        <h3 class="electronica"><a href="detail-track.html">${nombreCan}</a></h3>
+                                        <h3 class="electronica"><a href="detail-track.html?id=${idTrack}">${nombreCan}</a></h3>
                                         <h4>Track</h4>
                                         </div>
                                         </article>`
@@ -112,7 +116,7 @@ window.addEventListener("load", function () {
                         let imagenArt = nombreArtist[0].picture_xl;
                         primero.innerHTML += `<img src="${imagenArt}" alt="${name}">
                 <div class="titulossearch">
-                    <h3 class="electronica"><a href="detail-artist.html">${name}</a></h3>
+                    <h3 class="electronica"><a href="detail-artist.html?id=${idArt}">${name}</a></h3>
                     <h4>Artista</h4>
                 </div>`
                         segundo.style.display = "none";
@@ -148,7 +152,7 @@ window.addEventListener("load", function () {
                         tercero.innerHTML += `<article class="discos">
                         <img src="${imagenTrack}" alt="${nameTrack}">
                     <div class="titulossearch">
-                        <h3 class="electronica"><a href="detail-artist.html">${nameTrack}</a></h3>
+                        <h3 class="electronica"><a href="detail-artist.html?id=${idArt}">${nameTrack}</a></h3>
                         <h4>Track</h4>
                     </div>
                     <article class="discos">
@@ -187,7 +191,7 @@ window.addEventListener("load", function () {
                         segundo.innerHTML += `<article class="discos">
                         <img src="${imagenAlbum}" alt="${nameAlbum}">
                     <div class="titulossearch">
-                        <h3 class="electronica"><a href="detail-artist.html">${nameAlbum}</a></h3>
+                        <h3 class="electronica"><a href="detail-artist.html?id=${idArt}">${nameAlbum}</a></h3>
                         <h4>Álbum</h4>
                     </div>
                     <article class="discos">

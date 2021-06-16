@@ -6,13 +6,13 @@ window.addEventListener("load", function () {
     const cualDos = parametros.get("id");
     //console.log(cualDos);
 
+
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${cualDos}`)
         .then(function (respuesta) {
             return respuesta.json();
         })
         .then(function (datos) {
             let tracksAlbum = datos;
-
             for (let i = 0; i < 1; i++) {
                 let albumPrimero = tracksAlbum;
                 let tituloAlbum = albumPrimero.title
@@ -64,14 +64,14 @@ window.addEventListener("load", function () {
                             let nombreMas = document.querySelector("#masde")
                             nombreMas.innerHTML += `<h1 class="titulodiscografia"> Más de ${nombreDos}</h1>`
                             for (let i = 0; i < 3; i++) {
-
+                                let idTrack = mas[i].id;
                                 let nombreCancion = mas[i].title;
                                 let img = mas[i].album.cover_big;
                                 console.log(img)
                                 segundaParte.innerHTML += `
                        <article class="discos">
                            <img src="${img}" alt="${nombreCancion}">
-                           <h3 class="albumesmartin"><a href="detail-track.html">${nombreCancion}</a></h3>
+                           <h3 class="albumesmartin"><a href="detail-track.html?id=${idTrack}">${nombreCancion}</a></h3>
                            <h4 class="subtitulosalbum"> Track</h4>
                        </article>
                        `
@@ -91,16 +91,17 @@ window.addEventListener("load", function () {
                         })
                         .then(function (datos) {
                             let tres = datos.data;
-                            if(tres.length == 0){
+                            if (tres.length == 0) {
                                 relacionados.style.display = "none";
                             }
                             for (let i = 0; i < 3; i++) {
                                 let nombreTres = tres[i].name;
                                 let imgTres = tres[i].picture_xl;
+                                let idArtist = tres[i].id
                                 relacionados.innerHTML += `
             <article class="discos">
                 <img src="${imgTres}" alt="${nombreTres}" class="imagenesartistas">
-                <h3 class="albumesmartin"><a href="detail-artist.html">${nombreTres}</a></h3>
+                <h3 class="albumesmartin"><a href="detail-artist.html?id=${idArtist}">${nombreTres}</a></h3>
                 <h4 class="subtitulosalbum">Artista</h4>
             </article>
             `
