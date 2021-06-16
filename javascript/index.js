@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
                 </figure>
                 <div class="informacion">
                     <h3> <a href="detail-track.html?id=${trackId}">${tituloTrack}</a></h3>
-                    <p><a href="detail-artist.html?id=${artistaId}>${artista}</a></p>
+                    <p><a href="detail-artist.html?id=${artistaId}">${artista}</a></p>
                 </div>
                 </div>
                 <audio id="audio" src="${preview}" controls></audio>
