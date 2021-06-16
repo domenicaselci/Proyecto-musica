@@ -11,7 +11,9 @@ window.addEventListener("load", function () {
             // console.log(tracks);
             for (let i = 0; i < 6; i++) {
                 let tituloTrack = tracks[i].title;
+                let trackId  = tracks[i].id;
                 let artista = tracks[i].artist.name;
+                let artistaId = tracks[i].artist.id;
                 let cover = tracks[i].album.cover;
                 let preview = tracks[i].preview;
                 topTracks.innerHTML += `
@@ -20,8 +22,8 @@ window.addEventListener("load", function () {
                 <figure class="cancion"><img src="${cover}" alt="${tituloTrack} - ${artista}">
                 </figure>
                 <div class="informacion">
-                    <h3> <a href="detail-track.html">${tituloTrack}</a></h3>
-                    <p><a href="detail-artist.html">${artista}</a></p>
+                    <h3> <a href="detail-track.html?id=${trackId}">${tituloTrack}</a></h3>
+                    <p><a href="detail-artist.html?id=${artistaId}>${artista}</a></p>
                 </div>
                 </div>
                 <audio id="audio" src="${preview}" controls></audio>
