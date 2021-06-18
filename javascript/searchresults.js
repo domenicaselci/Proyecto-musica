@@ -12,7 +12,8 @@ window.addEventListener("load", function () {
     let tercero = document.querySelector("#tercero");
     let tituloart = document.querySelector("#tituloart");
     let resultadosbusqueda = document.querySelector(".resultadosbusqueda");
-    let giphy = document.querySelector(".giphy");
+    
+
 
     if (filtro == "todo" || filtro == null) {
         fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${busqueda}`)
@@ -22,13 +23,12 @@ window.addEventListener("load", function () {
                 let todo = datos.data;
                 if (todo.length == 0) {
                     resultadosbusqueda.innerText = `No se encontraron resultados para "${busqueda}"`;
-                    primero.innerHTML += `<img src="./img/giphy.gif" alt="giphy">`;
                     segundo.style.display = "none";
                     tituloart.style.display = "none";
                     tercero.style.display = "none";
                 } else {
                     resultadosbusqueda.innerText = `Resultados para "${busqueda}"`;
-                    giphy.style.display = "none";
+
                     for (let i = 0; i < 1; i++) {
                         let nombreArt = todo[i].artist.name;
                         let idArt = todo[i].artist.id
@@ -81,34 +81,39 @@ window.addEventListener("load", function () {
                                         </div>
                                         </article>`
                                         }
-                                    }).catch(function (error) {
+                                    })
+                                    .catch(function (error) {
                                         console.log(error);
                                     })
                             }
                         }
                     }
                 }
-            }).catch(function (error) {
+            })
+            .then(function(){
+                tituloart.style.background = "none";
+                tituloart.style.height = "auto";
+            })
+            .catch(function (error) {
                 console.log(error)
             })
     } else if (filtro == "artista") {
         fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=${busqueda}`)
-            .then(function (respuesta) {
+                    .then(function (respuesta) {
                 return respuesta.json();
             })
             .then(function (datos) {
                 let nombreArtist = datos.data;
-                
+
                 //console.log(nombreArtist)
                 if (nombreArtist.length == 0) {
                     resultadosbusqueda.innerText = `No se encontraron resultados para "${busqueda}"`
-                    primero.innerHTML += `<img src="./img/giphy.gif" alt="giphy">`;
                     segundo.style.display = "none";
                     tituloart.style.display = "none";
                     tercero.style.display = "none";
                 } else {
                     resultadosbusqueda.innerText = `Resultados para "${busqueda}"`
-                    giphy.style.display = "none";
+
 
                     for (let i = 0; i < 1; i++) {
                         let name = nombreArtist[i].name;
@@ -123,6 +128,9 @@ window.addEventListener("load", function () {
                         tercero.style.display = "none";
                     }
                 }
+            }).then(function () {
+                tituloart.style.background = "none";
+                tituloart.style.height = "auto";
             })
             .catch(function (error) {
                 console.log(error);
@@ -138,16 +146,16 @@ window.addEventListener("load", function () {
                 let trackArtist = datos.data;
                 if (trackArtist == 0) {
                     resultadosbusqueda.innerText = `No se encontraron resultados para "${busqueda}"`
-                    primero.innerHTML += `<img src="./img/giphy.gif" alt="giphy">`;
+
                     segundo.style.display = "none";
                     tituloart.style.display = "none";
                     tercero.style.display = "none";
                 } else {
                     resultadosbusqueda.innerText = `Resultados para "${busqueda}"`
-                    giphy.style.display = "none";
+
                     for (let i = 0; i < 1; i++) {
                         let nameTrack = trackArtist[0].title;
-                        let idTrack = trackArtist[0].id 
+                        let idTrack = trackArtist[0].id
                         let imagenTrack = trackArtist[0].album.cover_xl;
                         tercero.innerHTML += `<article class="discos">
                         <img src="${imagenTrack}" alt="${nameTrack}">
@@ -163,6 +171,9 @@ window.addEventListener("load", function () {
                 }
 
 
+            }).then(function () {
+                tituloart.style.background = "none";
+                tituloart.style.height = "auto";
             })
             .catch(function (error) {
                 console.log(error);
@@ -177,13 +188,13 @@ window.addEventListener("load", function () {
                 let albumArtist = datos.data;
                 if (albumArtist.length == 0) {
                     resultadosbusqueda.innerText = `No se encontraron resultados para "${busqueda}"`
-                    primero.innerHTML += `<img src="./img/giphy.gif" alt="giphy">`;
+
                     segundo.style.display = "none";
                     tituloart.style.display = "none";
                     tercero.style.display = "none";
                 } else {
                     resultadosbusqueda.innerText = `Resultados para "${busqueda}"`
-                    giphy.style.display = "none";
+
                     for (let i = 0; i < 1; i++) {
                         let nameAlbum = albumArtist[0].title;
                         let idAlbum = albumArtist[0].id
@@ -200,6 +211,9 @@ window.addEventListener("load", function () {
                         tituloart.style.display = "none";
                     }
                 }
+            }).then(function () {
+                tituloart.style.background = "none";
+                tituloart.style.height = "auto";
             })
             .catch(function (error) {
                 console.log(error);
