@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
             if (campoBuscar.value.length > 0 && campoBuscar.value.length < 2) {
                 resultadoss.innerText = `Por favor ingrese al menos 2 caracteres`
             } else {
-               submit();
+               formulario.submit();
             }
         })
 
