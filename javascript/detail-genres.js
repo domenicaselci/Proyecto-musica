@@ -9,6 +9,9 @@ window.addEventListener("load", function () {
     let playlistDestacadas = document.querySelector(`#playlist`);
     let artistasGen = document.querySelector(`#artistas`);
     let cancionesDestacadas = document.querySelector(`#canciones`);
+    let loadTracks = document.querySelector("#loadingTracks");
+    let loadPlaylists = document.querySelector("#loadingPlaylists");
+    let loadArtistas = document.querySelector("#loadingArtistas");
 
     let queryString = location.search;
     console.log(queryString);
@@ -38,6 +41,7 @@ window.addEventListener("load", function () {
                     return response.json();
                 })
                 .then(function (data) {
+                    loadArtistas.style.display = "none";
                     let artistasGenero = data.data;
                     for (let i = 0; i < 6; i++) {
                         let nombreArtista = artistasGenero[i].name;
@@ -68,8 +72,9 @@ window.addEventListener("load", function () {
         })
         .then(function (data) {
             let canciones = data.data;
+            loadTracks.style.display = "none";
 
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < 6; i++) {         
                 let cover = canciones[i].album.cover_medium;
                 let title = canciones[i].title;
                 let idCancion = canciones[i].id;
@@ -112,6 +117,7 @@ window.addEventListener("load", function () {
             return response.json();
         })
         .then(function (data) {
+            loadPlaylists.style.display = "none";
             let playlists = data.data;
             for (let i = 0; i < 6; i++) {
                 let titulo = playlists[i].title;

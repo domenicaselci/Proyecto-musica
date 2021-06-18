@@ -1,13 +1,17 @@
 window.addEventListener("load", function () {
 
     let topTracks = document.querySelector("#canciones");
+    let loadingTracks = document.querySelector("#loadingTracks");
+    let loadingAlbums = document.querySelector("#loadingAlbums");
+    let loadingArtistas = document.querySelector("#loadingArtistas");
 
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks`)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            let tracks = data.data;
+           loadingTracks.style.display = "none";
+           let tracks = data.data;
             // console.log(tracks);
             for (let i = 0; i < 6; i++) {
                 let tituloTrack = tracks[i].title;
@@ -55,6 +59,7 @@ window.addEventListener("load", function () {
         })
         .then(function (data) {
             // console.log(data);
+            loadingAlbums.style.display = "none";
             let albumes = data.data;
             console.log(albumes);
             for (let i = 0; i < 6; i++) {
@@ -106,6 +111,7 @@ window.addEventListener("load", function () {
             return response.json();
         })
         .then(function (data) {
+            loadingArtistas.style.display = "none";
             let artists = data.data;
             for (let i = 0; i < 6; i++) {
                 let foto = artists[i].picture;

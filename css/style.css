@@ -99,6 +99,15 @@ nav ul .search-icon .icon span {
     flex-direction: column;*/
 }
 
+.loading {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#loadingGeneros {
+    margin: 0;
+}
+
 .subtitulo {
     font-size: 30px;
     text-align: center;
