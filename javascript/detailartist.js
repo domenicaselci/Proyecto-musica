@@ -32,9 +32,10 @@ window.addEventListener("load", function () {
             let top = datos.data;
             for (let i = 0; i < top.length; i++) {
                 let topCinco = top[i].title;
+                let topCincoId = top[i].id
                 console.log(topCinco);
                 topisimo.innerHTML += `<li class="cancionesconplay">
-        <div><a href="#"><i class="fas fa-play" title="Play"></i> ${topCinco}</a></div>
+        <div><a href="detail-track.html?id=${topCincoId}"><i class="fas fa-play" title="Play"></i> ${topCinco}</a></div>
         <div><a href="#" title="Añadir a favoritos" class="mas"><i class="far fa-heart"></i></a></div>
         </li>`
             }

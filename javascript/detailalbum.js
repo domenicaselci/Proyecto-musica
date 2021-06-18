@@ -43,11 +43,12 @@ window.addEventListener("load", function () {
                 let lista = document.querySelector("#cancionesyalbum ol");
 
                 for (let i = 0; i < nuevosTracks.length; i++) {
+                    let idNuevosTracks = albumPrimero.tracks.data[i].id;
+                    console.log(idNuevosTracks);
                     lista.innerHTML += `<li class="cancionesconplay">
-                    <div><a href="#"><i class="fas fa-play" title="Play"></i> ${nuevosTracks[i].title} </a></div>
+                    <div><a href="detail-track.html?id=${idNuevosTracks}"><i class="fas fa-play" title="Play"></i> ${nuevosTracks[i].title} </a></div>
                     <a href="#" title="Añadir a favoritos" class="mas"><i class="far fa-heart"></i></a>
                 </li>`
-
                 }
 
                 let segundaParte = document.querySelector("#masde");

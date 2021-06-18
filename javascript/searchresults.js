@@ -59,7 +59,8 @@ window.addEventListener("load", function () {
                     </div>
                     </article>`
                                     }
-                                }).catch(function (error) {
+                                })
+                                .catch(function (error) {
                                     console.log(error)
                                 })
                             for (let i = 0; i < 1; i++) {
@@ -128,7 +129,8 @@ window.addEventListener("load", function () {
                         tercero.style.display = "none";
                     }
                 }
-            }).then(function () {
+            })
+            .then(function () {
                 tituloart.style.background = "none";
                 tituloart.style.height = "auto";
             })
@@ -171,7 +173,8 @@ window.addEventListener("load", function () {
                 }
 
 
-            }).then(function () {
+            })
+            .then(function () {
                 tituloart.style.background = "none";
                 tituloart.style.height = "auto";
             })
@@ -211,14 +214,14 @@ window.addEventListener("load", function () {
                         tituloart.style.display = "none";
                     }
                 }
-            }).then(function () {
+            })
+            .then(function () {
                 tituloart.style.background = "none";
                 tituloart.style.height = "auto";
             })
             .catch(function (error) {
                 console.log(error);
             })
-
     } else if (busqueda == "") {
         console.log("no se encontró resultados")
     }
