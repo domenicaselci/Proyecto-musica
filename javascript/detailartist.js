@@ -19,6 +19,10 @@ window.addEventListener("load", function () {
             <h1 class="martingarrixtitulo">${nombre}</h1>`
             }
         })
+        .then(function () {
+            document.querySelector(".infomartin").style.background = "none";
+            document.querySelector(".infomartin").style.height = "auto";
+        })
         .catch(function (error) {
             console.log(error);
         })
@@ -32,16 +36,21 @@ window.addEventListener("load", function () {
             let top = datos.data;
             for (let i = 0; i < top.length; i++) {
                 let topCinco = top[i].title;
+                console.log(topCinco)
                 let topCincoId = top[i].id
-                console.log(topCinco);
                 topisimo.innerHTML += `<li class="cancionesconplay">
         <div><a href="detail-track.html?id=${topCincoId}"><i class="fas fa-play" title="Play"></i> ${topCinco}</a></div>
         <div><a href="#" title="Añadir a favoritos" class="mas"><i class="far fa-heart"></i></a></div>
-        </li>`
+        </li>
+        `
             }
-        }).catch(function (error) {
+                           
+        })
+        .catch(function (error) {
             console.log(error)
         })
+    
+
 
     let discos = document.querySelector("#discografiauno")
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${cualDos}/albums`)
@@ -60,9 +69,7 @@ window.addEventListener("load", function () {
         <h3 class="albumesmartin"><a href="detail-album.html?id=${albumId}">${titleDos}</a></h3>
         <h4 class="subtitulosalbum">Álbum</h4>
         </article>`
-                discos.addEventListener("mouseover", function () {
-                    discos.style.color = "gray";
-                })
+
 
             }
 
@@ -71,6 +78,7 @@ window.addEventListener("load", function () {
             console.log(error);
         })
 
+    //otro
     let info = document.querySelector(".informacionmartin article")
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${cualDos}`)
         .then(function (respuesta) {
@@ -82,7 +90,7 @@ window.addEventListener("load", function () {
                 let imgMedieum = infoFans.picture_xl
                 let fansNum = infoFans.nb_fan;
                 let numAlbum = infoFans.nb_album;
-                
+
                 document.querySelector(".martingarrixinfo").innerText = `${fansNum} oyentes`
                 document.querySelector(".parrafo").innerText = `${numAlbum} tracks`
                 info.style.backgroundImage = `url(${imgMedieum})`;
