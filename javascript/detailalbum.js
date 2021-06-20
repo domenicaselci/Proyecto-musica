@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
                     //console.log(idNuevosTracks);
                     lista.innerHTML += `<li class="cancionesconplay">
                     <div><a href="detail-track.html?id=${idNuevosTracks}"><i class="fas fa-play" title="Play"></i> ${nuevosTracks[i].title}</a></div>
-                    <a href="detail-track.html?id=${idNuevosTracks}"><i class="fas fa-ellipsis-h"></i>
+                    <a href="detail-track.html?id=${idNuevosTracks}" title="Más" class="mas"><i class="fas fa-ellipsis-h"></i>
                     </li>`
                     //console.log(nuevosTracks[i].title)
                     
