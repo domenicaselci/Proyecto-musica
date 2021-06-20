@@ -40,7 +40,7 @@ window.addEventListener("load", function () {
                 let topCincoId = top[i].id
                 topisimo.innerHTML += `<li class="cancionesconplay">
         <div><a href="detail-track.html?id=${topCincoId}"><i class="fas fa-play" title="Play"></i> ${topCinco}</a></div>
-        <div><a href="#" title="Añadir a favoritos" class="mas"><i class="far fa-heart"></i></a></div>
+        <a href="detail-track.html?id=${topCincoId}" title="Más" class="mas"><i class="fas fa-ellipsis-h"></i>
         </li>
         `
             }

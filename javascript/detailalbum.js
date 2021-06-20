@@ -47,6 +47,7 @@ window.addEventListener("load", function () {
                     //console.log(idNuevosTracks);
                     lista.innerHTML += `<li class="cancionesconplay">
                     <div><a href="detail-track.html?id=${idNuevosTracks}"><i class="fas fa-play" title="Play"></i> ${nuevosTracks[i].title}</a></div>
+                    <a href="detail-track.html?id=${idNuevosTracks}"><i class="fas fa-ellipsis-h"></i>
                     </li>`
                     //console.log(nuevosTracks[i].title)
                     
@@ -121,76 +122,5 @@ window.addEventListener("load", function () {
         .catch(function (error) {
             console.log(error);
         })
-
-//defino el array favoritos
-
-let fav = [];
-
-//recupero el storage a ver si hay o no favoritos
-
-let recuperoStorage = localStorage.getItem("fav");
-
-//SI HAY DENTRO DEl storage (FAVORITOS) 
-
-if(recuperoStorage != null){
-
-//transformo ese string en array y le asignamos el array a la variable favoritos
-    fav = JSON.parse(recuperoStorage);
-}
-
-// si el id del gif actual esta en la lista
-
-if(fav.includes(cualDos)){
-
-    //se cambio el texto del link favoritos
-    document.querySelector(".fav").innerHTML += `<i class="fas fa-heart"></i>`
-    console.log("Quitar de favoritos");
-
-}
-
-//agregar sacar gif actual de favoritos
-
-//agregar a favs
-
-let favss = document.querySelector(".fav")
-
-//cuando se hace click en el link
-
-favss.addEventListener("click", function(e){
-e.preventDefault();
-
-//si el gif actual esta en la lista
-if (fav.includes(cualDos)){
-//lo localizamos en el array
-
-let idASacar = fav.indexOf(cual);
-//lo sacamos de alli
-fav.splice(idASacar, 1);
-
-//si ya lo sacamos---> cambiamos texto de link
-
-document.querySelector(".fav").innerHTML += `<i class="far fa-heart"></i>`
-console.log("Agregar a favoritos");
-
-}else {//si no esta en la lista
-
-    //se agrega el gif actual
-    fav.push(cual);
-
-//si ya fue agregado-->cambiabos el texto de link
-document.querySelector(".fav").innerHTML += `<i class="fas fa-heart"></i>`
-console.log("Quitar de favoritos");
-
-}
-
-//guardamos el array actualizado como string
-let favoritosParaStorage = JSON.stringify(fav);
-
-//guardamos ese string en el localstorage
-localStorage.setItem("fav",favoritosParaStorage)
-
-//revisamos como quedo
-console.log(localStorage)
-})
 
 })
