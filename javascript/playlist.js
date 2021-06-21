@@ -17,21 +17,19 @@ if (recuperoStorage == null || recuperoStorage == "[]") {
 }
 // mostrar tracks en la playlist
 
-function buscarYMostrarTrack(idTrack) {
-    const parametros = new URLSearchParams(location.search);
-    const Trackid = parametros.get("id");
-    console.log(Trackid);
- 
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${Trackid}`)
-        .then(function (respuesta) {
-            return respuesta.json();
-        })
-        
-        .then(function (track) {
-            playlistx.innerHTML += '<li>' + '<a href="detail-track.html?id=' + track.id + '">' + track.title + '</a></li>'
-        })
-        .catch(function (errors) {
-            console.log(errors);
+function buscarYMostrarTrack(idTrack){
+    let proxy = 'https://cors-anywhere.herokuapp.com/';
+    let url = proxy + 'https://api.deezer.com/track/' + idTrack;
 
+    fetch(url)
+        .then(function (response) {
+            return response.json();
         })
-}
+        .then(function (track) {
+            playlistx.innerHTML += '<li>' + '<a href="detail-track.html?id=' + track.id + '">' + track.title + '</a></li>' 
+        })
+        .catch(function(errors){
+            console.log(errors);
+            
+        })
+    }
