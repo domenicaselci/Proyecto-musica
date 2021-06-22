@@ -336,11 +336,9 @@ a:hover {
     padding: 10px;
 }
 
-#tituloart {
+.fondo {
     background: url(../img/loading.gif) center center no-repeat;
-    height: 40vh;
-    width: 100%;
-
+    
 }
 
 .titulodiscografia {
@@ -544,7 +542,7 @@ ol.topcinco li {
     display: flex;
     margin-bottom: 5px;
     background-color: rgba(15, 15, 15, 0.74);
-
+flex-direction: row;
     border-radius: 40px;
     flex-direction: column;
     width: calc(33% - 5px);

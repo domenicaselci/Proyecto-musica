@@ -21,6 +21,7 @@ window.addEventListener("load", function () {
                 let nombreArtista = albumPrimero.artist.name;
                 let fecha = albumPrimero.release_date;
                 let id = albumPrimero.artist.id;
+                let generoArtista = albumPrimero.genres.data[0].name;
                 //console.log(id)
                 let primeraParte = document.querySelector(".primeraparte");
                 primeraParte.innerHTML += `
@@ -33,8 +34,8 @@ window.addEventListener("load", function () {
                         <li class="tim">${tituloAlbum}</li>
                     </ul>
                     <ul class="listaheaven">
-                        <li class="artista"><a href="detail-artist.html">${nombreArtista}</a></li>
-                        <li>Electrónica</li>
+                        <li class="artista"><a href="detail-artist.html?id=${id}">${nombreArtista}</a></li>
+                        <li>${generoArtista}</li>
                         <li>Fecha de lanzamiento: ${fecha}</li>
                     </ul>
     
