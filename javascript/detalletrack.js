@@ -18,11 +18,10 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idTrac
         interprete.innerHTML += '<a href="./detail-artist.html?id=' + datos.artist.id + '" >' + datos.artist.name + '</a>'
         let album = document.querySelector('.album');
         album.innerHTML += '<a href="./detail-album.html?id=' + datos.album.id + '" >' + datos.album.title + '</a>'
-        let player = document.querySelector('iframe');
-        player.src = datos.preview
+        let player= document.querySelector('.cositodedeezer')
+        player.innerHTML+='<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/1390823292" width="100%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>'
 
     })
-
 /// boton agregar/quitar de playlist
 let playlist = []
 let recuperoStorage = localStorage.getItem('playlist');
