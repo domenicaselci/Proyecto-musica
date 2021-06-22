@@ -12,6 +12,9 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idTrac
     })
     .then(function (datos) {
         console.log(datos);
+        let portada = datos.album.cover_xl;
+        let imagen = document.querySelector('.imagen')
+        imagen.innerHTML += `<div class="imagen"><img src="${portada}"></div>`;
         let titulo = document.querySelector('.titulo');
         titulo.innerHTML += datos.title;
         let interprete = document.querySelector('.interprete');
@@ -19,9 +22,9 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idTrac
         let album = document.querySelector('.album');
         album.innerHTML += '<a href="./detail-album.html?id=' + datos.album.id + '" >' + datos.album.title + '</a>'
         let player= document.querySelector('.cositodedeezer')
-        player.innerHTML+='<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/1390823292" width="100%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>'
+        player.innerHTML+=`<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${idTrack}" width="100%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`;
 
-    })
+    })//``
 /// boton agregar/quitar de playlist
 let playlist = []
 let recuperoStorage = localStorage.getItem('playlist');
