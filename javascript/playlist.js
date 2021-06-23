@@ -1,3 +1,5 @@
+//condicional si hay canciones en playlist, ajuste de local/web storage.
+
 let recuperoStorage = localStorage.getItem('playlist');
 let playlist = JSON.parse(recuperoStorage);
 
