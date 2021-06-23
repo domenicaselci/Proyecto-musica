@@ -23,9 +23,12 @@
                 <li><a href="../proyecto-musica/genres.html">Genres</a></li>
                 <li><a href="../proyecto-musica/playlist.html">Playlist</a></li>
             </div>
-            <li class="search-icon">
+            
                 <form action="../proyecto-musica/search-results.html" method="GET">
                     <input class="campobuscar" type="text" name="q" placeholder="Descubrí MusicCenter">
+                    <label class="button">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </label>
                     <label>
                         Artista
                         <input type="radio" name="filtro" value="artista">
@@ -40,13 +43,12 @@
                     </label>
                     <label>
                         Todo
-                        <input type="radio" name="filtro" value="todo" checked>
+                        <input type="radio" name="filtro" value="todo">
                     </label>
-                    <label class="icon">
-                        <span class="fas fa-search"></span>
-                    </label>
+                    
+                    
                 </form>
-            </li>
+            
         </ul>
     </nav>
 
