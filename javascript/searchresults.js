@@ -1,5 +1,4 @@
 window.addEventListener("load", function () {
-
     let queryString = location.search;
     //console.log(queryString)
     let queryStringObj = new URLSearchParams(queryString);
@@ -11,8 +10,6 @@ window.addEventListener("load", function () {
     let segundo = document.querySelector("#segundo");
     let tercero = document.querySelector("#tercero");
     let resultadosbusqueda = document.querySelector(".resultadosbusqueda");
-
-
 
     if (filtro == "todo" || filtro == null) {
         fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${busqueda}`)
@@ -40,7 +37,7 @@ window.addEventListener("load", function () {
                                     primero.style.display = "none";
                                 } else if (nombreArtist.length > 0 && nombreArtist.length <= 2) {
                                     for (let i = 0; i < nombreArtist.length; i++) {
-                                        let idArtist = nombreArtist[i].id
+                                        let idArtist = nombreArtist[i].id;
                                         let name = nombreArtist[i].name;
                                         let imagenArt = nombreArtist[i].picture_xl;
                                         primero.innerHTML += `<article class="discos" id="primero">
@@ -53,7 +50,7 @@ window.addEventListener("load", function () {
                                     }
                                 } else if (nombreArtist.length >= 3) {
                                     for (let i = 0; i < 3; i++) {
-                                        let idArtist = nombreArtist[i].id
+                                        let idArtist = nombreArtist[i].id;
                                         let name = nombreArtist[i].name;
                                         let imagenArt = nombreArtist[i].picture_xl;
                                         primero.innerHTML += `<article class="discos" id="primero">
@@ -65,7 +62,6 @@ window.addEventListener("load", function () {
                                 </article`
                                     }
                                 }
-
                             })
                             .catch(function (error) {
                                 console.log(error);
@@ -84,7 +80,7 @@ window.addEventListener("load", function () {
                                     resultadosbusqueda.innerText = `Resultados para "${busqueda}"`;
                                     for (let i = 0; i < albom.length; i++) {
                                         let nomAlbUno = albom[i].title;
-                                        let idAlbUno = albom[i].id
+                                        let idAlbUno = albom[i].id;
                                         let fotoAlbUno = albom[i].cover_xl;
                                         document.querySelector("#segundo").innerHTML +=
                                             `<article class="discos" id="segundo">
@@ -98,7 +94,7 @@ window.addEventListener("load", function () {
                                 } else if (albom.length >= 3) {
                                     for (let i = 0; i < 3; i++) {
                                         let nomAlb = albom[i].title;
-                                        let idAlb = albom[i].id
+                                        let idAlb = albom[i].id;
                                         let fotoAlb = albom[i].cover_xl;
                                         document.querySelector("#segundo").innerHTML +=
                                             `<article class="discos" id="segundo">
@@ -110,7 +106,6 @@ window.addEventListener("load", function () {
                                     </article>`
                                     }
                                 }
-
                             })
                             .catch(function (error) {
                                 console.log(error)
@@ -129,7 +124,7 @@ window.addEventListener("load", function () {
                                         for (let i = 0; i < canciones.length; i++) {
                                             let nombreCan = canciones[i].title;
                                             let fotoCan = canciones[i].album.cover_xl;
-                                            let idTrack = canciones[i].id
+                                            let idTrack = canciones[i].id;
                                             tercero.innerHTML += `
                                                         <article class="discos">
                                                         <img src="${fotoCan}" alt="${nombreCan}">
@@ -154,14 +149,12 @@ window.addEventListener("load", function () {
                                                     </article>`
                                         }
                                     }
-
                                 })
                                 .catch(function (error) {
                                     console.log(error);
                                 })
                         }
                     }
-
                 }
             })
             .then(function () {
@@ -187,7 +180,7 @@ window.addEventListener("load", function () {
                 } else {
                     resultadosbusqueda.innerText = `Resultados para "${busqueda}"`
                     for (let i = 0; i < nombreArtist.length; i++) {
-                        let idArtist = nombreArtist[i].id
+                        let idArtist = nombreArtist[i].id;
                         let name = nombreArtist[i].name;
                         let imagenArt = nombreArtist[i].picture_xl;
                         primero.innerHTML += `<article class="discos" id="primero">
@@ -227,7 +220,7 @@ window.addEventListener("load", function () {
                     resultadosbusqueda.innerText = `Resultados para "${busqueda}"`
                     for (let i = 0; i < trackArtist.length; i++) {
                         let nameTrack = trackArtist[i].title;
-                        let idTrack = trackArtist[i].id
+                        let idTrack = trackArtist[i].id;
                         let imagenTrack = trackArtist[i].album.cover_xl;
                         tercero.innerHTML += `<article class="discos">
                         <img src="${imagenTrack}" alt="${nameTrack}">
@@ -267,8 +260,8 @@ window.addEventListener("load", function () {
                     resultadosbusqueda.innerText = `Resultados para "${busqueda}"`
                     for (let i = 0; i < albumArtist.length; i++) {
                         let nameAlbum = albumArtist[i].title;
-                        console.log(nameAlbum)
-                        let idAlbum = albumArtist[i].id
+                        console.log(nameAlbum);
+                        let idAlbum = albumArtist[i].id;
                         let imagenAlbum = albumArtist[i].cover_xl;
                         segundo.innerHTML += `<article class="discos">
                         <img src="${imagenAlbum}" alt="${nameAlbum}">
@@ -291,6 +284,6 @@ window.addEventListener("load", function () {
                 console.log(error);
             })
     } else if (busqueda == "") {
-        console.log("   No se encontró resultados")
+        console.log("No se encontró resultados");
     }
 })

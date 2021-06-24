@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
-    console.log(window);
-    console.log(window.location);
-    console.log(location.search);
+    //console.log(window);
+    //console.log(window.location);
+    //console.log(location.search);
     const parametros = new URLSearchParams(location.search);
     const cualDos = parametros.get("id");
     //console.log(cualDos);
