@@ -51,7 +51,7 @@ window.addEventListener("load", function () {
                     <a href="detail-track.html?id=${idNuevosTracks}" title="Más" class="mas"><i class="fas fa-ellipsis-h"></i>
                     </li>`
                     //console.log(nuevosTracks[i].title)
-                    
+
                 }
 
                 let segundaParte = document.querySelector("#masde");
@@ -82,8 +82,8 @@ window.addEventListener("load", function () {
                             }
 
                         })
-                        
-                        
+
+
                         .catch(function (error) {
                             console.log(error);
                         })
@@ -119,9 +119,77 @@ window.addEventListener("load", function () {
                 }
             }
         })
-        
+
         .catch(function (error) {
             console.log(error);
         })
+    //defino el array favoritos
+
+    let fav = [];
+
+    //recupero el storage a ver si hay o no favoritos
+
+    let recuperoStorage = localStorage.getItem("fav");
+
+    //SI HAY DENTRO DEl storage (FAVORITOS) 
+
+    if (recuperoStorage != null) {
+
+        //transformo ese string en array y le asignamos el array a la variable favoritos
+        fav = JSON.parse(recuperoStorage);
+    }
+
+    // si el id del gif actual esta en la lista
+
+    if (fav.includes(cualDos)) {
+
+        //se cambio el texto del link favoritos
+        document.querySelector("#botonfavorito").innerHTML = `<a href="#" title="Sacar de favoritos" class="iconitos"><i class="fas fa-heart"></i></a>`
+
+    }
+
+    //agregar sacar gif actual de favoritos
+
+    //agregar a favs
+
+    let favss = document.querySelector("#botonfavorito")
+
+    //cuando se hace click en el link
+
+    favss.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        //si el gif actual esta en la lista
+        if (fav.includes(cualDos)) {
+            //lo localizamos en el array
+
+            let idASacar = fav.indexOf(cualDos);
+            //lo sacamos de alli
+            fav.splice(idASacar, 1);
+
+            //si ya lo sacamos---> cambiamos texto de link
+
+            document.querySelector("#botonfavorito").innerHTML = `<a href="#" title="Añadir a favoritos" class="iconitos"><i
+        class="far fa-heart"></i></a>`
+
+        } else { //si no esta en la lista
+
+            //se agrega el gif actual
+            fav.push(cualDos);
+
+            //si ya fue agregado-->cambiabos el texto de link
+            document.querySelector("#botonfavorito").innerHTML = `<a href="#" title="Sacar de favoritos" class="iconitos"><i class="fas fa-heart"></i></a>`
+
+        }
+
+        //guardamos el array actualizado como string
+        let favoritosParaStorage = JSON.stringify(fav);
+
+        //guardamos ese string en el localstorage
+        localStorage.setItem("fav", favoritosParaStorage)
+
+        //revisamos como quedo
+        console.log(localStorage)
+    })
 
 })
