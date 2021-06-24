@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
-    console.log(window);
-    console.log(window.location);
-    console.log(location.search);
+    //console.log(window);
+    //console.log(window.location);
+    //console.log(location.search);
     const parametros = new URLSearchParams(location.search);
     const cualDos = parametros.get("id");
     //console.log(cualDos);
@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
             let tracksAlbum = datos;
             for (let i = 0; i < 1; i++) {
                 let albumPrimero = tracksAlbum;
-                let tituloAlbum = albumPrimero.title
+                let tituloAlbum = albumPrimero.title;
                 //console.log(tituloAlbum);
                 let imagenAlbum = albumPrimero.cover_xl;
                 let nombreArtista = albumPrimero.artist.name;
@@ -64,14 +64,14 @@ window.addEventListener("load", function () {
                         .then(function (datos) {
                             let mas = datos.data;
                             let nombreDos = mas[0].contributors[0].name;
-                            console.log(nombreDos)
-                            let nombreMas = document.querySelector("#masde")
+                            //console.log(nombreDos)
+                            let nombreMas = document.querySelector("#masde");
                             nombreMas.innerHTML += `<h1 class="titulodiscografia"> Más de ${nombreDos}</h1>`
                             for (let i = 0; i < 3; i++) {
                                 let idTrack = mas[i].id;
                                 let nombreCancion = mas[i].title;
                                 let img = mas[i].album.cover_big;
-                                console.log(img)
+
                                 segundaParte.innerHTML += `
                        <article class="discos">
                            <img src="${img}" alt="${nombreCancion}">
@@ -82,14 +82,12 @@ window.addEventListener("load", function () {
                             }
 
                         })
-
-
                         .catch(function (error) {
                             console.log(error);
                         })
                 }
-                let relacionados = document.querySelector("#relacionados");
 
+                let relacionados = document.querySelector("#relacionados");
                 for (let i = 0; i < 1; i++) {
                     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/related`)
                         .then(function (respuesta) {

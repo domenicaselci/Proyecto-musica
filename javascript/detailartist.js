@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
             console.log(error);
         })
 
-    let topisimo = document.querySelector(".topcinco")
+    let topisimo = document.querySelector(".topcinco");
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${cualDos}/top`)
         .then(function (respuesta) {
             return respuesta.json()
@@ -44,12 +44,12 @@ window.addEventListener("load", function () {
         </li>
         `
             }
-                           
+
         })
         .catch(function (error) {
             console.log(error)
         })
-    
+
 
 
     let discos = document.querySelector("#discografiauno")
@@ -72,9 +72,8 @@ window.addEventListener("load", function () {
 
 
             }
-
-
-        }).catch(function (error) {
+        })
+        .catch(function (error) {
             console.log(error);
         })
 

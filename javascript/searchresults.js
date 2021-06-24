@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
 
     let queryString = location.search;
-    console.log(queryString)
+    //console.log(queryString)
     let queryStringObj = new URLSearchParams(queryString);
     let filtro = queryStringObj.get("filtro");
     let busqueda = queryStringObj.get("q");
@@ -21,7 +21,7 @@ window.addEventListener("load", function () {
             })
             .then(function (datos) {
                 let todo = datos.data;
-                console.log(todo)
+                //console.log(todo)
                 if (todo.length == 0) {
                     resultadosbusqueda.innerText = `No se encontraron resultados para "${busqueda}"`;
                     segundo.style.display = "none";
@@ -45,11 +45,11 @@ window.addEventListener("load", function () {
                                         let imagenArt = nombreArtist[i].picture_xl;
                                         primero.innerHTML += `<article class="discos" id="primero">
                                     <img src="${imagenArt}" alt="${name}">
-                            <div class="titulossearch">
-                                <h3 class="electronica"><a href="detail-artist.html?id=${idArtist}">${name}</a></h3>
-                                <h4>Artista</h4>
-                            </div>
-                            </article`
+                                    <div class="titulossearch">
+                                    <h3 class="electronica"><a href="detail-artist.html?id=${idArtist}">${name}</a></h3>
+                                    <h4>Artista</h4>
+                                    </div>
+                                    </article`
                                     }
                                 } else if (nombreArtist.length >= 3) {
                                     for (let i = 0; i < 3; i++) {
@@ -58,11 +58,11 @@ window.addEventListener("load", function () {
                                         let imagenArt = nombreArtist[i].picture_xl;
                                         primero.innerHTML += `<article class="discos" id="primero">
                                 <img src="${imagenArt}" alt="${name}">
-                        <div class="titulossearch">
-                            <h3 class="electronica"><a href="detail-artist.html?id=${idArtist}">${name}</a></h3>
-                            <h4>Artista</h4>
-                        </div>
-                        </article`
+                                <div class="titulossearch">
+                                <h3 class="electronica"><a href="detail-artist.html?id=${idArtist}">${name}</a></h3>
+                                <h4>Artista</h4>
+                                </div>
+                                </article`
                                     }
                                 }
 
@@ -192,11 +192,11 @@ window.addEventListener("load", function () {
                         let imagenArt = nombreArtist[i].picture_xl;
                         primero.innerHTML += `<article class="discos" id="primero">
                         <img src="${imagenArt}" alt="${name}">
-                <div class="titulossearch">
-                    <h3 class="electronica"><a href="detail-artist.html?id=${idArtist}">${name}</a></h3>
-                    <h4>Artista</h4>
-                </div>
-                </article`
+                        <div class="titulossearch">
+                        <h3 class="electronica"><a href="detail-artist.html?id=${idArtist}">${name}</a></h3>
+                        <h4>Artista</h4>
+                        </div>
+                        </article`
                         segundo.style.display = "none";
                         tercero.style.display = "none";
                     }
@@ -231,12 +231,12 @@ window.addEventListener("load", function () {
                         let imagenTrack = trackArtist[i].album.cover_xl;
                         tercero.innerHTML += `<article class="discos">
                         <img src="${imagenTrack}" alt="${nameTrack}">
-                    <div class="titulossearch">
+                        <div class="titulossearch">
                         <h3 class="electronica"><a href="detail-track.html?id=${idTrack}">${nameTrack}</a></h3>
                         <h4>Track</h4>
-                    </div>
-                    <article class="discos">
-                    `
+                        </div>
+                        <article class="discos">
+                        `
                         segundo.style.display = "none";
                         primero.style.display = "none";
                     }
@@ -272,12 +272,12 @@ window.addEventListener("load", function () {
                         let imagenAlbum = albumArtist[i].cover_xl;
                         segundo.innerHTML += `<article class="discos">
                         <img src="${imagenAlbum}" alt="${nameAlbum}">
-                    <div class="titulossearch">
+                        <div class="titulossearch">
                         <h3 class="electronica"><a href="detail-album.html?id=${idAlbum}">${nameAlbum}</a></h3>
                         <h4>Álbum</h4>
-                    </div>
-                    <article class="discos">
-                    `
+                        </div>
+                        <article class="discos">
+                        `
                         tercero.style.display = "none";
                         primero.style.display = "none";
                     }
@@ -291,6 +291,6 @@ window.addEventListener("load", function () {
                 console.log(error);
             })
     } else if (busqueda == "") {
-        console.log("no se encontró resultados")
+        console.log("   No se encontró resultados")
     }
 })
