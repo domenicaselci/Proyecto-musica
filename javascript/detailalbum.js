@@ -25,10 +25,8 @@ window.addEventListener("load", function () {
                 //console.log(id)
                 let primeraParte = document.querySelector(".primeraparte");
                 primeraParte.innerHTML += `
-              
-                <img src="${imagenAlbum}" alt="${tituloAlbum}">
-              
-                <div class="listagris">
+                              <img src="${imagenAlbum}" alt="${tituloAlbum}">
+                              <div class="listagris">
                     <ul class="albumtim">
                         <li class="album">ALBUM</li>
                         <li class="tim">${tituloAlbum}</li>
@@ -38,8 +36,7 @@ window.addEventListener("load", function () {
                         <li>${generoArtista}</li>
                         <li>Fecha de lanzamiento: ${fecha}</li>
                     </ul>
-    
-            `
+                `
                 let nuevosTracks = albumPrimero.tracks.data;
                 let lista = document.querySelector("#cancionesyalbum ol");
 
@@ -51,7 +48,6 @@ window.addEventListener("load", function () {
                     <a href="detail-track.html?id=${idNuevosTracks}" title="Más" class="mas"><i class="fas fa-ellipsis-h"></i>
                     </li>`
                     //console.log(nuevosTracks[i].title)
-
                 }
 
                 let segundaParte = document.querySelector("#masde");
@@ -80,7 +76,6 @@ window.addEventListener("load", function () {
                        </article>
                        `
                             }
-
                         })
                         .catch(function (error) {
                             console.log(error);
@@ -88,6 +83,7 @@ window.addEventListener("load", function () {
                 }
 
                 let relacionados = document.querySelector("#relacionados");
+
                 for (let i = 0; i < 1; i++) {
                     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/related`)
                         .then(function (respuesta) {
@@ -103,12 +99,12 @@ window.addEventListener("load", function () {
                                 let imgTres = tres[i].picture_xl;
                                 let idArtist = tres[i].id
                                 relacionados.innerHTML += `
-            <article class="discos">
-                <img src="${imgTres}" alt="${nombreTres}" class="imagenesartistas">
-                <h3 class="albumesmartin"><a href="detail-artist.html?id=${idArtist}">${nombreTres}</a></h3>
-                <h4 class="subtitulosalbum">Artista</h4>
-            </article>
-            `
+                        <article class="discos">
+                        <img src="${imgTres}" alt="${nombreTres}" class="imagenesartistas">
+                        <h3 class="albumesmartin"><a href="detail-artist.html?id=${idArtist}">${nombreTres}</a></h3>
+                        <h4 class="subtitulosalbum">Artista</h4>
+                        </article>
+                        `
                             }
                         })
                         .catch(function (error) {

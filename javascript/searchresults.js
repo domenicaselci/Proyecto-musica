@@ -1,8 +1,12 @@
 window.addEventListener("load", function () {
+    //cadena de caracteres que tengo que recuperar y transformar en objeto
+    //guardo la info en una variable
     let queryString = location.search;
     //console.log(queryString)
+    //transformarlo en un objeto literal
     let queryStringObj = new URLSearchParams(queryString);
     let filtro = queryStringObj.get("filtro");
+    //de toda la info que podría traer, necesito recuperar el name q
     let busqueda = queryStringObj.get("q");
     console.log(filtro);
     console.log(busqueda);
@@ -12,6 +16,7 @@ window.addEventListener("load", function () {
     let resultadosbusqueda = document.querySelector(".resultadosbusqueda");
 
     if (filtro == "todo" || filtro == null) {
+        //estrucutra de fetch para consumir Apis
         fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${busqueda}`)
             .then(function (respuesta) {
                 return respuesta.json()

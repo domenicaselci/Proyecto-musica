@@ -50,8 +50,6 @@ window.addEventListener("load", function () {
             console.log(error)
         })
 
-
-
     let discos = document.querySelector("#discografiauno")
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${cualDos}/albums`)
         .then(function (respuesta) {
