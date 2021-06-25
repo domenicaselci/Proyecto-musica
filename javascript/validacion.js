@@ -8,9 +8,9 @@ window.addEventListener("load", function () {
         if (campoBuscar.value == "") {
             resultadoss.innerText = `El campo no puede estar vacío`;
         }
-        if (campoBuscar.value.length innerText = `Por favor ingrese al menos 3 caracteres`
-        } else {> 0 && campoBuscar.value.length < 3) {
-            resultadoss.
+        if (campoBuscar.value.length > 0 && campoBuscar.value.length < 3) {
+            resultadoss.innerText = `Por favor ingrese al menos 3 caracteres`
+        }else {
             formulario.submit();
         }
     })
