@@ -14,6 +14,9 @@ window.addEventListener("load", function () {
     let segundo = document.querySelector("#segundo");
     let tercero = document.querySelector("#tercero");
     let resultadosbusqueda = document.querySelector(".resultadosbusqueda");
+    let urlArtist = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=${busqueda}`;
+    let urlAlbum = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=${busqueda}`;
+    let urlTrack = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q=${busqueda}`;
 
     if (filtro == "todo" || filtro == null) {
         //estrucutra de fetch para consumir Apis
@@ -32,7 +35,7 @@ window.addEventListener("load", function () {
                 } else {
                     resultadosbusqueda.innerText = `Resultados para "${busqueda}"`;
                     for (let i = 0; i < 1; i++) {
-                        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=${busqueda}`)
+                        fetch(urlArtist)
                             .then(function (respuesta) {
                                 return respuesta.json()
                             })
@@ -73,7 +76,7 @@ window.addEventListener("load", function () {
                             })
                     }
                     for (let i = 0; i < 1; i++) {
-                        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=${busqueda}`)
+                        fetch(urlAlbum)
                             .then(function (respuesta) {
                                 return respuesta.json()
                             })
@@ -116,7 +119,7 @@ window.addEventListener("load", function () {
                                 console.log(error)
                             })
                         for (let i = 0; i < 1; i++) {
-                            fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q=${busqueda}`)
+                            fetch(urlTrack)
                                 .then(function (respuesta) {
                                     return respuesta.json()
                                 })
@@ -170,7 +173,7 @@ window.addEventListener("load", function () {
                 console.log(error)
             })
     } else if (filtro == "artista") {
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=${busqueda}`)
+        fetch(urlArtist)
             .then(function (respuesta) {
                 return respuesta.json();
             })
@@ -210,7 +213,7 @@ window.addEventListener("load", function () {
 
 
     } else if (filtro == "track") {
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q=${busqueda}`)
+        fetch(urlTrack)
             .then(function (respuesta) {
                 return respuesta.json();
             })
@@ -249,7 +252,7 @@ window.addEventListener("load", function () {
             })
 
     } else if (filtro == "album") {
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=${busqueda}`)
+        fetch(urlAlbum)
             .then(function (respuesta) {
                 return respuesta.json();
             })
